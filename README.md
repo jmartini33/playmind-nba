@@ -2,10 +2,17 @@
 
 An AI-powered NBA analytics platform using retrieval-augmented generation (RAG) to analyze play-by-play data and generate real-time tactical insights.
 
-## Quick Start
-1. Clone the repo
-2. Create a virtual environment
+## 🚀 Setup Instructions
+0. Install Python 
+brew install python@3.11
+
+1. Clone the repository
+git clone https://github.com/jmartini33/playmind-nba.git
+cd playmind-nba
+
+2. Create and activate a virtual environment
+python3.11 -m venv .venv
+source .venv/bin/activate
+
 3. Install dependencies
-4. Run the CLI:
-   ```bash
-   python -m src.api.cli
+pip install -r requirements.txt
