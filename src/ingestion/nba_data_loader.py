@@ -9,7 +9,7 @@ DATA_PATH = Path("data/raw")
 DATA_PATH.mkdir(parents=True, exist_ok=True)
 
 
-def fetch_game(game_id: str = "0022400001") -> pd.DataFrame:
+def fetch_game(game_id: str = "0022500142") -> pd.DataFrame:
     """
     Fetch play-by-play data for a given NBA game ID.
     Saves it to data/raw/ and returns a DataFrame.
