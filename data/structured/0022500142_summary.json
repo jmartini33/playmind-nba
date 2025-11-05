@@ -1,0 +1,40 @@
+{
+  "teams": [
+    "Kings",
+    "Bucks"
+  ],
+  "final_score": {
+    "Kings": 131,
+    "Bucks": 127
+  },
+  "three_pointers": {
+    "Kings": "10/28",
+    "Bucks": "15/32"
+  },
+  "field_goals": {
+    "Kings": "43/82",
+    "Bucks": "46/79"
+  },
+  "free_throws": {
+    "Kings": "35/40",
+    "Bucks": "20/31"
+  },
+  "turnovers": {
+    "Kings": 3,
+    "Bucks": 10
+  },
+  "rebounds": {
+    "Kings": 38,
+    "Bucks": 37
+  },
+  "fouls": {
+    "Kings": 22,
+    "Bucks": 31
+  },
+  "steals": {
+    "Kings": 5,
+    "Bucks": 0
+  },
+  "scoring_runs": [],
+  "narrative": "Kings defeated Bucks by 4 points. Kings made 10/28 threes compared to 15/32 by Bucks. Kings committed 3 turnovers. "
+}
