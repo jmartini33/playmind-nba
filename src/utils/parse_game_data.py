@@ -2,15 +2,18 @@ import re
 import json
 from pathlib import Path
 
+RAW_DIR = Path("data/raw")
+STRUCTURED_DIR = Path("data/structured")
+
 def parse_event_type(description: str) -> str:
     desc = description.upper()
     if "3PT" in desc and "MISS" not in desc:
         return "3PT_MADE"
     if "3PT" in desc and "MISS" in desc:
         return "3PT_MISSED"
-    if "SHOT" in desc and "MISS" not in desc:
+    if ("SHOT" in desc or "JUMPER" in desc or "FADEAWAY" in desc) and "MISS" not in desc and "CLOCK" not in desc:
         return "SHOT_MADE"
-    if "SHOT" in desc and "MISS" in desc:
+    if ("SHOT" in desc or "JUMPER" in desc or "FADEAWAY" in desc) and "MISS" in desc and "CLOCK" not in desc:
         return "SHOT_MISSED"
     if "LAYUP" in desc and "MISS" not in desc:
         return "LAYUP_MADE"
@@ -26,16 +29,14 @@ def parse_event_type(description: str) -> str:
         return "FT_MISSED"
     if "REBOUND" in desc:
         return "REBOUND"
+    if "FOUL" in desc and "TURNOVER" in desc:
+        return "FOUL+TURNOVER"
     if "FOUL" in desc:
         return "FOUL"
     if "STEAL" in desc:
         return "STEAL"
     if "TURNOVER" in desc:
         return "TURNOVER"
-    if "FADEAWAY" in desc and "JUMPER" not in desc:
-        return "FADEAWAY"
-    if "JUMPER" in desc:
-        return "JUMPER"
     
     return "OTHER"
 
@@ -56,46 +57,79 @@ def parse_game_data(game_id: str, csv_path: str, home_team="HOME", away_team="AW
     parsed = []
 
     for _, row in df.iterrows():
-        home_desc = str(row.get("HOMEDESCRIPTION") or "").strip()
-        away_desc = str(row.get("VISITORDESCRIPTION") or "").strip()
-        desc = home_desc if home_desc != "nan" else away_desc
+        # Normalize descriptions and choose the first non-empty
+        home_val = row.get("HOMEDESCRIPTION")
+        away_val = row.get("VISITORDESCRIPTION")
+        home_desc = "" if str(home_val).lower() == "nan" else str(home_val or "").strip()
+        away_desc = "" if str(away_val).lower() == "nan" else str(away_val or "").strip()
+        desc = home_desc or away_desc
 
         if not desc:
             continue
 
-        team = home_team if home_desc !="nan" else away_team
-        parsed.append({
+        # Primary event (from whichever side has text)
+        primary_is_home = bool(home_desc)
+        primary_HoA = home_team if primary_is_home else away_team
+        primary_event = {
             "period": int(row.get("PERIOD", 0)),
             "time": str(row.get("PCTIMESTRING") or "").strip(),
-            "HoA": team,
+            "HoA": primary_HoA,
             "team": str(row.get("PLAYER1_TEAM_NICKNAME") or "").strip(),
             "player": str(row.get("PLAYER1_NAME") or "").strip(),
             "event_type": parse_event_type(desc),
             "points": extract_points(desc),
-            "description": desc.strip()
-        })
+            "description": desc.strip(),
+            "home_description": home_desc,
+            "away_description": away_desc,
+        }
+        parsed.append(primary_event)
+
+        home_up = home_desc.upper()
+        away_up = away_desc.upper()
+
+        
+        if "STEAL" in home_up or "STEAL" in away_up:
+            print("TURNOVER INTO AWAY")
+            print(primary_event)
+  
+        elif "TURNOVER" in home_up or "TURNOVER" in away_up:
+            print("STEAL INTO AWAY")
+            print(primary_event)
+        
 
     return parsed
 
 
-def save_parsed_game(game_id: str, csv_path: str, output_dir="data/structured") -> str:
-    data = parse_game_data(game_id, csv_path)
+def get_raw_csv_path(game_id: str) -> Path:
+    return RAW_DIR / f"{game_id}_game_data.csv"
+
+
+def save_parsed_game(game_id: str, output_dir: str = str(STRUCTURED_DIR)) -> str:
+    csv_path = get_raw_csv_path(game_id)
+    if not csv_path.exists():
+        raise FileNotFoundError(f"Raw CSV not found: {csv_path}")
+
+    data = parse_game_data(game_id, str(csv_path))
     out_path = Path(output_dir) / f"{game_id}_parsed.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(data, f, indent=2)
-    print(f"✅ Saved parsed game data: {out_path}")
+    print(f"Saved parsed game data: {out_path}")
     return str(out_path)
 
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) < 3:
-        print("Usage: python -m src.utils.parse_game_data <game_id> <csv_path>")
+    if len(sys.argv) < 2:
+        print("Usage: python -m src.utils.parse_game_data <GAME_ID>")
         sys.exit(1)
 
     game_id = sys.argv[1]
-    csv_path = sys.argv[2]
+    csv_path = get_raw_csv_path(game_id)
+
+    if not csv_path.exists():
+        print(f"Raw file not found: {csv_path}")
+        sys.exit(1)
 
     print(f"Parsing game {game_id} from {csv_path}...")
-    save_parsed_game(game_id, csv_path)
+    save_parsed_game(game_id)

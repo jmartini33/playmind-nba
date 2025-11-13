@@ -1,6 +1,15 @@
 import json
 from pathlib import Path
 from collections import defaultdict, deque
+from re import T
+
+STRUCTURED_DIR = Path("data/structured")
+
+def get_parsed_path(game_id: str) -> Path:
+    return STRUCTURED_DIR / f"{game_id}_parsed.json"
+
+def get_summary_path(game_id: str) -> Path:
+    return STRUCTURED_DIR / f"{game_id}_summary.json"
 
 def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
     """
@@ -14,8 +23,26 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
     if not plays:
         raise ValueError("Parsed file is empty or invalid.")
 
+    # Derive teams early for use throughout (first two non-UNK teams by appearance)
+    early_seen = []
+    for p in plays:
+        t = p.get("team")
+        if t and t != "UNK" and t not in early_seen:
+            early_seen.append(t)
+        if len(early_seen) == 2:
+            break
+    # Placeholder names if not enough info yet; replaced later if needed
+    team_a, team_b = (early_seen + ["UNK", "UNK"])[:2]
+
     team_stats = defaultdict(lambda: {"points": 0, "fg_Made": 0, "fg_Attempts": 0, "threePt_Attempts": 0, "threePt_Made": 0, "ft_Made": 0, "ft_Attempts": 0, "turnovers": 0, "rebounds": 0, "fouls": 0, "steals": 0})
     scoring_timeline = []  # [(team, points, time)]
+
+    def opposite(t: str) -> str:
+        if t == team_a:
+            return team_b
+        if t == team_b:
+            return team_a
+        return t  # if UNK or unseen, leave unchanged
 
     # --------------------------------------------
     # Aggregate stats
@@ -24,6 +51,7 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
         team = play.get("team", "UNK")
         evt = play.get("event_type", "")
         pts = play.get("points", 0)
+        away_desc = play.get("away_description", "")
 
         if "3PT" in evt:
             team_stats[team]["threePt_Attempts"] += 1
@@ -45,12 +73,15 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
             team_stats[team]["fg_Attempts"] += 1
         elif "TURNOVER" in evt:
             team_stats[team]["turnovers"] += 1
+            if "STEAL" in away_desc:
+                team_stats[opposite(team)]["steals"] += 1
         elif "REBOUND" in evt:
             team_stats[team]["rebounds"] += 1
         elif "FOUL" in evt:
             team_stats[team]["fouls"] += 1
         elif "STEAL" in evt:
-            team_stats[team]["steals"] += 1
+            team_stats[opposite(team)]["steals"] += 1
+            team_stats[team]["turnovers"] += 1
 
         
 
@@ -73,11 +104,13 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
     # --------------------------------------------
     # Derive final structured summary
     # --------------------------------------------
-    teams = list(team_stats.keys())
-    if len(teams) < 2:
-        teams += ["UNK"]
+    # If early detection missed anything (e.g., empty or single team), fall back to aggregated keys
+    if team_a == "UNK" or team_b == "UNK" or team_a == team_b:
+        teams = list(team_stats.keys())
+        if len(teams) < 2:
+            teams += ["UNK"]
+        team_a, team_b = teams[:2]
 
-    team_a, team_b = teams[:2]
     a_stats, b_stats = team_stats[team_a], team_stats[team_b]
 
     summary = {
@@ -135,10 +168,16 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) < 3:
-        print("Usage: python -m src.utils.summarize_game_data <parsed_json> <save_json>")
+    if len(sys.argv) < 2:
+        print("Usage: python -m src.utils.summarize_parsed_data <GAME_ID>")
         sys.exit(1)
 
-    parsed_path = sys.argv[1]
-    save_path = sys.argv[2]
-    summarize_parsed_game(parsed_path, save_path)
+    game_id = sys.argv[1]
+    parsed_path = get_parsed_path(game_id)
+    save_path = get_summary_path(game_id)
+
+    if not parsed_path.exists():
+        print(f"❌ Parsed JSON not found: {parsed_path}")
+        sys.exit(1)
+
+    summarize_parsed_game(str(parsed_path), str(save_path))

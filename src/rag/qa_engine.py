@@ -1,8 +1,9 @@
 import json
 import time
 from pathlib import Path
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
-from langchain_huggingface import HuggingFacePipeline
+from openai import OpenAI
+import os
+from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 
 
@@ -10,6 +11,9 @@ from langchain_core.prompts import ChatPromptTemplate
 SUMMARY_DIR = Path("data/structured")
 SUMMARY_PATH = max(SUMMARY_DIR.glob("*_summary.json"), key=lambda p: p.stat().st_mtime)
 
+
+# Load environment variables from .env (if present)
+load_dotenv()
 
 # -------------------------------------------------------------
 # Load and format summarized game data
@@ -45,19 +49,42 @@ def load_summary(path=SUMMARY_PATH):
 # Build and load the model
 # -------------------------------------------------------------
 def build_llm():
-    print("Loading Flan-T5-Base model (fast CPU mode)...")
-    model_id = "google/flan-t5-base"
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
+    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    print(f"Using OpenAI model: {model}")
+    client = OpenAI()
 
-    gen_pipeline = pipeline(
-        "text2text-generation",
-        model=model,
-        tokenizer=tokenizer,
-        max_new_tokens=128,
-        truncation=True,
-    )
-    return HuggingFacePipeline(pipeline=gen_pipeline)
+    class OpenAIChatLLM:
+        def __init__(self, client, model):
+            self.client = client
+            self.model = model
+        def invoke(self, input_text: str):
+            # Simple retry to avoid sporadic empty responses
+            last_content = None
+            for attempt in range(1, 3):
+                resp = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": (
+                                "You are an NBA analyst. Answer in one short sentence (<=25 words). "
+                                "Use only the provided game context. If the context lacks the information, reply exactly: 'Not enough information.' "
+                                "Return only the answer with no preamble."
+                            ),
+                        },
+                        {"role": "user", "content": input_text},
+                    ],
+                    max_completion_tokens=80,
+                )
+                content = resp.choices[0].message.content or ""
+                if content.strip():
+                    return content
+                last_content = content
+                print("⚠️ Received empty content from model, retrying... (attempt", attempt, ")")
+            # Fallback: return whatever we have (possibly empty) to keep flow moving
+            return last_content or ""
+
+    return OpenAIChatLLM(client, model)
 
 
 # -------------------------------------------------------------
@@ -65,13 +92,15 @@ def build_llm():
 # -------------------------------------------------------------
 def build_prompt():
     return ChatPromptTemplate.from_template(
-        "You are an NBA analyst. Use the following summarized game data to answer questions about the match.\n\n"
-        "Summary:\n{context}\n\nQuestion: {question}"
+        "You are an NBA analyst. Answer in one short sentence (<=50 words).\n"
+        "Use only the provided game data. If the data lacks the answer, reply exactly: 'Not enough information.'\n\n"
+        "Game Data:\n{context}\n\n"
+        "Question: {question}\n\n"
+        "Answer concisely, focusing on analysis (e.g., causes, comparisons, outcomes)."
     )
 
 
 def ask(llm, prompt, context, question):
-    print(f"\nQuestion: {question}\n")
     start = time.time()
 
     input_text = prompt.format(context=context, question=question)
@@ -95,7 +124,7 @@ def main():
     print("\n================ GAME SUMMARY CONTEXT ================\n")
     print(context)
     print("\n======================================================\n")
-    
+
     llm = build_llm()
     prompt = build_prompt()
 
