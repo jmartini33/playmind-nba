@@ -37,6 +37,12 @@ def parse_event_type(description: str) -> str:
         return "STEAL"
     if "TURNOVER" in desc:
         return "TURNOVER"
+    if "BLOCK" in desc:
+        return "BLOCK"
+    if "SUB" in desc:
+        return "SUBSTITUTION"
+    if "TIMEOUT" in desc:
+        return "TIMEOUT"
     
     return "OTHER"
 
@@ -55,6 +61,9 @@ def parse_game_data(game_id: str, csv_path: str, home_team="HOME", away_team="AW
     import pandas as pd
     df = pd.read_csv(csv_path)
     parsed = []
+    shotAttempts = 0
+    home_team_name = None
+    away_team_name = None
 
     for _, row in df.iterrows():
         # Normalize descriptions and choose the first non-empty
@@ -70,11 +79,22 @@ def parse_game_data(game_id: str, csv_path: str, home_team="HOME", away_team="AW
         # Primary event (from whichever side has text)
         primary_is_home = bool(home_desc)
         primary_HoA = home_team if primary_is_home else away_team
+        raw_team = str(row.get("PLAYER1_TEAM_NICKNAME") or "").strip()
+        if primary_is_home and not home_team_name:
+            home_team_name = raw_team or home_team_name
+        if not primary_is_home and not away_team_name:
+            away_team_name = raw_team or away_team_name
+
+        if raw_team == "nan":
+            raw_team = home_team_name if primary_is_home else away_team_name
+            print("HERE", raw_team)
+        
+        
         primary_event = {
             "period": int(row.get("PERIOD", 0)),
             "time": str(row.get("PCTIMESTRING") or "").strip(),
             "HoA": primary_HoA,
-            "team": str(row.get("PLAYER1_TEAM_NICKNAME") or "").strip(),
+            "team": raw_team,
             "player": str(row.get("PLAYER1_NAME") or "").strip(),
             "event_type": parse_event_type(desc),
             "points": extract_points(desc),
@@ -84,19 +104,12 @@ def parse_game_data(game_id: str, csv_path: str, home_team="HOME", away_team="AW
         }
         parsed.append(primary_event)
 
-        home_up = home_desc.upper()
-        away_up = away_desc.upper()
+        evt = parse_event_type(desc)
+        if "SHOT" in evt or "DUNK" in evt or "LAYUP" in evt or "FREE THROW" in evt or "JUMPER" in evt or "FADEAWAY" in evt or "3PT" in evt:
+            if primary_HoA == away_team:
+                shotAttempts += 1
 
-        
-        if "STEAL" in home_up or "STEAL" in away_up:
-            print("TURNOVER INTO AWAY")
-            print(primary_event)
-  
-        elif "TURNOVER" in home_up or "TURNOVER" in away_up:
-            print("STEAL INTO AWAY")
-            print(primary_event)
-        
-
+    print(f"Shot attempts: {shotAttempts}")
     return parsed
 
 

@@ -35,7 +35,7 @@ def load_summary(path=SUMMARY_PATH):
         s = data.get(stat, {})
         return f"{stat.replace('_', ' ').title()} — {teams[0]}: {s.get(teams[0], 'N/A')}, {teams[1]}: {s.get(teams[1], 'N/A')}."
 
-    for stat in ["three_pointers", "field_goals", "free_throws", "turnovers", "rebounds", "fouls", "steals"]:
+    for stat in ["three_pointers", "field_goals", "free_throws", "turnovers", "rebounds", "fouls", "steals", "blocks", "timeouts", "substitutions"]:
         summary_text.append(fmt_stat(stat))
 
     narrative = data.get("narrative", "")

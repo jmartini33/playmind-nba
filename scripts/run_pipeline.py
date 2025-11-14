@@ -21,15 +21,15 @@ def main():
     structured_dir = base_dir / "data" / "structured"
 
     # 0️⃣ Fetch raw play-by-play CSV
-    print("🔸 Step 0: Fetching raw play-by-play data...")
+    print("Step 0: Fetching raw play-by-play data...")
     subprocess.run(["python", "-m", "src.ingestion.nba_data_loader", game_id], check=True)
 
     csv_path = raw_dir / f"{game_id}_game_data.csv"
     if not csv_path.exists():
-        print(f"❌ Raw file not found: {csv_path}")
+        print(f"Raw file not found: {csv_path}")
         sys.exit(1)
 
-    print(f"\n🏀 Running full pipeline for game {game_id}...\n")
+    print(f"\nRunning full pipeline for game {game_id}...\n")
 
     # 1️⃣ Parse the game data
     print("🔹 Step 1: Parsing play-by-play data...")
@@ -43,10 +43,10 @@ def main():
 
     parsed_path = structured_dir / f"{game_id}_parsed.json"
     if not parsed_path.exists():
-        print("❌ Parsing failed — parsed JSON not found.")
+        print("Parsing failed — parsed JSON not found.")
         sys.exit(1)
 
-    print(f"✅ Parsed data saved to {parsed_path}\n")
+    print(f"Parsed data saved to {parsed_path}\n")
 
     # 2️⃣ Summarize parsed data (input + output paths)
     print("🔹 Step 2: Summarizing parsed data...")
@@ -60,12 +60,12 @@ def main():
     subprocess.run(summarize_cmd, check=True)
 
     if not summary_path.exists():
-        print("❌ Summarization failed — summary JSON not found.")
+        print("Summarization failed — summary JSON not found.")
         sys.exit(1)
 
-    print(f"✅ Summary data saved to {summary_path}\n")
+    print(f"Summary data saved to {summary_path}\n")
 
-    print("🎯 Pipeline completed successfully!\n")
+    print("Pipeline completed successfully!\n")
     print(f"Parsed:   {parsed_path}")
     print(f"Summary:  {summary_path}\n")
 
@@ -73,7 +73,7 @@ def main():
     choice = input("Would you like to run the QA engine now? (y/n): ").strip().lower()
 
     if choice in ["y", "yes"]:
-        print("\n🚀 Launching QA Engine...\n")
+        print("\n Launching QA Engine...\n")
         qa_cmd = [
             "python",
             "-m",
@@ -81,7 +81,7 @@ def main():
         ]
         subprocess.run(qa_cmd)
     else:
-        print("\n✅ Pipeline complete. Skipping QA engine.\n")
+        print("\n Pipeline complete. Skipping QA engine.\n")
 
 
 if __name__ == "__main__":

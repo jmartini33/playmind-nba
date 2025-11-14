@@ -34,7 +34,7 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
     # Placeholder names if not enough info yet; replaced later if needed
     team_a, team_b = (early_seen + ["UNK", "UNK"])[:2]
 
-    team_stats = defaultdict(lambda: {"points": 0, "fg_Made": 0, "fg_Attempts": 0, "threePt_Attempts": 0, "threePt_Made": 0, "ft_Made": 0, "ft_Attempts": 0, "turnovers": 0, "rebounds": 0, "fouls": 0, "steals": 0})
+    team_stats = defaultdict(lambda: {"points": 0, "fg_Made": 0, "fg_Attempts": 0, "threePt_Attempts": 0, "threePt_Made": 0, "ft_Made": 0, "ft_Attempts": 0, "turnovers": 0, "rebounds": 0, "fouls": 0, "steals": 0, "blocks": 0, "timeouts": 0, "substitutions": 0})
     scoring_timeline = []  # [(team, points, time)]
 
     def opposite(t: str) -> str:
@@ -52,6 +52,7 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
         evt = play.get("event_type", "")
         pts = play.get("points", 0)
         away_desc = play.get("away_description", "")
+        home_desc = play.get("home_description", "")
 
         if "3PT" in evt:
             team_stats[team]["threePt_Attempts"] += 1
@@ -82,6 +83,16 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
         elif "STEAL" in evt:
             team_stats[opposite(team)]["steals"] += 1
             team_stats[team]["turnovers"] += 1
+        elif "BLOCK" in evt:
+            team_stats[opposite(team)]["blocks"] += 1
+            team_stats[team]["fg_Attempts"] += 1
+        elif "TIMEOUT" in evt:
+            team_stats[team]["timeouts"] += 1
+        elif "SUBSTITUTION" in evt:
+            team_stats[team]["substitutions"] += 1
+        if "MISS" in home_desc and "LOCK" in away_desc:
+            team_stats[opposite(team)]["blocks"] += 1
+            
 
         
 
@@ -133,6 +144,9 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
         "fouls": {team_a: a_stats["fouls"], team_b: b_stats["fouls"]},
         "steals": {team_a: a_stats["steals"], team_b: b_stats["steals"]},
         "scoring_runs": runs,
+        "blocks": {team_a: a_stats["blocks"], team_b: b_stats["blocks"]},
+        "timeouts": {team_a: a_stats["timeouts"], team_b: b_stats["timeouts"]},
+        "substitutions": {team_a: a_stats["substitutions"], team_b: b_stats["substitutions"]},
     }
 
     # --------------------------------------------
@@ -161,7 +175,7 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
         out_path.parent.mkdir(parents=True, exist_ok=True)
         with open(out_path, "w") as f:
             json.dump(summary, f, indent=2)
-        print(f"✅ Saved summarized game data: {out_path}")
+        print(f"Saved summarized game data: {out_path}")
 
     return summary
 
@@ -177,7 +191,7 @@ if __name__ == "__main__":
     save_path = get_summary_path(game_id)
 
     if not parsed_path.exists():
-        print(f"❌ Parsed JSON not found: {parsed_path}")
+        print(f"Parsed JSON not found: {parsed_path}")
         sys.exit(1)
 
     summarize_parsed_game(str(parsed_path), str(save_path))
