@@ -1,6 +1,7 @@
 # src/ingestion/nba_data_loader.py
 
 from nba_api.stats.endpoints import playbyplayv2 as nba_data
+from nba_api.stats.library.http import NBAStatsHTTP
 import pandas as pd
 from pathlib import Path
 
@@ -12,32 +13,67 @@ def fetch_game(game_id: str):
     print(f"Fetching play-by-play data for game {game_id}...")
 
     try:
-        pbp = nba_data.PlayByPlayV2(game_id=game_id)
-        raw = pbp.get_dict()
+        # Use low-level HTTP client to avoid the broken get_data_sets() path
+        http_client = NBAStatsHTTP()
+        response = http_client.send_api_request(
+            endpoint="playbyplayv2",
+            parameters={"GameID": game_id},
+        )
 
-        # Debug: validate structure
+        # Log basic request info without relying on private attributes
+        try:
+            print("Status code:", response.get_status_code())
+        except AttributeError:
+            # Fallback if the client does not expose a status accessor
+            print("Status code: <unavailable>")
+
+        print("URL:", response.get_url())
+
+        raw = response.get_dict()
+
+        print("Top-level keys in response:", list(raw.keys()))
+
         if not isinstance(raw, dict):
             print("⚠️ API returned a non-dict response:")
             print(raw)
             return None
 
-        # Some responses come back without expected keys when blocked/rate-limited
-        if "resultSets" not in raw:
-            print("⚠️ API did not return valid play-by-play data (missing resultSets).")
+        if "resultSets" not in raw and "resultSet" not in raw:
+            print("⚠️ API did not return legacy resultSets/resultSet structure.")
             print("Full response:")
             print(raw)
             return None
 
-        frames = pbp.get_data_frames()
-        if not frames or frames[0].empty:
-            print("⚠️ API returned an empty data frame.")
+        # Normalize resultSets/resultSet to a list of result sets
+        results = raw.get("resultSets") if "resultSets" in raw else raw.get("resultSet")
+        if isinstance(results, dict):
+            results = [results]
+
+        if not results:
+            print("⚠️ API returned no result sets.")
             return None
 
-        return frames[0]
+        first = results[0]
+        headers = first.get("headers", [])
+        row_set = first.get("rowSet", [])
+
+        if not headers or not row_set:
+            print("⚠️ result set missing headers or rowSet.")
+            print(first)
+            return None
+
+        df = pd.DataFrame(row_set, columns=headers)
+        if df.empty:
+            print("⚠️ API returned an empty data frame after manual parse.")
+            return None
+
+        return df
 
     except Exception as e:
-        print(f"❌ Exception while fetching data: {e}")
-        return None
+        import traceback
+        print("❌ Exception while fetching data:")
+        traceback.print_exc()
+        raise
 
 
 def main():

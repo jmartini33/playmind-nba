@@ -11,7 +11,7 @@ from pathlib import Path
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python -m src.run_pipeline <GAME_ID>")
+        print("Usage: python scripts/run_pipeline.py <GAME_ID>")
         sys.exit(1)
 
     game_id = sys.argv[1]
