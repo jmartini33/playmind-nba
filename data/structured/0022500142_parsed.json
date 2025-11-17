@@ -2,22 +2,14 @@
   {
     "period": 1,
     "time": "12:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
-  },
-  {
-    "period": 1,
-    "time": "12:00",
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Myles Turner",
     "event_type": "OTHER",
     "points": 0,
-    "description": "Jump Ball Turner vs. Sabonis: Tip to G. Antetokounmpo"
+    "description": "Jump Ball Turner vs. Sabonis: Tip to G. Antetokounmpo",
+    "home_description": "Jump Ball Turner vs. Sabonis: Tip to G. Antetokounmpo",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -25,9 +17,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "AJ Green",
-    "event_type": "OTHER",
+    "event_type": "SHOT_MADE",
     "points": 2,
-    "description": "Green 6' Fadeaway Jumper (2 PTS) (Rollins 1 AST)"
+    "description": "Green 6' Fadeaway Jumper (2 PTS) (Rollins 1 AST)",
+    "home_description": "Green 6' Fadeaway Jumper (2 PTS) (Rollins 1 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -37,7 +31,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 20' Pullup Jump Shot"
+    "description": "MISS DeRozan 20' Pullup Jump Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 20' Pullup Jump Shot"
   },
   {
     "period": 1,
@@ -47,7 +43,9 @@
     "player": "Domantas Sabonis",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Sabonis Tip Layup Shot"
+    "description": "MISS Sabonis Tip Layup Shot",
+    "home_description": "",
+    "away_description": "MISS Sabonis Tip Layup Shot"
   },
   {
     "period": 1,
@@ -57,7 +55,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:1 Def:0)"
+    "description": "Sabonis REBOUND (Off:1 Def:0)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:1 Def:0)"
   },
   {
     "period": 1,
@@ -67,7 +67,9 @@
     "player": "Ryan Rollins",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Rollins REBOUND (Off:0 Def:1)"
+    "description": "Rollins REBOUND (Off:0 Def:1)",
+    "home_description": "Rollins REBOUND (Off:0 Def:1)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -77,7 +79,9 @@
     "player": "Dylan Cardwell",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Cardwell S.FOUL (P1.T1) (M.Ervin)"
+    "description": "Cardwell S.FOUL (P1.T1) (M.Ervin)",
+    "home_description": "",
+    "away_description": "Cardwell S.FOUL (P1.T1) (M.Ervin)"
   },
   {
     "period": 1,
@@ -87,7 +91,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 1,
-    "description": "G. Antetokounmpo Free Throw 1 of 2 (1 PTS)"
+    "description": "G. Antetokounmpo Free Throw 1 of 2 (1 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 1 of 2 (1 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -97,7 +103,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 2,
-    "description": "G. Antetokounmpo Free Throw 2 of 2 (2 PTS)"
+    "description": "G. Antetokounmpo Free Throw 2 of 2 (2 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 2 of 2 (2 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -107,17 +115,21 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 8' Turnaround Fadeaway Shot"
+    "description": "MISS DeRozan 8' Turnaround Fadeaway Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 8' Turnaround Fadeaway Shot"
   },
   {
     "period": 1,
     "time": "10:42",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 1,
@@ -127,7 +139,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Trent Jr. L.B.FOUL (P1.T1) (M.Ervin)"
+    "description": "Trent Jr. L.B.FOUL (P1.T1) (M.Ervin)",
+    "home_description": "Trent Jr. L.B.FOUL (P1.T1) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -137,7 +151,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Schroder 28' 3PT Jump Shot"
+    "description": "MISS Schroder 28' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Schroder 28' 3PT Jump Shot"
   },
   {
     "period": 1,
@@ -147,7 +163,9 @@
     "player": "AJ Green",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Green REBOUND (Off:0 Def:1)"
+    "description": "Green REBOUND (Off:0 Def:1)",
+    "home_description": "Green REBOUND (Off:0 Def:1)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -157,7 +175,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "3PT_MADE",
     "points": 3,
-    "description": "Trent Jr. 3PT Jump Shot (3 PTS) (G. Antetokounmpo 1 AST)"
+    "description": "Trent Jr. 3PT Jump Shot (3 PTS) (G. Antetokounmpo 1 AST)",
+    "home_description": "Trent Jr. 3PT Jump Shot (3 PTS) (G. Antetokounmpo 1 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -167,7 +187,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "STEAL",
     "points": 0,
-    "description": "Rollins STEAL (1 STL)"
+    "description": "Rollins STEAL (1 STL)",
+    "home_description": "Rollins STEAL (1 STL)",
+    "away_description": "Schroder Lost Ball Turnover (P1.T1)"
   },
   {
     "period": 1,
@@ -177,7 +199,9 @@
     "player": "Ryan Rollins",
     "event_type": "DUNK_MADE",
     "points": 2,
-    "description": "Rollins 1' Running Dunk (2 PTS)"
+    "description": "Rollins 1' Running Dunk (2 PTS)",
+    "home_description": "Rollins 1' Running Dunk (2 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -187,7 +211,9 @@
     "player": "Zach LaVine",
     "event_type": "LAYUP_MADE",
     "points": 2,
-    "description": "LaVine 3' Driving Finger Roll Layup (2 PTS) (Sabonis 1 AST)"
+    "description": "LaVine 3' Driving Finger Roll Layup (2 PTS) (Sabonis 1 AST)",
+    "home_description": "",
+    "away_description": "LaVine 3' Driving Finger Roll Layup (2 PTS) (Sabonis 1 AST)"
   },
   {
     "period": 1,
@@ -197,7 +223,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MADE",
     "points": 5,
-    "description": "Green 26' 3PT Jump Shot (5 PTS) (G. Antetokounmpo 2 AST)"
+    "description": "Green 26' 3PT Jump Shot (5 PTS) (G. Antetokounmpo 2 AST)",
+    "home_description": "Green 26' 3PT Jump Shot (5 PTS) (G. Antetokounmpo 2 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -207,7 +235,9 @@
     "player": "Myles Turner",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Turner P.FOUL (P1.T2) (M.Kogut)"
+    "description": "Turner P.FOUL (P1.T2) (M.Kogut)",
+    "home_description": "Turner P.FOUL (P1.T2) (M.Kogut)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -217,7 +247,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS Schroder 3' Driving Finger Roll Layup"
+    "description": "MISS Schroder 3' Driving Finger Roll Layup",
+    "home_description": "",
+    "away_description": "MISS Schroder 3' Driving Finger Roll Layup"
   },
   {
     "period": 1,
@@ -227,7 +259,9 @@
     "player": "Ryan Rollins",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Rollins REBOUND (Off:0 Def:2)"
+    "description": "Rollins REBOUND (Off:0 Def:2)",
+    "home_description": "Rollins REBOUND (Off:0 Def:2)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -237,17 +271,21 @@
     "player": "Myles Turner",
     "event_type": "3PT_MADE",
     "points": 3,
-    "description": "Turner 3PT Running Jump Shot (3 PTS) (Trent Jr. 1 AST)"
+    "description": "Turner 3PT Running Jump Shot (3 PTS) (Trent Jr. 1 AST)",
+    "home_description": "Turner 3PT Running Jump Shot (3 PTS) (Trent Jr. 1 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
     "time": "9:01",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "Kings Timeout: Regular (Reg.1 Short 0)"
+    "description": "Kings Timeout: Regular (Reg.1 Short 0)",
+    "home_description": "",
+    "away_description": "Kings Timeout: Regular (Reg.1 Short 0)"
   },
   {
     "period": 1,
@@ -257,7 +295,9 @@
     "player": "Zach LaVine",
     "event_type": "SHOT_MADE",
     "points": 4,
-    "description": "LaVine 22' Step Back Jump Shot (4 PTS)"
+    "description": "LaVine 22' Step Back Jump Shot (4 PTS)",
+    "home_description": "",
+    "away_description": "LaVine 22' Step Back Jump Shot (4 PTS)"
   },
   {
     "period": 1,
@@ -267,7 +307,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Green 3PT Jump Shot"
+    "description": "MISS Green 3PT Jump Shot",
+    "home_description": "MISS Green 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -277,7 +319,9 @@
     "player": "Dylan Cardwell",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Cardwell REBOUND (Off:0 Def:1)"
+    "description": "Cardwell REBOUND (Off:0 Def:1)",
+    "home_description": "",
+    "away_description": "Cardwell REBOUND (Off:0 Def:1)"
   },
   {
     "period": 1,
@@ -287,7 +331,9 @@
     "player": "Domantas Sabonis",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Sabonis 4' Hook Shot"
+    "description": "MISS Sabonis 4' Hook Shot",
+    "home_description": "",
+    "away_description": "MISS Sabonis 4' Hook Shot"
   },
   {
     "period": 1,
@@ -297,7 +343,9 @@
     "player": "Myles Turner",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Turner REBOUND (Off:0 Def:1)"
+    "description": "Turner REBOUND (Off:0 Def:1)",
+    "home_description": "Turner REBOUND (Off:0 Def:1)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -307,7 +355,9 @@
     "player": "Myles Turner",
     "event_type": "3PT_MADE",
     "points": 6,
-    "description": "Turner 26' 3PT Jump Shot (6 PTS) (G. Antetokounmpo 3 AST)"
+    "description": "Turner 26' 3PT Jump Shot (6 PTS) (G. Antetokounmpo 3 AST)",
+    "home_description": "Turner 26' 3PT Jump Shot (6 PTS) (G. Antetokounmpo 3 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -317,7 +367,9 @@
     "player": "Dylan Cardwell",
     "event_type": "SHOT_MADE",
     "points": 2,
-    "description": "Cardwell 2' Cutting Dunk Shot (2 PTS) (Sabonis 2 AST)"
+    "description": "Cardwell 2' Cutting Dunk Shot (2 PTS) (Sabonis 2 AST)",
+    "home_description": "",
+    "away_description": "Cardwell 2' Cutting Dunk Shot (2 PTS) (Sabonis 2 AST)"
   },
   {
     "period": 1,
@@ -327,7 +379,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "3PT_MADE",
     "points": 6,
-    "description": "Trent Jr. 26' 3PT Jump Shot (6 PTS) (G. Antetokounmpo 4 AST)"
+    "description": "Trent Jr. 26' 3PT Jump Shot (6 PTS) (G. Antetokounmpo 4 AST)",
+    "home_description": "Trent Jr. 26' 3PT Jump Shot (6 PTS) (G. Antetokounmpo 4 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -337,7 +391,9 @@
     "player": "Domantas Sabonis",
     "event_type": "SHOT_MADE",
     "points": 2,
-    "description": "Sabonis 15' Jump Shot (2 PTS) (LaVine 1 AST)"
+    "description": "Sabonis 15' Jump Shot (2 PTS) (LaVine 1 AST)",
+    "home_description": "",
+    "away_description": "Sabonis 15' Jump Shot (2 PTS) (LaVine 1 AST)"
   },
   {
     "period": 1,
@@ -347,7 +403,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo 17' Jump Shot"
+    "description": "MISS G. Antetokounmpo 17' Jump Shot",
+    "home_description": "MISS G. Antetokounmpo 17' Jump Shot",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -357,7 +415,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Schroder REBOUND (Off:0 Def:1)"
+    "description": "Schroder REBOUND (Off:0 Def:1)",
+    "home_description": "",
+    "away_description": "Schroder REBOUND (Off:0 Def:1)"
   },
   {
     "period": 1,
@@ -367,7 +427,9 @@
     "player": "Myles Turner",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Turner S.FOUL (P2.T3) (J.Conley)"
+    "description": "Turner S.FOUL (P2.T3) (J.Conley)",
+    "home_description": "Turner S.FOUL (P2.T3) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -377,17 +439,21 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Sabonis Free Throw 1 of 2"
+    "description": "MISS Sabonis Free Throw 1 of 2",
+    "home_description": "",
+    "away_description": "MISS Sabonis Free Throw 1 of 2"
   },
   {
     "period": 1,
     "time": "6:57",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 1,
@@ -395,9 +461,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Myles Turner",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Portis FOR Turner"
+    "description": "SUB: Portis FOR Turner",
+    "home_description": "SUB: Portis FOR Turner",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -405,9 +473,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Dennis Schr\u00f6der",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Raynaud FOR Schroder"
+    "description": "SUB: Raynaud FOR Schroder",
+    "home_description": "",
+    "away_description": "SUB: Raynaud FOR Schroder"
   },
   {
     "period": 1,
@@ -415,9 +485,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Dylan Cardwell",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Westbrook FOR Cardwell"
+    "description": "SUB: Westbrook FOR Cardwell",
+    "home_description": "",
+    "away_description": "SUB: Westbrook FOR Cardwell"
   },
   {
     "period": 1,
@@ -427,7 +499,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MADE",
     "points": 3,
-    "description": "Sabonis Free Throw 2 of 2 (3 PTS)"
+    "description": "Sabonis Free Throw 2 of 2 (3 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis Free Throw 2 of 2 (3 PTS)"
   },
   {
     "period": 1,
@@ -437,7 +511,9 @@
     "player": "Ryan Rollins",
     "event_type": "LAYUP_MADE",
     "points": 4,
-    "description": "Rollins 2' Driving Layup (4 PTS)"
+    "description": "Rollins 2' Driving Layup (4 PTS)",
+    "home_description": "Rollins 2' Driving Layup (4 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -447,7 +523,9 @@
     "player": "Ryan Rollins",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Rollins S.FOUL (P1.T4) (M.Ervin)"
+    "description": "Rollins S.FOUL (P1.T4) (M.Ervin)",
+    "home_description": "Rollins S.FOUL (P1.T4) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -457,7 +535,9 @@
     "player": "Russell Westbrook",
     "event_type": "FT_MADE",
     "points": 1,
-    "description": "Westbrook Free Throw 1 of 2 (1 PTS)"
+    "description": "Westbrook Free Throw 1 of 2 (1 PTS)",
+    "home_description": "",
+    "away_description": "Westbrook Free Throw 1 of 2 (1 PTS)"
   },
   {
     "period": 1,
@@ -467,7 +547,9 @@
     "player": "Russell Westbrook",
     "event_type": "FT_MADE",
     "points": 2,
-    "description": "Westbrook Free Throw 2 of 2 (2 PTS)"
+    "description": "Westbrook Free Throw 2 of 2 (2 PTS)",
+    "home_description": "",
+    "away_description": "Westbrook Free Throw 2 of 2 (2 PTS)"
   },
   {
     "period": 1,
@@ -477,7 +559,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "LAYUP_MADE",
     "points": 4,
-    "description": "G. Antetokounmpo 3' Reverse Layup (4 PTS) (Rollins 2 AST)"
+    "description": "G. Antetokounmpo 3' Reverse Layup (4 PTS) (Rollins 2 AST)",
+    "home_description": "G. Antetokounmpo 3' Reverse Layup (4 PTS) (Rollins 2 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -487,7 +571,9 @@
     "player": "Domantas Sabonis",
     "event_type": "LAYUP_MADE",
     "points": 5,
-    "description": "Sabonis 2' Layup (5 PTS) (Westbrook 1 AST)"
+    "description": "Sabonis 2' Layup (5 PTS) (Westbrook 1 AST)",
+    "home_description": "",
+    "away_description": "Sabonis 2' Layup (5 PTS) (Westbrook 1 AST)"
   },
   {
     "period": 1,
@@ -497,7 +583,9 @@
     "player": "Bobby Portis",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Portis 26' 3PT Jump Shot"
+    "description": "MISS Portis 26' 3PT Jump Shot",
+    "home_description": "MISS Portis 26' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -507,7 +595,9 @@
     "player": "Zach LaVine",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "LaVine REBOUND (Off:0 Def:1)"
+    "description": "LaVine REBOUND (Off:0 Def:1)",
+    "home_description": "",
+    "away_description": "LaVine REBOUND (Off:0 Def:1)"
   },
   {
     "period": 1,
@@ -517,7 +607,9 @@
     "player": "Zach LaVine",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 13' Turnaround Jump Shot"
+    "description": "MISS LaVine 13' Turnaround Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 13' Turnaround Jump Shot"
   },
   {
     "period": 1,
@@ -527,7 +619,9 @@
     "player": "Bobby Portis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Portis REBOUND (Off:0 Def:1)"
+    "description": "Portis REBOUND (Off:0 Def:1)",
+    "home_description": "Portis REBOUND (Off:0 Def:1)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -537,17 +631,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MADE",
     "points": 8,
-    "description": "Green 26' 3PT Running Pull-Up Jump Shot (8 PTS)"
-  },
-  {
-    "period": 1,
-    "time": "5:34",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "Green 26' 3PT Running Pull-Up Jump Shot (8 PTS)",
+    "home_description": "Green 26' 3PT Running Pull-Up Jump Shot (8 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -555,9 +641,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "DeMar DeRozan",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Clifford FOR DeRozan"
+    "description": "SUB: Clifford FOR DeRozan",
+    "home_description": "",
+    "away_description": "SUB: Clifford FOR DeRozan"
   },
   {
     "period": 1,
@@ -567,7 +655,9 @@
     "player": "Bobby Portis",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Portis T.FOUL (P0.T4) (M.Ervin)"
+    "description": "Portis T.FOUL (P0.T4) (M.Ervin)",
+    "home_description": "Portis T.FOUL (P0.T4) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -577,7 +667,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 5,
-    "description": "LaVine Free Throw Technical (5 PTS)"
+    "description": "LaVine Free Throw Technical (5 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw Technical (5 PTS)"
   },
   {
     "period": 1,
@@ -587,7 +679,9 @@
     "player": "AJ Green",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Green P.FOUL (P1.PN) (M.Ervin)"
+    "description": "Green P.FOUL (P1.PN) (M.Ervin)",
+    "home_description": "Green P.FOUL (P1.PN) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -597,7 +691,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 6,
-    "description": "LaVine Free Throw 1 of 2 (6 PTS)"
+    "description": "LaVine Free Throw 1 of 2 (6 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw 1 of 2 (6 PTS)"
   },
   {
     "period": 1,
@@ -607,7 +703,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 7,
-    "description": "LaVine Free Throw 2 of 2 (7 PTS)"
+    "description": "LaVine Free Throw 2 of 2 (7 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw 2 of 2 (7 PTS)"
   },
   {
     "period": 1,
@@ -617,7 +715,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "3PT_MADE",
     "points": 9,
-    "description": "Trent Jr. 27' 3PT Jump Shot (9 PTS) (Green 1 AST)"
+    "description": "Trent Jr. 27' 3PT Jump Shot (9 PTS) (Green 1 AST)",
+    "home_description": "Trent Jr. 27' 3PT Jump Shot (9 PTS) (Green 1 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -627,7 +727,9 @@
     "player": "Russell Westbrook",
     "event_type": "SHOT_MADE",
     "points": 4,
-    "description": "Westbrook 2' Cutting Layup Shot (4 PTS) (Sabonis 3 AST)"
+    "description": "Westbrook 2' Cutting Layup Shot (4 PTS) (Sabonis 3 AST)",
+    "home_description": "",
+    "away_description": "Westbrook 2' Cutting Layup Shot (4 PTS) (Sabonis 3 AST)"
   },
   {
     "period": 1,
@@ -637,7 +739,9 @@
     "player": "Ryan Rollins",
     "event_type": "DUNK_MADE",
     "points": 6,
-    "description": "Rollins Driving Dunk (6 PTS)"
+    "description": "Rollins Driving Dunk (6 PTS)",
+    "home_description": "Rollins Driving Dunk (6 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -647,7 +751,9 @@
     "player": "Domantas Sabonis",
     "event_type": "SHOT_MADE",
     "points": 7,
-    "description": "Sabonis 1' Cutting Dunk Shot (7 PTS) (Westbrook 2 AST)"
+    "description": "Sabonis 1' Cutting Dunk Shot (7 PTS) (Westbrook 2 AST)",
+    "home_description": "",
+    "away_description": "Sabonis 1' Cutting Dunk Shot (7 PTS) (Westbrook 2 AST)"
   },
   {
     "period": 1,
@@ -657,7 +763,9 @@
     "player": "Bobby Portis",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Portis 19' Jump Shot"
+    "description": "MISS Portis 19' Jump Shot",
+    "home_description": "MISS Portis 19' Jump Shot",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -667,7 +775,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:1 Def:1)"
+    "description": "Sabonis REBOUND (Off:1 Def:1)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:1 Def:1)"
   },
   {
     "period": 1,
@@ -677,7 +787,9 @@
     "player": "Russell Westbrook",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 5' Driving Layup"
+    "description": "MISS Westbrook 5' Driving Layup",
+    "home_description": "",
+    "away_description": "MISS Westbrook 5' Driving Layup"
   },
   {
     "period": 1,
@@ -687,7 +799,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:0 Def:1)"
+    "description": "G. Antetokounmpo REBOUND (Off:0 Def:1)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:0 Def:1)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -697,7 +811,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "DUNK_MADE",
     "points": 6,
-    "description": "G. Antetokounmpo 1' Running Dunk (6 PTS)"
+    "description": "G. Antetokounmpo 1' Running Dunk (6 PTS)",
+    "home_description": "G. Antetokounmpo 1' Running Dunk (6 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -707,7 +823,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MADE",
     "points": 10,
-    "description": "LaVine 27' 3PT Jump Shot (10 PTS) (Sabonis 4 AST)"
+    "description": "LaVine 27' 3PT Jump Shot (10 PTS) (Sabonis 4 AST)",
+    "home_description": "",
+    "away_description": "LaVine 27' 3PT Jump Shot (10 PTS) (Sabonis 4 AST)"
   },
   {
     "period": 1,
@@ -717,7 +835,9 @@
     "player": "Maxime Raynaud",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Raynaud S.FOUL (P1.T2) (M.Ervin)"
+    "description": "Raynaud S.FOUL (P1.T2) (M.Ervin)",
+    "home_description": "",
+    "away_description": "Raynaud S.FOUL (P1.T2) (M.Ervin)"
   },
   {
     "period": 1,
@@ -727,7 +847,9 @@
     "player": "Bobby Portis",
     "event_type": "FT_MADE",
     "points": 1,
-    "description": "Portis Free Throw 1 of 2 (1 PTS)"
+    "description": "Portis Free Throw 1 of 2 (1 PTS)",
+    "home_description": "Portis Free Throw 1 of 2 (1 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -735,9 +857,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "AJ Green",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Kuzma FOR Green"
+    "description": "SUB: Kuzma FOR Green",
+    "home_description": "SUB: Kuzma FOR Green",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -745,9 +869,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Giannis Antetokounmpo",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Prince FOR G. Antetokounmpo"
+    "description": "SUB: Prince FOR G. Antetokounmpo",
+    "home_description": "SUB: Prince FOR G. Antetokounmpo",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -757,7 +883,9 @@
     "player": "Bobby Portis",
     "event_type": "FT_MADE",
     "points": 2,
-    "description": "Portis Free Throw 2 of 2 (2 PTS)"
+    "description": "Portis Free Throw 2 of 2 (2 PTS)",
+    "home_description": "Portis Free Throw 2 of 2 (2 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -767,7 +895,9 @@
     "player": "Russell Westbrook",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 27' 3PT Jump Shot"
+    "description": "MISS Westbrook 27' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Westbrook 27' 3PT Jump Shot"
   },
   {
     "period": 1,
@@ -777,7 +907,9 @@
     "player": "Maxime Raynaud",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Raynaud REBOUND (Off:1 Def:0)"
+    "description": "Raynaud REBOUND (Off:1 Def:0)",
+    "home_description": "",
+    "away_description": "Raynaud REBOUND (Off:1 Def:0)"
   },
   {
     "period": 1,
@@ -787,7 +919,9 @@
     "player": "Maxime Raynaud",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS Raynaud 2' Putback Layup"
+    "description": "MISS Raynaud 2' Putback Layup",
+    "home_description": "",
+    "away_description": "MISS Raynaud 2' Putback Layup"
   },
   {
     "period": 1,
@@ -797,7 +931,9 @@
     "player": "Bobby Portis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Portis REBOUND (Off:0 Def:2)"
+    "description": "Portis REBOUND (Off:0 Def:2)",
+    "home_description": "Portis REBOUND (Off:0 Def:2)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -807,7 +943,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Trent Jr. 25' 3PT Jump Shot"
+    "description": "MISS Trent Jr. 25' 3PT Jump Shot",
+    "home_description": "MISS Trent Jr. 25' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -817,7 +955,9 @@
     "player": "Zach LaVine",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "LaVine REBOUND (Off:0 Def:2)"
+    "description": "LaVine REBOUND (Off:0 Def:2)",
+    "home_description": "",
+    "away_description": "LaVine REBOUND (Off:0 Def:2)"
   },
   {
     "period": 1,
@@ -827,17 +967,21 @@
     "player": "Kyle Kuzma",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Kuzma S.FOUL (P1.PN) (M.Kogut)"
+    "description": "Kuzma S.FOUL (P1.PN) (M.Kogut)",
+    "home_description": "Kuzma S.FOUL (P1.PN) (M.Kogut)",
+    "away_description": ""
   },
   {
     "period": 1,
     "time": "2:58",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "BUCKS Timeout: Regular (Full 1 Short 0)"
+    "description": "BUCKS Timeout: Regular (Full 1 Short 0)",
+    "home_description": "BUCKS Timeout: Regular (Full 1 Short 0)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -845,9 +989,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Ryan Rollins",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Anthony FOR Rollins"
+    "description": "SUB: Anthony FOR Rollins",
+    "home_description": "SUB: Anthony FOR Rollins",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -855,9 +1001,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Russell Westbrook",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Ellis FOR Westbrook"
+    "description": "SUB: Ellis FOR Westbrook",
+    "home_description": "",
+    "away_description": "SUB: Ellis FOR Westbrook"
   },
   {
     "period": 1,
@@ -865,9 +1013,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Nique Clifford",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: DeRozan FOR Clifford"
+    "description": "SUB: DeRozan FOR Clifford",
+    "home_description": "",
+    "away_description": "SUB: DeRozan FOR Clifford"
   },
   {
     "period": 1,
@@ -875,9 +1025,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Maxime Raynaud",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Schroder FOR Raynaud"
+    "description": "SUB: Schroder FOR Raynaud",
+    "home_description": "",
+    "away_description": "SUB: Schroder FOR Raynaud"
   },
   {
     "period": 1,
@@ -887,7 +1039,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 11,
-    "description": "LaVine Free Throw 1 of 2 (11 PTS)"
+    "description": "LaVine Free Throw 1 of 2 (11 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw 1 of 2 (11 PTS)"
   },
   {
     "period": 1,
@@ -897,7 +1051,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 12,
-    "description": "LaVine Free Throw 2 of 2 (12 PTS)"
+    "description": "LaVine Free Throw 2 of 2 (12 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw 2 of 2 (12 PTS)"
   },
   {
     "period": 1,
@@ -907,7 +1063,9 @@
     "player": "Bobby Portis",
     "event_type": "SHOT_MADE",
     "points": 4,
-    "description": "Portis 15' Jump Shot (4 PTS) (Anthony 1 AST)"
+    "description": "Portis 15' Jump Shot (4 PTS) (Anthony 1 AST)",
+    "home_description": "Portis 15' Jump Shot (4 PTS) (Anthony 1 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -917,7 +1075,9 @@
     "player": "DeMar DeRozan",
     "event_type": "LAYUP_MADE",
     "points": 2,
-    "description": "DeRozan 3' Driving Reverse Layup (2 PTS)"
+    "description": "DeRozan 3' Driving Reverse Layup (2 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan 3' Driving Reverse Layup (2 PTS)"
   },
   {
     "period": 1,
@@ -927,7 +1087,9 @@
     "player": "Kyle Kuzma",
     "event_type": "SHOT_MADE",
     "points": 2,
-    "description": "Kuzma 3' Cutting Layup Shot (2 PTS) (Portis 1 AST)"
+    "description": "Kuzma 3' Cutting Layup Shot (2 PTS) (Portis 1 AST)",
+    "home_description": "Kuzma 3' Cutting Layup Shot (2 PTS) (Portis 1 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -937,7 +1099,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "LAYUP_MADE",
     "points": 2,
-    "description": "Schroder 2' Driving Layup (2 PTS)"
+    "description": "Schroder 2' Driving Layup (2 PTS)",
+    "home_description": "",
+    "away_description": "Schroder 2' Driving Layup (2 PTS)"
   },
   {
     "period": 1,
@@ -947,7 +1111,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Schroder S.FOUL (P1.T3) (M.Kogut)"
+    "description": "Schroder S.FOUL (P1.T3) (M.Kogut)",
+    "home_description": "",
+    "away_description": "Schroder S.FOUL (P1.T3) (M.Kogut)"
   },
   {
     "period": 1,
@@ -957,17 +1123,21 @@
     "player": "Cole Anthony",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Anthony Free Throw 1 of 2"
+    "description": "MISS Anthony Free Throw 1 of 2",
+    "home_description": "MISS Anthony Free Throw 1 of 2",
+    "away_description": ""
   },
   {
     "period": 1,
     "time": "1:41",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "BUCKS Rebound"
+    "description": "BUCKS Rebound",
+    "home_description": "BUCKS Rebound",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -975,9 +1145,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Gary Trent Jr.",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Coffey FOR Trent Jr."
+    "description": "SUB: Coffey FOR Trent Jr.",
+    "home_description": "SUB: Coffey FOR Trent Jr.",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -985,9 +1157,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Zach LaVine",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Clifford FOR LaVine"
+    "description": "SUB: Clifford FOR LaVine",
+    "home_description": "",
+    "away_description": "SUB: Clifford FOR LaVine"
   },
   {
     "period": 1,
@@ -995,9 +1169,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Domantas Sabonis",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Eubanks FOR Sabonis"
+    "description": "SUB: Eubanks FOR Sabonis",
+    "home_description": "",
+    "away_description": "SUB: Eubanks FOR Sabonis"
   },
   {
     "period": 1,
@@ -1007,7 +1183,9 @@
     "player": "Cole Anthony",
     "event_type": "FT_MADE",
     "points": 1,
-    "description": "Anthony Free Throw 2 of 2 (1 PTS)"
+    "description": "Anthony Free Throw 2 of 2 (1 PTS)",
+    "home_description": "Anthony Free Throw 2 of 2 (1 PTS)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -1017,7 +1195,9 @@
     "player": "Drew Eubanks",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS Eubanks 4' Reverse Layup"
+    "description": "MISS Eubanks 4' Reverse Layup",
+    "home_description": "",
+    "away_description": "MISS Eubanks 4' Reverse Layup"
   },
   {
     "period": 1,
@@ -1027,7 +1207,9 @@
     "player": "Bobby Portis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Portis REBOUND (Off:0 Def:3)"
+    "description": "Portis REBOUND (Off:0 Def:3)",
+    "home_description": "Portis REBOUND (Off:0 Def:3)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -1037,7 +1219,9 @@
     "player": "Kyle Kuzma",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Kuzma 25' 3PT Jump Shot"
+    "description": "MISS Kuzma 25' 3PT Jump Shot",
+    "home_description": "MISS Kuzma 25' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -1047,7 +1231,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Schroder REBOUND (Off:0 Def:2)"
+    "description": "Schroder REBOUND (Off:0 Def:2)",
+    "home_description": "",
+    "away_description": "Schroder REBOUND (Off:0 Def:2)"
   },
   {
     "period": 1,
@@ -1057,7 +1243,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "LAYUP_MADE",
     "points": 4,
-    "description": "Schroder 3' Driving Finger Roll Layup (4 PTS)"
+    "description": "Schroder 3' Driving Finger Roll Layup (4 PTS)",
+    "home_description": "",
+    "away_description": "Schroder 3' Driving Finger Roll Layup (4 PTS)"
   },
   {
     "period": 1,
@@ -1067,7 +1255,9 @@
     "player": "Bobby Portis",
     "event_type": "SHOT_MADE",
     "points": 6,
-    "description": "Portis 9' Pullup Jump Shot (6 PTS) (Coffey 1 AST)"
+    "description": "Portis 9' Pullup Jump Shot (6 PTS) (Coffey 1 AST)",
+    "home_description": "Portis 9' Pullup Jump Shot (6 PTS) (Coffey 1 AST)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -1077,7 +1267,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MADE",
     "points": 4,
-    "description": "DeRozan 1' Driving Floating Bank Jump Shot (4 PTS)"
+    "description": "DeRozan 1' Driving Floating Bank Jump Shot (4 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan 1' Driving Floating Bank Jump Shot (4 PTS)"
   },
   {
     "period": 1,
@@ -1087,7 +1279,9 @@
     "player": "Kyle Kuzma",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Kuzma S.FOUL (P2.PN) (M.Ervin)"
+    "description": "Kuzma S.FOUL (P2.PN) (M.Ervin)",
+    "home_description": "Kuzma S.FOUL (P2.PN) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -1097,7 +1291,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 5,
-    "description": "DeRozan Free Throw 1 of 1 (5 PTS)"
+    "description": "DeRozan Free Throw 1 of 1 (5 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw 1 of 1 (5 PTS)"
   },
   {
     "period": 1,
@@ -1107,7 +1303,9 @@
     "player": "Taurean Prince",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Prince 24' 3PT Jump Shot"
+    "description": "MISS Prince 24' 3PT Jump Shot",
+    "home_description": "MISS Prince 24' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 1,
@@ -1117,7 +1315,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Schroder REBOUND (Off:0 Def:3)"
+    "description": "Schroder REBOUND (Off:0 Def:3)",
+    "home_description": "",
+    "away_description": "Schroder REBOUND (Off:0 Def:3)"
   },
   {
     "period": 1,
@@ -1127,7 +1327,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MADE",
     "points": 7,
-    "description": "DeRozan 7' Driving Floating Jump Shot (7 PTS) (Schroder 1 AST)"
+    "description": "DeRozan 7' Driving Floating Jump Shot (7 PTS) (Schroder 1 AST)",
+    "home_description": "",
+    "away_description": "DeRozan 7' Driving Floating Jump Shot (7 PTS) (Schroder 1 AST)"
   },
   {
     "period": 1,
@@ -1137,37 +1339,9 @@
     "player": "Taurean Prince",
     "event_type": "3PT_MADE",
     "points": 3,
-    "description": "Prince 26' 3PT Step Back Jump Shot (3 PTS) (Anthony 2 AST)"
-  },
-  {
-    "period": 1,
-    "time": "0:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "Chris Childs",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
-  },
-  {
-    "period": 1,
-    "time": "0:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
-  },
-  {
-    "period": 2,
-    "time": "12:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "Prince 26' 3PT Step Back Jump Shot (3 PTS) (Anthony 2 AST)",
+    "home_description": "Prince 26' 3PT Step Back Jump Shot (3 PTS) (Anthony 2 AST)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1177,7 +1351,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "LAYUP_MADE",
     "points": 6,
-    "description": "Schroder 3' Driving Finger Roll Layup (6 PTS) (Eubanks 1 AST)"
+    "description": "Schroder 3' Driving Finger Roll Layup (6 PTS) (Eubanks 1 AST)",
+    "home_description": "",
+    "away_description": "Schroder 3' Driving Finger Roll Layup (6 PTS) (Eubanks 1 AST)"
   },
   {
     "period": 2,
@@ -1187,7 +1363,9 @@
     "player": "Cole Anthony",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Anthony S.FOUL (P1.T1) (M.Kogut)"
+    "description": "Anthony S.FOUL (P1.T1) (M.Kogut)",
+    "home_description": "Anthony S.FOUL (P1.T1) (M.Kogut)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1197,7 +1375,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "FT_MADE",
     "points": 7,
-    "description": "Schroder Free Throw 1 of 1 (7 PTS)"
+    "description": "Schroder Free Throw 1 of 1 (7 PTS)",
+    "home_description": "",
+    "away_description": "Schroder Free Throw 1 of 1 (7 PTS)"
   },
   {
     "period": 2,
@@ -1207,7 +1387,9 @@
     "player": "Cole Anthony",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Anthony 6' Driving Floating Bank Jump Shot"
+    "description": "MISS Anthony 6' Driving Floating Bank Jump Shot",
+    "home_description": "MISS Anthony 6' Driving Floating Bank Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1217,7 +1399,9 @@
     "player": "Drew Eubanks",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Eubanks REBOUND (Off:0 Def:1)"
+    "description": "Eubanks REBOUND (Off:0 Def:1)",
+    "home_description": "",
+    "away_description": "Eubanks REBOUND (Off:0 Def:1)"
   },
   {
     "period": 2,
@@ -1227,7 +1411,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Schroder 26' 3PT Jump Shot"
+    "description": "MISS Schroder 26' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Schroder 26' 3PT Jump Shot"
   },
   {
     "period": 2,
@@ -1237,7 +1423,9 @@
     "player": "Keon Ellis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Ellis REBOUND (Off:1 Def:0)"
+    "description": "Ellis REBOUND (Off:1 Def:0)",
+    "home_description": "",
+    "away_description": "Ellis REBOUND (Off:1 Def:0)"
   },
   {
     "period": 2,
@@ -1247,7 +1435,9 @@
     "player": "Taurean Prince",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Prince S.FOUL (P1.T2) (J.Conley)"
+    "description": "Prince S.FOUL (P1.T2) (J.Conley)",
+    "home_description": "Prince S.FOUL (P1.T2) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1257,7 +1447,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "FT_MADE",
     "points": 8,
-    "description": "Schroder Free Throw 1 of 2 (8 PTS)"
+    "description": "Schroder Free Throw 1 of 2 (8 PTS)",
+    "home_description": "",
+    "away_description": "Schroder Free Throw 1 of 2 (8 PTS)"
   },
   {
     "period": 2,
@@ -1267,7 +1459,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "FT_MADE",
     "points": 9,
-    "description": "Schroder Free Throw 2 of 2 (9 PTS)"
+    "description": "Schroder Free Throw 2 of 2 (9 PTS)",
+    "home_description": "",
+    "away_description": "Schroder Free Throw 2 of 2 (9 PTS)"
   },
   {
     "period": 2,
@@ -1277,7 +1471,9 @@
     "player": "Bobby Portis",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Portis 5' Cutting Layup Shot"
+    "description": "MISS Portis 5' Cutting Layup Shot",
+    "home_description": "MISS Portis 5' Cutting Layup Shot",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1287,7 +1483,9 @@
     "player": "Bobby Portis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Portis REBOUND (Off:1 Def:3)"
+    "description": "Portis REBOUND (Off:1 Def:3)",
+    "home_description": "Portis REBOUND (Off:1 Def:3)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1297,7 +1495,9 @@
     "player": "Bobby Portis",
     "event_type": "LAYUP_MADE",
     "points": 8,
-    "description": "Portis 4' Putback Layup (8 PTS)"
+    "description": "Portis 4' Putback Layup (8 PTS)",
+    "home_description": "Portis 4' Putback Layup (8 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1307,7 +1507,9 @@
     "player": "Drew Eubanks",
     "event_type": "OTHER",
     "points": 0,
-    "description": "Eubanks Violation:Defensive Goaltending (M.Kogut)"
+    "description": "Eubanks Violation:Defensive Goaltending (M.Kogut)",
+    "home_description": "",
+    "away_description": "Eubanks Violation:Defensive Goaltending (M.Kogut)"
   },
   {
     "period": 2,
@@ -1317,7 +1519,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MADE",
     "points": 9,
-    "description": "DeRozan 22' Jump Shot (9 PTS) (Schroder 2 AST)"
+    "description": "DeRozan 22' Jump Shot (9 PTS) (Schroder 2 AST)",
+    "home_description": "",
+    "away_description": "DeRozan 22' Jump Shot (9 PTS) (Schroder 2 AST)"
   },
   {
     "period": 2,
@@ -1327,7 +1531,9 @@
     "player": "Kyle Kuzma",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS Kuzma 3' Finger Roll Layup"
+    "description": "MISS Kuzma 3' Finger Roll Layup",
+    "home_description": "MISS Kuzma 3' Finger Roll Layup",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1337,7 +1543,9 @@
     "player": "Amir Coffey",
     "event_type": "SHOT_MADE",
     "points": 2,
-    "description": "Coffey Tip Layup Shot (2 PTS)"
+    "description": "Coffey Tip Layup Shot (2 PTS)",
+    "home_description": "Coffey Tip Layup Shot (2 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1347,7 +1555,9 @@
     "player": "Amir Coffey",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Coffey REBOUND (Off:1 Def:0)"
+    "description": "Coffey REBOUND (Off:1 Def:0)",
+    "home_description": "Coffey REBOUND (Off:1 Def:0)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1355,9 +1565,11 @@
     "HoA": "HOME",
     "team": "Kings",
     "player": "Russell Westbrook",
-    "event_type": "OTHER",
+    "event_type": "BLOCK",
     "points": 0,
-    "description": "Coffey BLOCK (1 BLK)"
+    "description": "Coffey BLOCK (1 BLK)",
+    "home_description": "Coffey BLOCK (1 BLK)",
+    "away_description": "MISS Westbrook 5' Driving Layup"
   },
   {
     "period": 2,
@@ -1367,7 +1579,9 @@
     "player": "Bobby Portis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Portis REBOUND (Off:1 Def:4)"
+    "description": "Portis REBOUND (Off:1 Def:4)",
+    "home_description": "Portis REBOUND (Off:1 Def:4)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1377,7 +1591,9 @@
     "player": "Kyle Kuzma",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Kuzma 24' 3PT Jump Shot"
+    "description": "MISS Kuzma 24' 3PT Jump Shot",
+    "home_description": "MISS Kuzma 24' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1387,7 +1603,9 @@
     "player": "Amir Coffey",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Coffey REBOUND (Off:2 Def:0)"
+    "description": "Coffey REBOUND (Off:2 Def:0)",
+    "home_description": "Coffey REBOUND (Off:2 Def:0)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1397,7 +1615,9 @@
     "player": "Amir Coffey",
     "event_type": "LAYUP_MADE",
     "points": 4,
-    "description": "Coffey 3' Driving Reverse Layup (4 PTS)"
+    "description": "Coffey 3' Driving Reverse Layup (4 PTS)",
+    "home_description": "Coffey 3' Driving Reverse Layup (4 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1407,7 +1627,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 16' Jump Shot"
+    "description": "MISS DeRozan 16' Jump Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 16' Jump Shot"
   },
   {
     "period": 2,
@@ -1417,7 +1639,9 @@
     "player": "Bobby Portis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Portis REBOUND (Off:1 Def:5)"
+    "description": "Portis REBOUND (Off:1 Def:5)",
+    "home_description": "Portis REBOUND (Off:1 Def:5)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1427,17 +1651,21 @@
     "player": "Cole Anthony",
     "event_type": "SHOT_MADE",
     "points": 3,
-    "description": "Anthony 7' Driving Floating Bank Jump Shot (3 PTS)"
+    "description": "Anthony 7' Driving Floating Bank Jump Shot (3 PTS)",
+    "home_description": "Anthony 7' Driving Floating Bank Jump Shot (3 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "9:11",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "Kings Timeout: Regular (Reg.2 Short 0)"
+    "description": "Kings Timeout: Regular (Reg.2 Short 0)",
+    "home_description": "",
+    "away_description": "Kings Timeout: Regular (Reg.2 Short 0)"
   },
   {
     "period": 2,
@@ -1447,7 +1675,9 @@
     "player": "DeMar DeRozan",
     "event_type": "LAYUP_MADE",
     "points": 11,
-    "description": "DeRozan 3' Driving Reverse Layup (11 PTS) (Schroder 3 AST)"
+    "description": "DeRozan 3' Driving Reverse Layup (11 PTS) (Schroder 3 AST)",
+    "home_description": "",
+    "away_description": "DeRozan 3' Driving Reverse Layup (11 PTS) (Schroder 3 AST)"
   },
   {
     "period": 2,
@@ -1457,7 +1687,9 @@
     "player": "Kyle Kuzma",
     "event_type": "LAYUP_MADE",
     "points": 4,
-    "description": "Kuzma 3' Driving Layup (4 PTS)"
+    "description": "Kuzma 3' Driving Layup (4 PTS)",
+    "home_description": "Kuzma 3' Driving Layup (4 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1467,7 +1699,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Schroder Out of Bounds - Bad Pass Turnover Turnover (P2.T2)"
+    "description": "Schroder Out of Bounds - Bad Pass Turnover Turnover (P2.T2)",
+    "home_description": "",
+    "away_description": "Schroder Out of Bounds - Bad Pass Turnover Turnover (P2.T2)"
   },
   {
     "period": 2,
@@ -1477,7 +1711,9 @@
     "player": "Bobby Portis",
     "event_type": "SHOT_MADE",
     "points": 10,
-    "description": "Portis 16' Jump Shot (10 PTS) (Coffey 2 AST)"
+    "description": "Portis 16' Jump Shot (10 PTS) (Coffey 2 AST)",
+    "home_description": "Portis 16' Jump Shot (10 PTS) (Coffey 2 AST)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1487,7 +1723,9 @@
     "player": "Keon Ellis",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Ellis 27' 3PT Jump Shot"
+    "description": "MISS Ellis 27' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Ellis 27' 3PT Jump Shot"
   },
   {
     "period": 2,
@@ -1497,7 +1735,9 @@
     "player": "Taurean Prince",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Prince REBOUND (Off:0 Def:1)"
+    "description": "Prince REBOUND (Off:0 Def:1)",
+    "home_description": "Prince REBOUND (Off:0 Def:1)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1507,7 +1747,9 @@
     "player": "Bobby Portis",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Portis Bad Pass Turnover (P1.T1)"
+    "description": "Portis Bad Pass Turnover (P1.T1)",
+    "home_description": "Portis Bad Pass Turnover (P1.T1)",
+    "away_description": "Ellis STEAL (1 STL)"
   },
   {
     "period": 2,
@@ -1517,7 +1759,9 @@
     "player": "Drew Eubanks",
     "event_type": "SHOT_MADE",
     "points": 2,
-    "description": "Eubanks 9' Turnaround Hook Shot (2 PTS)"
+    "description": "Eubanks 9' Turnaround Hook Shot (2 PTS)",
+    "home_description": "",
+    "away_description": "Eubanks 9' Turnaround Hook Shot (2 PTS)"
   },
   {
     "period": 2,
@@ -1527,7 +1771,9 @@
     "player": "Cole Anthony",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS Anthony 3' Driving Layup"
+    "description": "MISS Anthony 3' Driving Layup",
+    "home_description": "MISS Anthony 3' Driving Layup",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1537,7 +1783,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Schroder REBOUND (Off:0 Def:4)"
+    "description": "Schroder REBOUND (Off:0 Def:4)",
+    "home_description": "",
+    "away_description": "Schroder REBOUND (Off:0 Def:4)"
   },
   {
     "period": 2,
@@ -1547,17 +1795,21 @@
     "player": "Drew Eubanks",
     "event_type": "SHOT_MADE",
     "points": 4,
-    "description": "Eubanks 1' Running Alley Oop Dunk Shot (4 PTS) (Ellis 1 AST)"
+    "description": "Eubanks 1' Running Alley Oop Dunk Shot (4 PTS) (Ellis 1 AST)",
+    "home_description": "",
+    "away_description": "Eubanks 1' Running Alley Oop Dunk Shot (4 PTS) (Ellis 1 AST)"
   },
   {
     "period": 2,
     "time": "7:17",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "BUCKS Timeout: Regular (Full 2 Short 0)"
+    "description": "BUCKS Timeout: Regular (Full 2 Short 0)",
+    "home_description": "BUCKS Timeout: Regular (Full 2 Short 0)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1565,9 +1817,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Bobby Portis",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: G. Antetokounmpo FOR Portis"
+    "description": "SUB: G. Antetokounmpo FOR Portis",
+    "home_description": "SUB: G. Antetokounmpo FOR Portis",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1575,9 +1829,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Kyle Kuzma",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Turner FOR Kuzma"
+    "description": "SUB: Turner FOR Kuzma",
+    "home_description": "SUB: Turner FOR Kuzma",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1585,9 +1841,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Cole Anthony",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Rollins FOR Anthony"
+    "description": "SUB: Rollins FOR Anthony",
+    "home_description": "SUB: Rollins FOR Anthony",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1595,9 +1853,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Drew Eubanks",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Sabonis FOR Eubanks"
+    "description": "SUB: Sabonis FOR Eubanks",
+    "home_description": "",
+    "away_description": "SUB: Sabonis FOR Eubanks"
   },
   {
     "period": 2,
@@ -1605,9 +1865,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Keon Ellis",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: LaVine FOR Ellis"
+    "description": "SUB: LaVine FOR Ellis",
+    "home_description": "",
+    "away_description": "SUB: LaVine FOR Ellis"
   },
   {
     "period": 2,
@@ -1617,17 +1879,21 @@
     "player": "Ryan Rollins",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Rollins 26' 3PT Jump Shot"
+    "description": "MISS Rollins 26' 3PT Jump Shot",
+    "home_description": "MISS Rollins 26' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "6:58",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 2,
@@ -1637,7 +1903,9 @@
     "player": "Taurean Prince",
     "event_type": "OTHER",
     "points": 0,
-    "description": "Prince Violation:Kicked Ball (J.Conley)"
+    "description": "Prince Violation:Kicked Ball (J.Conley)",
+    "home_description": "Prince Violation:Kicked Ball (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1645,9 +1913,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Taurean Prince",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Green FOR Prince"
+    "description": "SUB: Green FOR Prince",
+    "home_description": "SUB: Green FOR Prince",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1655,19 +1925,23 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Amir Coffey",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Trent Jr. FOR Coffey"
+    "description": "SUB: Trent Jr. FOR Coffey",
+    "home_description": "SUB: Trent Jr. FOR Coffey",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "6:34",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
-    "event_type": "SHOT_MADE",
+    "event_type": "TURNOVER",
     "points": 0,
-    "description": "Kings Turnover: Shot Clock (T#3)"
+    "description": "Kings Turnover: Shot Clock (T#3)",
+    "home_description": "",
+    "away_description": "Kings Turnover: Shot Clock (T#3)"
   },
   {
     "period": 2,
@@ -1677,7 +1951,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo 3' Driving Layup"
+    "description": "MISS G. Antetokounmpo 3' Driving Layup",
+    "home_description": "MISS G. Antetokounmpo 3' Driving Layup",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1687,7 +1963,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:1 Def:2)"
+    "description": "Sabonis REBOUND (Off:1 Def:2)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:1 Def:2)"
   },
   {
     "period": 2,
@@ -1697,7 +1975,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 24' 3PT Step Back Jump Shot"
+    "description": "MISS LaVine 24' 3PT Step Back Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 24' 3PT Step Back Jump Shot"
   },
   {
     "period": 2,
@@ -1707,7 +1987,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:0 Def:2)"
+    "description": "G. Antetokounmpo REBOUND (Off:0 Def:2)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:0 Def:2)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1717,7 +1999,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo 17' Running Pull-Up Jump Shot"
+    "description": "MISS G. Antetokounmpo 17' Running Pull-Up Jump Shot",
+    "home_description": "MISS G. Antetokounmpo 17' Running Pull-Up Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1727,7 +2011,9 @@
     "player": "Zach LaVine",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "LaVine REBOUND (Off:0 Def:3)"
+    "description": "LaVine REBOUND (Off:0 Def:3)",
+    "home_description": "",
+    "away_description": "LaVine REBOUND (Off:0 Def:3)"
   },
   {
     "period": 2,
@@ -1737,7 +2023,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MADE",
     "points": 13,
-    "description": "DeRozan 5' Turnaround Bank Shot (13 PTS)"
+    "description": "DeRozan 5' Turnaround Bank Shot (13 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan 5' Turnaround Bank Shot (13 PTS)"
   },
   {
     "period": 2,
@@ -1747,7 +2035,9 @@
     "player": "Myles Turner",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Turner Bad Pass Turnover (P1.T2)"
+    "description": "Turner Bad Pass Turnover (P1.T2)",
+    "home_description": "Turner Bad Pass Turnover (P1.T2)",
+    "away_description": "Westbrook STEAL (1 STL)"
   },
   {
     "period": 2,
@@ -1757,7 +2047,9 @@
     "player": "Russell Westbrook",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 2' Running Layup"
+    "description": "MISS Westbrook 2' Running Layup",
+    "home_description": "",
+    "away_description": "MISS Westbrook 2' Running Layup"
   },
   {
     "period": 2,
@@ -1767,7 +2059,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:2 Def:2)"
+    "description": "Sabonis REBOUND (Off:2 Def:2)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:2 Def:2)"
   },
   {
     "period": 2,
@@ -1777,7 +2071,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MADE",
     "points": 15,
-    "description": "LaVine 26' 3PT Jump Shot (15 PTS) (DeRozan 1 AST)"
+    "description": "LaVine 26' 3PT Jump Shot (15 PTS) (DeRozan 1 AST)",
+    "home_description": "",
+    "away_description": "LaVine 26' 3PT Jump Shot (15 PTS) (DeRozan 1 AST)"
   },
   {
     "period": 2,
@@ -1787,7 +2083,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Sabonis S.FOUL (P1.T1) (M.Kogut)"
+    "description": "Sabonis S.FOUL (P1.T1) (M.Kogut)",
+    "home_description": "",
+    "away_description": "Sabonis S.FOUL (P1.T1) (M.Kogut)"
   },
   {
     "period": 2,
@@ -1797,7 +2095,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 7,
-    "description": "G. Antetokounmpo Free Throw 1 of 2 (7 PTS)"
+    "description": "G. Antetokounmpo Free Throw 1 of 2 (7 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 1 of 2 (7 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1807,7 +2107,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo Free Throw 2 of 2"
+    "description": "MISS G. Antetokounmpo Free Throw 2 of 2",
+    "home_description": "MISS G. Antetokounmpo Free Throw 2 of 2",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1815,9 +2117,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Dennis Schr\u00f6der",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Clifford FOR Schroder"
+    "description": "SUB: Clifford FOR Schroder",
+    "home_description": "",
+    "away_description": "SUB: Clifford FOR Schroder"
   },
   {
     "period": 2,
@@ -1827,7 +2131,9 @@
     "player": "Russell Westbrook",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Westbrook REBOUND (Off:0 Def:1)"
+    "description": "Westbrook REBOUND (Off:0 Def:1)",
+    "home_description": "",
+    "away_description": "Westbrook REBOUND (Off:0 Def:1)"
   },
   {
     "period": 2,
@@ -1837,7 +2143,9 @@
     "player": "DeMar DeRozan",
     "event_type": "LAYUP_MADE",
     "points": 15,
-    "description": "DeRozan 2' Driving Layup (15 PTS)"
+    "description": "DeRozan 2' Driving Layup (15 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan 2' Driving Layup (15 PTS)"
   },
   {
     "period": 2,
@@ -1847,7 +2155,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FOUL",
     "points": 0,
-    "description": "G. Antetokounmpo S.FOUL (P1.T3) (J.Conley)"
+    "description": "G. Antetokounmpo S.FOUL (P1.T3) (J.Conley)",
+    "home_description": "G. Antetokounmpo S.FOUL (P1.T3) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1857,7 +2167,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 16,
-    "description": "DeRozan Free Throw 1 of 1 (16 PTS)"
+    "description": "DeRozan Free Throw 1 of 1 (16 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw 1 of 1 (16 PTS)"
   },
   {
     "period": 2,
@@ -1867,17 +2179,21 @@
     "player": "Myles Turner",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Turner 26' 3PT Jump Shot"
+    "description": "MISS Turner 26' 3PT Jump Shot",
+    "home_description": "MISS Turner 26' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "4:23",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 2,
@@ -1887,7 +2203,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 26' 3PT Jump Shot"
+    "description": "MISS LaVine 26' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 26' 3PT Jump Shot"
   },
   {
     "period": 2,
@@ -1897,7 +2215,9 @@
     "player": "Ryan Rollins",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Rollins REBOUND (Off:0 Def:3)"
+    "description": "Rollins REBOUND (Off:0 Def:3)",
+    "home_description": "Rollins REBOUND (Off:0 Def:3)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1907,7 +2227,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Green 24' 3PT Jump Shot"
+    "description": "MISS Green 24' 3PT Jump Shot",
+    "home_description": "MISS Green 24' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1917,7 +2239,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:1 Def:2)"
+    "description": "G. Antetokounmpo REBOUND (Off:1 Def:2)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:1 Def:2)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1927,7 +2251,9 @@
     "player": "Myles Turner",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Turner 12' Jump Shot"
+    "description": "MISS Turner 12' Jump Shot",
+    "home_description": "MISS Turner 12' Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1937,7 +2263,9 @@
     "player": "DeMar DeRozan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "DeRozan REBOUND (Off:0 Def:1)"
+    "description": "DeRozan REBOUND (Off:0 Def:1)",
+    "home_description": "",
+    "away_description": "DeRozan REBOUND (Off:0 Def:1)"
   },
   {
     "period": 2,
@@ -1947,7 +2275,9 @@
     "player": "Domantas Sabonis",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Sabonis 28' 3PT Jump Shot"
+    "description": "MISS Sabonis 28' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Sabonis 28' 3PT Jump Shot"
   },
   {
     "period": 2,
@@ -1957,7 +2287,9 @@
     "player": "Ryan Rollins",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Rollins REBOUND (Off:0 Def:4)"
+    "description": "Rollins REBOUND (Off:0 Def:4)",
+    "home_description": "Rollins REBOUND (Off:0 Def:4)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1967,7 +2299,9 @@
     "player": "Ryan Rollins",
     "event_type": "LAYUP_MADE",
     "points": 8,
-    "description": "Rollins 1' Running Layup (8 PTS)"
+    "description": "Rollins 1' Running Layup (8 PTS)",
+    "home_description": "Rollins 1' Running Layup (8 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -1977,7 +2311,9 @@
     "player": "Russell Westbrook",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Westbrook Out of Bounds - Bad Pass Turnover Turnover (P1.T4)"
+    "description": "Westbrook Out of Bounds - Bad Pass Turnover Turnover (P1.T4)",
+    "home_description": "",
+    "away_description": "Westbrook Out of Bounds - Bad Pass Turnover Turnover (P1.T4)"
   },
   {
     "period": 2,
@@ -1987,7 +2323,9 @@
     "player": "Russell Westbrook",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Westbrook S.FOUL (P1.T2) (J.Conley)"
+    "description": "Westbrook S.FOUL (P1.T2) (J.Conley)",
+    "home_description": "",
+    "away_description": "Westbrook S.FOUL (P1.T2) (J.Conley)"
   },
   {
     "period": 2,
@@ -1997,17 +2335,21 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo Free Throw 1 of 2"
+    "description": "MISS G. Antetokounmpo Free Throw 1 of 2",
+    "home_description": "MISS G. Antetokounmpo Free Throw 1 of 2",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "3:22",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "BUCKS Rebound"
+    "description": "BUCKS Rebound",
+    "home_description": "BUCKS Rebound",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2017,7 +2359,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo Free Throw 2 of 2"
+    "description": "MISS G. Antetokounmpo Free Throw 2 of 2",
+    "home_description": "MISS G. Antetokounmpo Free Throw 2 of 2",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2025,9 +2369,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Russell Westbrook",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Schroder FOR Westbrook"
+    "description": "SUB: Schroder FOR Westbrook",
+    "home_description": "",
+    "away_description": "SUB: Schroder FOR Westbrook"
   },
   {
     "period": 2,
@@ -2037,7 +2383,9 @@
     "player": "Myles Turner",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Turner REBOUND (Off:1 Def:1)"
+    "description": "Turner REBOUND (Off:1 Def:1)",
+    "home_description": "Turner REBOUND (Off:1 Def:1)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2047,7 +2395,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MADE",
     "points": 11,
-    "description": "Green 24' 3PT Jump Shot (11 PTS) (Rollins 3 AST)"
+    "description": "Green 24' 3PT Jump Shot (11 PTS) (Rollins 3 AST)",
+    "home_description": "Green 24' 3PT Jump Shot (11 PTS) (Rollins 3 AST)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2057,7 +2407,9 @@
     "player": "Domantas Sabonis",
     "event_type": "STEAL",
     "points": 0,
-    "description": "Turner STEAL (1 STL)"
+    "description": "Turner STEAL (1 STL)",
+    "home_description": "Turner STEAL (1 STL)",
+    "away_description": "Sabonis Lost Ball Turnover (P1.T5)"
   },
   {
     "period": 2,
@@ -2067,7 +2419,9 @@
     "player": "Zach LaVine",
     "event_type": "FOUL",
     "points": 0,
-    "description": "LaVine Transition Take Foul (P1.T3) (M.Kogut)"
+    "description": "LaVine Transition Take Foul (P1.T3) (M.Kogut)",
+    "home_description": "",
+    "away_description": "LaVine Transition Take Foul (P1.T3) (M.Kogut)"
   },
   {
     "period": 2,
@@ -2077,17 +2431,21 @@
     "player": "Gary Trent Jr.",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Trent Jr. Free Throw 1 of 1"
+    "description": "MISS Trent Jr. Free Throw 1 of 1",
+    "home_description": "MISS Trent Jr. Free Throw 1 of 1",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "2:54",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "BUCKS Rebound"
+    "description": "BUCKS Rebound",
+    "home_description": "BUCKS Rebound",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2097,7 +2455,9 @@
     "player": "Ryan Rollins",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Rollins Bad Pass Turnover (P1.T3)"
+    "description": "Rollins Bad Pass Turnover (P1.T3)",
+    "home_description": "Rollins Bad Pass Turnover (P1.T3)",
+    "away_description": "Sabonis STEAL (1 STL)"
   },
   {
     "period": 2,
@@ -2105,19 +2465,23 @@
     "HoA": "HOME",
     "team": "Kings",
     "player": "Domantas Sabonis",
-    "event_type": "OTHER",
+    "event_type": "BLOCK",
     "points": 0,
-    "description": "G. Antetokounmpo BLOCK (1 BLK)"
+    "description": "G. Antetokounmpo BLOCK (1 BLK)",
+    "home_description": "G. Antetokounmpo BLOCK (1 BLK)",
+    "away_description": "MISS Sabonis 3' Running Layup"
   },
   {
     "period": 2,
     "time": "2:49",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 2,
@@ -2127,27 +2491,21 @@
     "player": "Myles Turner",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Turner P.FOUL (P3.T4) (J.Conley)"
+    "description": "Turner P.FOUL (P3.T4) (J.Conley)",
+    "home_description": "Turner P.FOUL (P3.T4) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "2:37",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "Kings Timeout: Coach Challenge (Reg.2 Short 0)"
-  },
-  {
-    "period": 2,
-    "time": "2:37",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "Mookie Blaylock",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "Kings Timeout: Coach Challenge (Reg.2 Short 0)",
+    "home_description": "",
+    "away_description": "Kings Timeout: Coach Challenge (Reg.2 Short 0)"
   },
   {
     "period": 2,
@@ -2155,9 +2513,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Myles Turner",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Portis FOR Turner"
+    "description": "SUB: Portis FOR Turner",
+    "home_description": "SUB: Portis FOR Turner",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2167,7 +2527,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FOUL",
     "points": 0,
-    "description": "G. Antetokounmpo P.FOUL (P2.PN) (M.Ervin)"
+    "description": "G. Antetokounmpo P.FOUL (P2.PN) (M.Ervin)",
+    "home_description": "G. Antetokounmpo P.FOUL (P2.PN) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2177,7 +2539,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 17,
-    "description": "DeRozan Free Throw 1 of 2 (17 PTS)"
+    "description": "DeRozan Free Throw 1 of 2 (17 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw 1 of 2 (17 PTS)"
   },
   {
     "period": 2,
@@ -2187,7 +2551,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan Free Throw 2 of 2"
+    "description": "MISS DeRozan Free Throw 2 of 2",
+    "home_description": "",
+    "away_description": "MISS DeRozan Free Throw 2 of 2"
   },
   {
     "period": 2,
@@ -2197,7 +2563,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:1 Def:3)"
+    "description": "G. Antetokounmpo REBOUND (Off:1 Def:3)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:1 Def:3)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2207,7 +2575,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "SHOT_MADE",
     "points": 9,
-    "description": "G. Antetokounmpo 15' Pullup Jump Shot (9 PTS) (Rollins 4 AST)"
+    "description": "G. Antetokounmpo 15' Pullup Jump Shot (9 PTS) (Rollins 4 AST)",
+    "home_description": "G. Antetokounmpo 15' Pullup Jump Shot (9 PTS) (Rollins 4 AST)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2217,7 +2587,9 @@
     "player": "Domantas Sabonis",
     "event_type": "LAYUP_MADE",
     "points": 9,
-    "description": "Sabonis 6' Driving Layup (9 PTS) (Schroder 4 AST)"
+    "description": "Sabonis 6' Driving Layup (9 PTS) (Schroder 4 AST)",
+    "home_description": "",
+    "away_description": "Sabonis 6' Driving Layup (9 PTS) (Schroder 4 AST)"
   },
   {
     "period": 2,
@@ -2227,7 +2599,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Trent Jr. 3PT Jump Shot"
+    "description": "MISS Trent Jr. 3PT Jump Shot",
+    "home_description": "MISS Trent Jr. 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2237,7 +2611,9 @@
     "player": "DeMar DeRozan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "DeRozan REBOUND (Off:0 Def:2)"
+    "description": "DeRozan REBOUND (Off:0 Def:2)",
+    "home_description": "",
+    "away_description": "DeRozan REBOUND (Off:0 Def:2)"
   },
   {
     "period": 2,
@@ -2247,7 +2623,9 @@
     "player": "Domantas Sabonis",
     "event_type": "LAYUP_MADE",
     "points": 11,
-    "description": "Sabonis 3' Alley Oop Layup (11 PTS) (Schroder 5 AST)"
+    "description": "Sabonis 3' Alley Oop Layup (11 PTS) (Schroder 5 AST)",
+    "home_description": "",
+    "away_description": "Sabonis 3' Alley Oop Layup (11 PTS) (Schroder 5 AST)"
   },
   {
     "period": 2,
@@ -2257,7 +2635,9 @@
     "player": "AJ Green",
     "event_type": "SHOT_MADE",
     "points": 13,
-    "description": "Green 11' Driving Floating Jump Shot (13 PTS) (G. Antetokounmpo 5 AST)"
+    "description": "Green 11' Driving Floating Jump Shot (13 PTS) (G. Antetokounmpo 5 AST)",
+    "home_description": "Green 11' Driving Floating Jump Shot (13 PTS) (G. Antetokounmpo 5 AST)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2267,7 +2647,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MADE",
     "points": 19,
-    "description": "DeRozan 8' Turnaround Jump Shot (19 PTS) (LaVine 2 AST)"
+    "description": "DeRozan 8' Turnaround Jump Shot (19 PTS) (LaVine 2 AST)",
+    "home_description": "",
+    "away_description": "DeRozan 8' Turnaround Jump Shot (19 PTS) (LaVine 2 AST)"
   },
   {
     "period": 2,
@@ -2277,7 +2659,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Sabonis S.FOUL (P2.T4) (J.Conley)"
+    "description": "Sabonis S.FOUL (P2.T4) (J.Conley)",
+    "home_description": "",
+    "away_description": "Sabonis S.FOUL (P2.T4) (J.Conley)"
   },
   {
     "period": 2,
@@ -2287,7 +2671,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 10,
-    "description": "G. Antetokounmpo Free Throw 1 of 2 (10 PTS)"
+    "description": "G. Antetokounmpo Free Throw 1 of 2 (10 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 1 of 2 (10 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2297,17 +2683,21 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo Free Throw 2 of 2"
+    "description": "MISS G. Antetokounmpo Free Throw 2 of 2",
+    "home_description": "MISS G. Antetokounmpo Free Throw 2 of 2",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "0:56",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 2,
@@ -2317,7 +2707,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "3PT_MADE",
     "points": 12,
-    "description": "Schroder 28' 3PT Step Back Jump Shot (12 PTS)"
+    "description": "Schroder 28' 3PT Step Back Jump Shot (12 PTS)",
+    "home_description": "",
+    "away_description": "Schroder 28' 3PT Step Back Jump Shot (12 PTS)"
   },
   {
     "period": 2,
@@ -2327,7 +2719,9 @@
     "player": "Ryan Rollins",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Rollins 26' 3PT Jump Shot"
+    "description": "MISS Rollins 26' 3PT Jump Shot",
+    "home_description": "MISS Rollins 26' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2337,7 +2731,9 @@
     "player": "Nique Clifford",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Clifford REBOUND (Off:0 Def:1)"
+    "description": "Clifford REBOUND (Off:0 Def:1)",
+    "home_description": "",
+    "away_description": "Clifford REBOUND (Off:0 Def:1)"
   },
   {
     "period": 2,
@@ -2347,7 +2743,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MADE",
     "points": 18,
-    "description": "LaVine 26' 3PT Jump Shot (18 PTS) (DeRozan 2 AST)"
+    "description": "LaVine 26' 3PT Jump Shot (18 PTS) (DeRozan 2 AST)",
+    "home_description": "",
+    "away_description": "LaVine 26' 3PT Jump Shot (18 PTS) (DeRozan 2 AST)"
   },
   {
     "period": 2,
@@ -2357,7 +2755,9 @@
     "player": "Nique Clifford",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Clifford S.FOUL (P1.PN) (M.Kogut)"
+    "description": "Clifford S.FOUL (P1.PN) (M.Kogut)",
+    "home_description": "",
+    "away_description": "Clifford S.FOUL (P1.PN) (M.Kogut)"
   },
   {
     "period": 2,
@@ -2367,17 +2767,21 @@
     "player": "Gary Trent Jr.",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Trent Jr. Free Throw 1 of 2"
+    "description": "MISS Trent Jr. Free Throw 1 of 2",
+    "home_description": "MISS Trent Jr. Free Throw 1 of 2",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "0:02",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "BUCKS Rebound"
+    "description": "BUCKS Rebound",
+    "home_description": "BUCKS Rebound",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2385,9 +2789,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Giannis Antetokounmpo",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Kuzma FOR G. Antetokounmpo"
+    "description": "SUB: Kuzma FOR G. Antetokounmpo",
+    "home_description": "SUB: Kuzma FOR G. Antetokounmpo",
+    "away_description": ""
   },
   {
     "period": 2,
@@ -2397,47 +2803,33 @@
     "player": "Gary Trent Jr.",
     "event_type": "FT_MADE",
     "points": 10,
-    "description": "Trent Jr. Free Throw 2 of 2 (10 PTS)"
+    "description": "Trent Jr. Free Throw 2 of 2 (10 PTS)",
+    "home_description": "Trent Jr. Free Throw 2 of 2 (10 PTS)",
+    "away_description": ""
   },
   {
     "period": 2,
     "time": "0:01",
     "HoA": "AWAY",
     "team": "Kings",
-    "player": "Dennis Schr\u00f6der",
+    "player": "nan",
     "event_type": "OTHER",
     "points": 0,
-    "description": "Schroder Heave:Team Field Goal Attempt"
+    "description": "KINGS Heave",
+    "home_description": "",
+    "away_description": "KINGS Heave"
   },
   {
     "period": 2,
     "time": "0:01",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
-  },
-  {
-    "period": 2,
-    "time": "0:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
-  },
-  {
-    "period": 3,
-    "time": "12:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 3,
@@ -2447,7 +2839,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MADE",
     "points": 21,
-    "description": "LaVine 24' 3PT Jump Shot (21 PTS) (Westbrook 3 AST)"
+    "description": "LaVine 24' 3PT Jump Shot (21 PTS) (Westbrook 3 AST)",
+    "home_description": "",
+    "away_description": "LaVine 24' 3PT Jump Shot (21 PTS) (Westbrook 3 AST)"
   },
   {
     "period": 3,
@@ -2457,7 +2851,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MADE",
     "points": 16,
-    "description": "Green 27' 3PT Jump Shot (16 PTS) (G. Antetokounmpo 6 AST)"
+    "description": "Green 27' 3PT Jump Shot (16 PTS) (G. Antetokounmpo 6 AST)",
+    "home_description": "Green 27' 3PT Jump Shot (16 PTS) (G. Antetokounmpo 6 AST)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2467,7 +2863,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 3PT Jump Shot"
+    "description": "MISS LaVine 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 3PT Jump Shot"
   },
   {
     "period": 3,
@@ -2477,7 +2875,9 @@
     "player": "Russell Westbrook",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Westbrook REBOUND (Off:1 Def:1)"
+    "description": "Westbrook REBOUND (Off:1 Def:1)",
+    "home_description": "",
+    "away_description": "Westbrook REBOUND (Off:1 Def:1)"
   },
   {
     "period": 3,
@@ -2487,7 +2887,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "3PT_MADE",
     "points": 15,
-    "description": "Schroder 26' 3PT Jump Shot (15 PTS) (Westbrook 4 AST)"
+    "description": "Schroder 26' 3PT Jump Shot (15 PTS) (Westbrook 4 AST)",
+    "home_description": "",
+    "away_description": "Schroder 26' 3PT Jump Shot (15 PTS) (Westbrook 4 AST)"
   },
   {
     "period": 3,
@@ -2497,7 +2899,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Green 26' 3PT Jump Shot"
+    "description": "MISS Green 26' 3PT Jump Shot",
+    "home_description": "MISS Green 26' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2507,7 +2911,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:2 Def:3)"
+    "description": "Sabonis REBOUND (Off:2 Def:3)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:2 Def:3)"
   },
   {
     "period": 3,
@@ -2517,7 +2923,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "OTHER",
     "points": 0,
-    "description": "G. Antetokounmpo Violation:Kicked Ball (M.Ervin)"
+    "description": "G. Antetokounmpo Violation:Kicked Ball (M.Ervin)",
+    "home_description": "G. Antetokounmpo Violation:Kicked Ball (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2527,7 +2935,9 @@
     "player": "Russell Westbrook",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 3PT Jump Shot"
+    "description": "MISS Westbrook 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Westbrook 3PT Jump Shot"
   },
   {
     "period": 3,
@@ -2537,7 +2947,9 @@
     "player": "AJ Green",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Green REBOUND (Off:0 Def:2)"
+    "description": "Green REBOUND (Off:0 Def:2)",
+    "home_description": "Green REBOUND (Off:0 Def:2)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2547,7 +2959,9 @@
     "player": "Ryan Rollins",
     "event_type": "SHOT_MADE",
     "points": 10,
-    "description": "Rollins 10' Pullup Jump Shot (10 PTS) (G. Antetokounmpo 7 AST)"
+    "description": "Rollins 10' Pullup Jump Shot (10 PTS) (G. Antetokounmpo 7 AST)",
+    "home_description": "Rollins 10' Pullup Jump Shot (10 PTS) (G. Antetokounmpo 7 AST)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2557,7 +2971,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "LAYUP_MADE",
     "points": 17,
-    "description": "Schroder 1' Driving Finger Roll Layup (17 PTS)"
+    "description": "Schroder 1' Driving Finger Roll Layup (17 PTS)",
+    "home_description": "",
+    "away_description": "Schroder 1' Driving Finger Roll Layup (17 PTS)"
   },
   {
     "period": 3,
@@ -2567,7 +2983,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "SHOT_MADE",
     "points": 12,
-    "description": "G. Antetokounmpo 17' Pullup Jump Shot (12 PTS)"
+    "description": "G. Antetokounmpo 17' Pullup Jump Shot (12 PTS)",
+    "home_description": "G. Antetokounmpo 17' Pullup Jump Shot (12 PTS)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2577,7 +2995,9 @@
     "player": "DeMar DeRozan",
     "event_type": "STEAL",
     "points": 0,
-    "description": "Turner STEAL (2 STL)"
+    "description": "Turner STEAL (2 STL)",
+    "home_description": "Turner STEAL (2 STL)",
+    "away_description": "DeRozan Lost Ball Turnover (P1.T6)"
   },
   {
     "period": 3,
@@ -2587,17 +3007,9 @@
     "player": "Russell Westbrook",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Westbrook S.FOUL (P2.T1) (M.Ervin)"
-  },
-  {
-    "period": 3,
-    "time": "9:45",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "Westbrook S.FOUL (P2.T1) (M.Ervin)",
+    "home_description": "",
+    "away_description": "Westbrook S.FOUL (P2.T1) (M.Ervin)"
   },
   {
     "period": 3,
@@ -2607,7 +3019,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 13,
-    "description": "G. Antetokounmpo Free Throw 1 of 2 (13 PTS)"
+    "description": "G. Antetokounmpo Free Throw 1 of 2 (13 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 1 of 2 (13 PTS)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2617,7 +3031,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo Free Throw 2 of 2"
+    "description": "MISS G. Antetokounmpo Free Throw 2 of 2",
+    "home_description": "MISS G. Antetokounmpo Free Throw 2 of 2",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2627,7 +3043,9 @@
     "player": "DeMar DeRozan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "DeRozan REBOUND (Off:0 Def:3)"
+    "description": "DeRozan REBOUND (Off:0 Def:3)",
+    "home_description": "",
+    "away_description": "DeRozan REBOUND (Off:0 Def:3)"
   },
   {
     "period": 3,
@@ -2637,7 +3055,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MADE",
     "points": 21,
-    "description": "DeRozan 22' Jump Shot (21 PTS) (Sabonis 5 AST)"
+    "description": "DeRozan 22' Jump Shot (21 PTS) (Sabonis 5 AST)",
+    "home_description": "",
+    "away_description": "DeRozan 22' Jump Shot (21 PTS) (Sabonis 5 AST)"
   },
   {
     "period": 3,
@@ -2647,7 +3067,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo 18' Pullup Jump Shot"
+    "description": "MISS G. Antetokounmpo 18' Pullup Jump Shot",
+    "home_description": "MISS G. Antetokounmpo 18' Pullup Jump Shot",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2657,7 +3079,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "DUNK_MADE",
     "points": 15,
-    "description": "G. Antetokounmpo Putback Dunk (15 PTS)"
+    "description": "G. Antetokounmpo Putback Dunk (15 PTS)",
+    "home_description": "G. Antetokounmpo Putback Dunk (15 PTS)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2667,7 +3091,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:2 Def:3)"
+    "description": "G. Antetokounmpo REBOUND (Off:2 Def:3)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:2 Def:3)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2677,17 +3103,21 @@
     "player": "Russell Westbrook",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 24' 3PT Jump Shot"
+    "description": "MISS Westbrook 24' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Westbrook 24' 3PT Jump Shot"
   },
   {
     "period": 3,
     "time": "8:50",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 3,
@@ -2697,7 +3127,9 @@
     "player": "Zach LaVine",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 17' Step Back Jump Shot"
+    "description": "MISS LaVine 17' Step Back Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 17' Step Back Jump Shot"
   },
   {
     "period": 3,
@@ -2707,7 +3139,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:2 Def:4)"
+    "description": "G. Antetokounmpo REBOUND (Off:2 Def:4)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:2 Def:4)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2717,7 +3151,9 @@
     "player": "Myles Turner",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Turner 5' Turnaround Hook Shot"
+    "description": "MISS Turner 5' Turnaround Hook Shot",
+    "home_description": "MISS Turner 5' Turnaround Hook Shot",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2727,7 +3163,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:2 Def:4)"
+    "description": "Sabonis REBOUND (Off:2 Def:4)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:2 Def:4)"
   },
   {
     "period": 3,
@@ -2737,27 +3175,21 @@
     "player": "Domantas Sabonis",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Sabonis 26' 3PT Jump Shot"
+    "description": "MISS Sabonis 26' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Sabonis 26' 3PT Jump Shot"
   },
   {
     "period": 3,
     "time": "8:15",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "BUCKS Rebound"
-  },
-  {
-    "period": 3,
-    "time": "8:15",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "Eric Montross",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "BUCKS Rebound",
+    "home_description": "BUCKS Rebound",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2767,7 +3199,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FOUL",
     "points": 0,
-    "description": "DeRozan S.FOUL (P1.T2) (M.Kogut)"
+    "description": "DeRozan S.FOUL (P1.T2) (M.Kogut)",
+    "home_description": "",
+    "away_description": "DeRozan S.FOUL (P1.T2) (M.Kogut)"
   },
   {
     "period": 3,
@@ -2777,7 +3211,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Trent Jr. T.FOUL (P1.T0) (J.Conley)"
+    "description": "Trent Jr. T.FOUL (P1.T0) (J.Conley)",
+    "home_description": "Trent Jr. T.FOUL (P1.T0) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2787,7 +3223,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 22,
-    "description": "DeRozan Free Throw Technical (22 PTS)"
+    "description": "DeRozan Free Throw Technical (22 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw Technical (22 PTS)"
   },
   {
     "period": 3,
@@ -2797,7 +3235,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "FT_MADE",
     "points": 11,
-    "description": "Trent Jr. Free Throw 1 of 2 (11 PTS)"
+    "description": "Trent Jr. Free Throw 1 of 2 (11 PTS)",
+    "home_description": "Trent Jr. Free Throw 1 of 2 (11 PTS)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2807,7 +3247,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "FT_MADE",
     "points": 12,
-    "description": "Trent Jr. Free Throw 2 of 2 (12 PTS)"
+    "description": "Trent Jr. Free Throw 2 of 2 (12 PTS)",
+    "home_description": "Trent Jr. Free Throw 2 of 2 (12 PTS)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2817,7 +3259,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MADE",
     "points": 24,
-    "description": "LaVine 25' 3PT Jump Shot (24 PTS) (Schroder 6 AST)"
+    "description": "LaVine 25' 3PT Jump Shot (24 PTS) (Schroder 6 AST)",
+    "home_description": "",
+    "away_description": "LaVine 25' 3PT Jump Shot (24 PTS) (Schroder 6 AST)"
   },
   {
     "period": 3,
@@ -2827,7 +3271,9 @@
     "player": "Ryan Rollins",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Rollins 26' 3PT Jump Shot"
+    "description": "MISS Rollins 26' 3PT Jump Shot",
+    "home_description": "MISS Rollins 26' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2837,7 +3283,9 @@
     "player": "Myles Turner",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Turner REBOUND (Off:2 Def:1)"
+    "description": "Turner REBOUND (Off:2 Def:1)",
+    "home_description": "Turner REBOUND (Off:2 Def:1)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2847,7 +3295,9 @@
     "player": "Myles Turner",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Turner Out of Bounds Lost Ball Turnover (P2.T4)"
+    "description": "Turner Out of Bounds Lost Ball Turnover (P2.T4)",
+    "home_description": "Turner Out of Bounds Lost Ball Turnover (P2.T4)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2857,17 +3307,21 @@
     "player": "Domantas Sabonis",
     "event_type": "LAYUP_MADE",
     "points": 13,
-    "description": "Sabonis 3' Alley Oop Layup (13 PTS) (Schroder 7 AST)"
+    "description": "Sabonis 3' Alley Oop Layup (13 PTS) (Schroder 7 AST)",
+    "home_description": "",
+    "away_description": "Sabonis 3' Alley Oop Layup (13 PTS) (Schroder 7 AST)"
   },
   {
     "period": 3,
     "time": "7:02",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "BUCKS Timeout: Regular (Full 3 Short 0)"
+    "description": "BUCKS Timeout: Regular (Full 3 Short 0)",
+    "home_description": "BUCKS Timeout: Regular (Full 3 Short 0)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2877,7 +3331,9 @@
     "player": "Ryan Rollins",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Rollins Bad Pass Turnover (P2.T5)"
+    "description": "Rollins Bad Pass Turnover (P2.T5)",
+    "home_description": "Rollins Bad Pass Turnover (P2.T5)",
+    "away_description": "Westbrook STEAL (2 STL)"
   },
   {
     "period": 3,
@@ -2887,7 +3343,9 @@
     "player": "AJ Green",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Green S.FOUL (P2.T1) (J.Conley)"
+    "description": "Green S.FOUL (P2.T1) (J.Conley)",
+    "home_description": "Green S.FOUL (P2.T1) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2897,7 +3355,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 25,
-    "description": "LaVine Free Throw 1 of 2 (25 PTS)"
+    "description": "LaVine Free Throw 1 of 2 (25 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw 1 of 2 (25 PTS)"
   },
   {
     "period": 3,
@@ -2907,7 +3367,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 26,
-    "description": "LaVine Free Throw 2 of 2 (26 PTS)"
+    "description": "LaVine Free Throw 2 of 2 (26 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw 2 of 2 (26 PTS)"
   },
   {
     "period": 3,
@@ -2917,7 +3379,9 @@
     "player": "Ryan Rollins",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Rollins 11' Floating Jump Shot"
+    "description": "MISS Rollins 11' Floating Jump Shot",
+    "home_description": "MISS Rollins 11' Floating Jump Shot",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2927,7 +3391,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:2 Def:5)"
+    "description": "Sabonis REBOUND (Off:2 Def:5)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:2 Def:5)"
   },
   {
     "period": 3,
@@ -2937,7 +3403,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 27' 3PT Running Jump Shot"
+    "description": "MISS LaVine 27' 3PT Running Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 27' 3PT Running Jump Shot"
   },
   {
     "period": 3,
@@ -2947,7 +3415,9 @@
     "player": "AJ Green",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Green REBOUND (Off:0 Def:3)"
+    "description": "Green REBOUND (Off:0 Def:3)",
+    "home_description": "Green REBOUND (Off:0 Def:3)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2957,7 +3427,9 @@
     "player": "Russell Westbrook",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Westbrook S.FOUL (P3.T3) (M.Kogut)"
+    "description": "Westbrook S.FOUL (P3.T3) (M.Kogut)",
+    "home_description": "",
+    "away_description": "Westbrook S.FOUL (P3.T3) (M.Kogut)"
   },
   {
     "period": 3,
@@ -2967,17 +3439,21 @@
     "player": "Myles Turner",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Turner Free Throw 1 of 2"
+    "description": "MISS Turner Free Throw 1 of 2",
+    "home_description": "MISS Turner Free Throw 1 of 2",
+    "away_description": ""
   },
   {
     "period": 3,
     "time": "6:08",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "BUCKS Rebound"
+    "description": "BUCKS Rebound",
+    "home_description": "BUCKS Rebound",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2987,7 +3463,9 @@
     "player": "Myles Turner",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Turner Free Throw 2 of 2"
+    "description": "MISS Turner Free Throw 2 of 2",
+    "home_description": "MISS Turner Free Throw 2 of 2",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -2997,7 +3475,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:2 Def:6)"
+    "description": "Sabonis REBOUND (Off:2 Def:6)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:2 Def:6)"
   },
   {
     "period": 3,
@@ -3007,7 +3487,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MADE",
     "points": 29,
-    "description": "LaVine 26' 3PT Jump Shot (29 PTS) (DeRozan 3 AST)"
+    "description": "LaVine 26' 3PT Jump Shot (29 PTS) (DeRozan 3 AST)",
+    "home_description": "",
+    "away_description": "LaVine 26' 3PT Jump Shot (29 PTS) (DeRozan 3 AST)"
   },
   {
     "period": 3,
@@ -3017,7 +3499,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS G. Antetokounmpo 17' Jump Shot"
+    "description": "MISS G. Antetokounmpo 17' Jump Shot",
+    "home_description": "MISS G. Antetokounmpo 17' Jump Shot",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3027,7 +3511,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Schroder REBOUND (Off:0 Def:5)"
+    "description": "Schroder REBOUND (Off:0 Def:5)",
+    "home_description": "",
+    "away_description": "Schroder REBOUND (Off:0 Def:5)"
   },
   {
     "period": 3,
@@ -3037,7 +3523,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 12' Turnaround Fadeaway Shot"
+    "description": "MISS DeRozan 12' Turnaround Fadeaway Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 12' Turnaround Fadeaway Shot"
   },
   {
     "period": 3,
@@ -3047,7 +3535,9 @@
     "player": "Russell Westbrook",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Westbrook REBOUND (Off:2 Def:1)"
+    "description": "Westbrook REBOUND (Off:2 Def:1)",
+    "home_description": "",
+    "away_description": "Westbrook REBOUND (Off:2 Def:1)"
   },
   {
     "period": 3,
@@ -3057,7 +3547,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "3PT_MADE",
     "points": 20,
-    "description": "Schroder 26' 3PT Jump Shot (20 PTS) (Westbrook 5 AST)"
+    "description": "Schroder 26' 3PT Jump Shot (20 PTS) (Westbrook 5 AST)",
+    "home_description": "",
+    "away_description": "Schroder 26' 3PT Jump Shot (20 PTS) (Westbrook 5 AST)"
   },
   {
     "period": 3,
@@ -3067,7 +3559,9 @@
     "player": "Ryan Rollins",
     "event_type": "SHOT_MADE",
     "points": 12,
-    "description": "Rollins 6' Turnaround Jump Shot (12 PTS)"
+    "description": "Rollins 6' Turnaround Jump Shot (12 PTS)",
+    "home_description": "Rollins 6' Turnaround Jump Shot (12 PTS)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3077,7 +3571,9 @@
     "player": "Domantas Sabonis",
     "event_type": "SHOT_MADE",
     "points": 15,
-    "description": "Sabonis 3' Cutting Layup Shot (15 PTS) (Westbrook 6 AST)"
+    "description": "Sabonis 3' Cutting Layup Shot (15 PTS) (Westbrook 6 AST)",
+    "home_description": "",
+    "away_description": "Sabonis 3' Cutting Layup Shot (15 PTS) (Westbrook 6 AST)"
   },
   {
     "period": 3,
@@ -3087,7 +3583,9 @@
     "player": "Ryan Rollins",
     "event_type": "LAYUP_MADE",
     "points": 14,
-    "description": "Rollins 6' Driving Finger Roll Layup (14 PTS)"
+    "description": "Rollins 6' Driving Finger Roll Layup (14 PTS)",
+    "home_description": "Rollins 6' Driving Finger Roll Layup (14 PTS)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3097,7 +3595,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FOUL",
     "points": 0,
-    "description": "G. Antetokounmpo S.FOUL (P3.T2) (J.Conley)"
+    "description": "G. Antetokounmpo S.FOUL (P3.T2) (J.Conley)",
+    "home_description": "G. Antetokounmpo S.FOUL (P3.T2) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3107,7 +3607,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 30,
-    "description": "LaVine Free Throw 1 of 2 (30 PTS)"
+    "description": "LaVine Free Throw 1 of 2 (30 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw 1 of 2 (30 PTS)"
   },
   {
     "period": 3,
@@ -3115,9 +3617,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "AJ Green",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Anthony FOR Green"
+    "description": "SUB: Anthony FOR Green",
+    "home_description": "SUB: Anthony FOR Green",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3125,9 +3629,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Myles Turner",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Kuzma FOR Turner"
+    "description": "SUB: Kuzma FOR Turner",
+    "home_description": "SUB: Kuzma FOR Turner",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3135,9 +3641,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Russell Westbrook",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Ellis FOR Westbrook"
+    "description": "SUB: Ellis FOR Westbrook",
+    "home_description": "",
+    "away_description": "SUB: Ellis FOR Westbrook"
   },
   {
     "period": 3,
@@ -3147,7 +3655,9 @@
     "player": "Zach LaVine",
     "event_type": "FT_MADE",
     "points": 31,
-    "description": "LaVine Free Throw 2 of 2 (31 PTS)"
+    "description": "LaVine Free Throw 2 of 2 (31 PTS)",
+    "home_description": "",
+    "away_description": "LaVine Free Throw 2 of 2 (31 PTS)"
   },
   {
     "period": 3,
@@ -3157,7 +3667,9 @@
     "player": "Cole Anthony",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Anthony OFF.Foul (P2) (M.Ervin)"
+    "description": "Anthony OFF.Foul (P2) (M.Ervin)",
+    "home_description": "Anthony OFF.Foul (P2) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3165,19 +3677,23 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Cole Anthony",
-    "event_type": "FOUL",
+    "event_type": "FOUL+TURNOVER",
     "points": 0,
-    "description": "Anthony Offensive Foul Turnover (P1.T6)"
+    "description": "Anthony Offensive Foul Turnover (P1.T6)",
+    "home_description": "Anthony Offensive Foul Turnover (P1.T6)",
+    "away_description": ""
   },
   {
     "period": 3,
     "time": "3:58",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "BUCKS Timeout: Regular (Full 4 Short 0)"
+    "description": "BUCKS Timeout: Regular (Full 4 Short 0)",
+    "home_description": "BUCKS Timeout: Regular (Full 4 Short 0)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3185,9 +3701,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "DeMar DeRozan",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Clifford FOR DeRozan"
+    "description": "SUB: Clifford FOR DeRozan",
+    "home_description": "",
+    "away_description": "SUB: Clifford FOR DeRozan"
   },
   {
     "period": 3,
@@ -3197,7 +3715,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Schroder 9' Driving Floating Jump Shot"
+    "description": "MISS Schroder 9' Driving Floating Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Schroder 9' Driving Floating Jump Shot"
   },
   {
     "period": 3,
@@ -3207,7 +3727,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:2 Def:5)"
+    "description": "G. Antetokounmpo REBOUND (Off:2 Def:5)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:2 Def:5)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3217,7 +3739,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "3PT_MADE",
     "points": 15,
-    "description": "Trent Jr. 3PT Jump Shot (15 PTS) (Kuzma 1 AST)"
+    "description": "Trent Jr. 3PT Jump Shot (15 PTS) (Kuzma 1 AST)",
+    "home_description": "Trent Jr. 3PT Jump Shot (15 PTS) (Kuzma 1 AST)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3227,7 +3751,9 @@
     "player": "Domantas Sabonis",
     "event_type": "SHOT_MADE",
     "points": 17,
-    "description": "Sabonis 6' Driving Bank Hook Shot (17 PTS)"
+    "description": "Sabonis 6' Driving Bank Hook Shot (17 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis 6' Driving Bank Hook Shot (17 PTS)"
   },
   {
     "period": 3,
@@ -3237,7 +3763,9 @@
     "player": "Cole Anthony",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Anthony Out of Bounds Lost Ball Turnover (P2.T7)"
+    "description": "Anthony Out of Bounds Lost Ball Turnover (P2.T7)",
+    "home_description": "Anthony Out of Bounds Lost Ball Turnover (P2.T7)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3245,9 +3773,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Giannis Antetokounmpo",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Portis FOR G. Antetokounmpo"
+    "description": "SUB: Portis FOR G. Antetokounmpo",
+    "home_description": "SUB: Portis FOR G. Antetokounmpo",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3255,9 +3785,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Domantas Sabonis",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Eubanks FOR Sabonis"
+    "description": "SUB: Eubanks FOR Sabonis",
+    "home_description": "",
+    "away_description": "SUB: Eubanks FOR Sabonis"
   },
   {
     "period": 3,
@@ -3267,7 +3799,9 @@
     "player": "Nique Clifford",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Clifford 14' Jump Shot"
+    "description": "MISS Clifford 14' Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Clifford 14' Jump Shot"
   },
   {
     "period": 3,
@@ -3277,7 +3811,9 @@
     "player": "Cole Anthony",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Anthony REBOUND (Off:0 Def:1)"
+    "description": "Anthony REBOUND (Off:0 Def:1)",
+    "home_description": "Anthony REBOUND (Off:0 Def:1)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3287,17 +3823,21 @@
     "player": "Ryan Rollins",
     "event_type": "DUNK_MADE",
     "points": 16,
-    "description": "Rollins 2' Running Dunk (16 PTS) (Anthony 3 AST)"
+    "description": "Rollins 2' Running Dunk (16 PTS) (Anthony 3 AST)",
+    "home_description": "Rollins 2' Running Dunk (16 PTS) (Anthony 3 AST)",
+    "away_description": ""
   },
   {
     "period": 3,
     "time": "2:38",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "Kings Timeout: Regular (Reg.3 Short 0)"
+    "description": "Kings Timeout: Regular (Reg.3 Short 0)",
+    "home_description": "",
+    "away_description": "Kings Timeout: Regular (Reg.3 Short 0)"
   },
   {
     "period": 3,
@@ -3305,9 +3845,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Ryan Rollins",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Coffey FOR Rollins"
+    "description": "SUB: Coffey FOR Rollins",
+    "home_description": "SUB: Coffey FOR Rollins",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3315,9 +3857,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Dennis Schr\u00f6der",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Westbrook FOR Schroder"
+    "description": "SUB: Westbrook FOR Schroder",
+    "home_description": "",
+    "away_description": "SUB: Westbrook FOR Schroder"
   },
   {
     "period": 3,
@@ -3325,9 +3869,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Russell Westbrook",
-    "event_type": "OTHER",
+    "event_type": "SHOT_MADE",
     "points": 6,
-    "description": "Westbrook 5' Turnaround Fadeaway (6 PTS)"
+    "description": "Westbrook 5' Turnaround Fadeaway (6 PTS)",
+    "home_description": "",
+    "away_description": "Westbrook 5' Turnaround Fadeaway (6 PTS)"
   },
   {
     "period": 3,
@@ -3337,7 +3883,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "SHOT_MADE",
     "points": 17,
-    "description": "Trent Jr. 19' Pullup Jump Shot (17 PTS) (Portis 2 AST)"
+    "description": "Trent Jr. 19' Pullup Jump Shot (17 PTS) (Portis 2 AST)",
+    "home_description": "Trent Jr. 19' Pullup Jump Shot (17 PTS) (Portis 2 AST)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3347,7 +3895,9 @@
     "player": "Russell Westbrook",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 27' 3PT Jump Shot"
+    "description": "MISS Westbrook 27' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Westbrook 27' 3PT Jump Shot"
   },
   {
     "period": 3,
@@ -3357,7 +3907,9 @@
     "player": "Cole Anthony",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Anthony REBOUND (Off:0 Def:2)"
+    "description": "Anthony REBOUND (Off:0 Def:2)",
+    "home_description": "Anthony REBOUND (Off:0 Def:2)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3367,7 +3919,9 @@
     "player": "Bobby Portis",
     "event_type": "3PT_MADE",
     "points": 13,
-    "description": "Portis 26' 3PT Jump Shot (13 PTS) (Anthony 4 AST)"
+    "description": "Portis 26' 3PT Jump Shot (13 PTS) (Anthony 4 AST)",
+    "home_description": "Portis 26' 3PT Jump Shot (13 PTS) (Anthony 4 AST)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3377,7 +3931,9 @@
     "player": "Drew Eubanks",
     "event_type": "SHOT_MADE",
     "points": 6,
-    "description": "Eubanks 5' Driving Hook Shot (6 PTS) (Westbrook 7 AST)"
+    "description": "Eubanks 5' Driving Hook Shot (6 PTS) (Westbrook 7 AST)",
+    "home_description": "",
+    "away_description": "Eubanks 5' Driving Hook Shot (6 PTS) (Westbrook 7 AST)"
   },
   {
     "period": 3,
@@ -3387,7 +3943,9 @@
     "player": "Bobby Portis",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Portis S.FOUL (P1.T3) (M.Kogut)"
+    "description": "Portis S.FOUL (P1.T3) (M.Kogut)",
+    "home_description": "Portis S.FOUL (P1.T3) (M.Kogut)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3397,7 +3955,9 @@
     "player": "Drew Eubanks",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Eubanks Free Throw 1 of 1"
+    "description": "MISS Eubanks Free Throw 1 of 1",
+    "home_description": "",
+    "away_description": "MISS Eubanks Free Throw 1 of 1"
   },
   {
     "period": 3,
@@ -3407,7 +3967,9 @@
     "player": "Kyle Kuzma",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kuzma REBOUND (Off:0 Def:1)"
+    "description": "Kuzma REBOUND (Off:0 Def:1)",
+    "home_description": "Kuzma REBOUND (Off:0 Def:1)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3417,7 +3979,9 @@
     "player": "Cole Anthony",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Anthony Lost Ball Turnover (P3.T8)"
+    "description": "Anthony Lost Ball Turnover (P3.T8)",
+    "home_description": "Anthony Lost Ball Turnover (P3.T8)",
+    "away_description": "Ellis STEAL (2 STL)"
   },
   {
     "period": 3,
@@ -3427,7 +3991,9 @@
     "player": "Drew Eubanks",
     "event_type": "SHOT_MADE",
     "points": 8,
-    "description": "Eubanks 3' Cutting Layup Shot (8 PTS) (Westbrook 8 AST)"
+    "description": "Eubanks 3' Cutting Layup Shot (8 PTS) (Westbrook 8 AST)",
+    "home_description": "",
+    "away_description": "Eubanks 3' Cutting Layup Shot (8 PTS) (Westbrook 8 AST)"
   },
   {
     "period": 3,
@@ -3437,7 +4003,9 @@
     "player": "Cole Anthony",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Anthony T.FOUL (P2.T3) (J.Conley)"
+    "description": "Anthony T.FOUL (P2.T3) (J.Conley)",
+    "home_description": "Anthony T.FOUL (P2.T3) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3447,17 +4015,21 @@
     "player": "Zach LaVine",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS LaVine Free Throw Technical"
+    "description": "MISS LaVine Free Throw Technical",
+    "home_description": "",
+    "away_description": "MISS LaVine Free Throw Technical"
   },
   {
     "period": 3,
     "time": "0:54",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "BUCKS Rebound"
+    "description": "BUCKS Rebound",
+    "home_description": "BUCKS Rebound",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3467,7 +4039,9 @@
     "player": "Drew Eubanks",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Eubanks P.FOUL (P1.T4) (M.Kogut)"
+    "description": "Eubanks P.FOUL (P1.T4) (M.Kogut)",
+    "home_description": "",
+    "away_description": "Eubanks P.FOUL (P1.T4) (M.Kogut)"
   },
   {
     "period": 3,
@@ -3477,7 +4051,9 @@
     "player": "Bobby Portis",
     "event_type": "3PT_MADE",
     "points": 16,
-    "description": "Portis 25' 3PT Jump Shot (16 PTS) (Trent Jr. 2 AST)"
+    "description": "Portis 25' 3PT Jump Shot (16 PTS) (Trent Jr. 2 AST)",
+    "home_description": "Portis 25' 3PT Jump Shot (16 PTS) (Trent Jr. 2 AST)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3487,7 +4063,9 @@
     "player": "Drew Eubanks",
     "event_type": "DUNK_MADE",
     "points": 10,
-    "description": "Eubanks Alley Oop Dunk (10 PTS) (Westbrook 9 AST)"
+    "description": "Eubanks Alley Oop Dunk (10 PTS) (Westbrook 9 AST)",
+    "home_description": "",
+    "away_description": "Eubanks Alley Oop Dunk (10 PTS) (Westbrook 9 AST)"
   },
   {
     "period": 3,
@@ -3497,7 +4075,9 @@
     "player": "Kyle Kuzma",
     "event_type": "SHOT_MADE",
     "points": 6,
-    "description": "Kuzma 10' Driving Floating Jump Shot (6 PTS) (Anthony 5 AST)"
+    "description": "Kuzma 10' Driving Floating Jump Shot (6 PTS) (Anthony 5 AST)",
+    "home_description": "Kuzma 10' Driving Floating Jump Shot (6 PTS) (Anthony 5 AST)",
+    "away_description": ""
   },
   {
     "period": 3,
@@ -3507,37 +4087,21 @@
     "player": "Russell Westbrook",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 26' 3PT Pullup Jump Shot"
+    "description": "MISS Westbrook 26' 3PT Pullup Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Westbrook 26' 3PT Pullup Jump Shot"
   },
   {
     "period": 3,
     "time": "0:01",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
-  },
-  {
-    "period": 3,
-    "time": "0:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
-  },
-  {
-    "period": 4,
-    "time": "12:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 4,
@@ -3547,7 +4111,9 @@
     "player": "Cole Anthony",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Anthony 13' Driving Floating Jump Shot"
+    "description": "MISS Anthony 13' Driving Floating Jump Shot",
+    "home_description": "MISS Anthony 13' Driving Floating Jump Shot",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3557,7 +4123,9 @@
     "player": "Russell Westbrook",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Westbrook REBOUND (Off:2 Def:2)"
+    "description": "Westbrook REBOUND (Off:2 Def:2)",
+    "home_description": "",
+    "away_description": "Westbrook REBOUND (Off:2 Def:2)"
   },
   {
     "period": 4,
@@ -3567,7 +4135,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 15' Pullup Jump Shot"
+    "description": "MISS DeRozan 15' Pullup Jump Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 15' Pullup Jump Shot"
   },
   {
     "period": 4,
@@ -3577,7 +4147,9 @@
     "player": "Nique Clifford",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Clifford REBOUND (Off:1 Def:1)"
+    "description": "Clifford REBOUND (Off:1 Def:1)",
+    "home_description": "",
+    "away_description": "Clifford REBOUND (Off:1 Def:1)"
   },
   {
     "period": 4,
@@ -3587,7 +4159,9 @@
     "player": "Russell Westbrook",
     "event_type": "LAYUP_MADE",
     "points": 8,
-    "description": "Westbrook 3' Driving Finger Roll Layup (8 PTS)"
+    "description": "Westbrook 3' Driving Finger Roll Layup (8 PTS)",
+    "home_description": "",
+    "away_description": "Westbrook 3' Driving Finger Roll Layup (8 PTS)"
   },
   {
     "period": 4,
@@ -3597,7 +4171,9 @@
     "player": "Keon Ellis",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Ellis S.FOUL (P1.T1) (M.Kogut)"
+    "description": "Ellis S.FOUL (P1.T1) (M.Kogut)",
+    "home_description": "",
+    "away_description": "Ellis S.FOUL (P1.T1) (M.Kogut)"
   },
   {
     "period": 4,
@@ -3607,7 +4183,9 @@
     "player": "Kyle Kuzma",
     "event_type": "FT_MADE",
     "points": 7,
-    "description": "Kuzma Free Throw 1 of 2 (7 PTS)"
+    "description": "Kuzma Free Throw 1 of 2 (7 PTS)",
+    "home_description": "Kuzma Free Throw 1 of 2 (7 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3617,7 +4195,9 @@
     "player": "Kyle Kuzma",
     "event_type": "FT_MADE",
     "points": 8,
-    "description": "Kuzma Free Throw 2 of 2 (8 PTS)"
+    "description": "Kuzma Free Throw 2 of 2 (8 PTS)",
+    "home_description": "Kuzma Free Throw 2 of 2 (8 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3627,17 +4207,21 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 15' Jump Shot"
+    "description": "MISS DeRozan 15' Jump Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 15' Jump Shot"
   },
   {
     "period": 4,
     "time": "10:47",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Kings Rebound"
+    "description": "Kings Rebound",
+    "home_description": "",
+    "away_description": "Kings Rebound"
   },
   {
     "period": 4,
@@ -3647,7 +4231,9 @@
     "player": "Cole Anthony",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Anthony P.FOUL (P3.T1) (J.Conley)"
+    "description": "Anthony P.FOUL (P3.T1) (J.Conley)",
+    "home_description": "Anthony P.FOUL (P3.T1) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3657,7 +4243,9 @@
     "player": "Cole Anthony",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Anthony T.FOUL (P3.T1) (J.Conley)"
+    "description": "Anthony T.FOUL (P3.T1) (J.Conley)",
+    "home_description": "Anthony T.FOUL (P3.T1) (J.Conley)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3667,7 +4255,9 @@
     "player": "Cole Anthony",
     "event_type": "OTHER",
     "points": 0,
-    "description": "Anthony Ejection:Other"
+    "description": "Anthony Ejection:Other",
+    "home_description": "Anthony Ejection:Other",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3677,7 +4267,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 23,
-    "description": "DeRozan Free Throw Technical (23 PTS)"
+    "description": "DeRozan Free Throw Technical (23 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw Technical (23 PTS)"
   },
   {
     "period": 4,
@@ -3685,9 +4277,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Cole Anthony",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Rollins FOR Anthony"
+    "description": "SUB: Rollins FOR Anthony",
+    "home_description": "SUB: Rollins FOR Anthony",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3697,7 +4291,9 @@
     "player": "Russell Westbrook",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 14' Pullup Jump Shot"
+    "description": "MISS Westbrook 14' Pullup Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Westbrook 14' Pullup Jump Shot"
   },
   {
     "period": 4,
@@ -3707,7 +4303,9 @@
     "player": "Taurean Prince",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Prince REBOUND (Off:0 Def:2)"
+    "description": "Prince REBOUND (Off:0 Def:2)",
+    "home_description": "Prince REBOUND (Off:0 Def:2)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3717,7 +4315,9 @@
     "player": "Kyle Kuzma",
     "event_type": "SHOT_MADE",
     "points": 10,
-    "description": "Kuzma 9' Running Jump Shot (10 PTS) (Rollins 5 AST)"
+    "description": "Kuzma 9' Running Jump Shot (10 PTS) (Rollins 5 AST)",
+    "home_description": "Kuzma 9' Running Jump Shot (10 PTS) (Rollins 5 AST)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3727,7 +4327,9 @@
     "player": "Nique Clifford",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Clifford S.FOUL (P2.T2) (J.Conley)"
+    "description": "Clifford S.FOUL (P2.T2) (J.Conley)",
+    "home_description": "",
+    "away_description": "Clifford S.FOUL (P2.T2) (J.Conley)"
   },
   {
     "period": 4,
@@ -3735,9 +4337,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Drew Eubanks",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Sabonis FOR Eubanks"
+    "description": "SUB: Sabonis FOR Eubanks",
+    "home_description": "",
+    "away_description": "SUB: Sabonis FOR Eubanks"
   },
   {
     "period": 4,
@@ -3747,7 +4351,9 @@
     "player": "Kyle Kuzma",
     "event_type": "FT_MADE",
     "points": 11,
-    "description": "Kuzma Free Throw 1 of 1 (11 PTS)"
+    "description": "Kuzma Free Throw 1 of 1 (11 PTS)",
+    "home_description": "Kuzma Free Throw 1 of 1 (11 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3755,9 +4361,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "DeMar DeRozan",
-    "event_type": "OTHER",
+    "event_type": "SHOT_MADE",
     "points": 25,
-    "description": "DeRozan 7' Fadeaway Jumper (25 PTS) (Sabonis 6 AST)"
+    "description": "DeRozan 7' Fadeaway Jumper (25 PTS) (Sabonis 6 AST)",
+    "home_description": "",
+    "away_description": "DeRozan 7' Fadeaway Jumper (25 PTS) (Sabonis 6 AST)"
   },
   {
     "period": 4,
@@ -3767,7 +4375,9 @@
     "player": "Ryan Rollins",
     "event_type": "LAYUP_MISSED",
     "points": 0,
-    "description": "MISS Rollins 6' Driving Layup"
+    "description": "MISS Rollins 6' Driving Layup",
+    "home_description": "MISS Rollins 6' Driving Layup",
+    "away_description": "Clifford BLOCK (1 BLK)"
   },
   {
     "period": 4,
@@ -3777,7 +4387,9 @@
     "player": "Nique Clifford",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Clifford REBOUND (Off:1 Def:2)"
+    "description": "Clifford REBOUND (Off:1 Def:2)",
+    "home_description": "",
+    "away_description": "Clifford REBOUND (Off:1 Def:2)"
   },
   {
     "period": 4,
@@ -3787,7 +4399,9 @@
     "player": "Keon Ellis",
     "event_type": "3PT_MADE",
     "points": 3,
-    "description": "Ellis 25' 3PT Running Jump Shot (3 PTS) (Westbrook 10 AST)"
+    "description": "Ellis 25' 3PT Running Jump Shot (3 PTS) (Westbrook 10 AST)",
+    "home_description": "",
+    "away_description": "Ellis 25' 3PT Running Jump Shot (3 PTS) (Westbrook 10 AST)"
   },
   {
     "period": 4,
@@ -3797,7 +4411,9 @@
     "player": "Kyle Kuzma",
     "event_type": "LAYUP_MADE",
     "points": 13,
-    "description": "Kuzma 8' Driving Layup (13 PTS) (Rollins 6 AST)"
+    "description": "Kuzma 8' Driving Layup (13 PTS) (Rollins 6 AST)",
+    "home_description": "Kuzma 8' Driving Layup (13 PTS) (Rollins 6 AST)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3807,7 +4423,9 @@
     "player": "Ryan Rollins",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Rollins S.FOUL (P2.T2) (M.Kogut)"
+    "description": "Rollins S.FOUL (P2.T2) (M.Kogut)",
+    "home_description": "Rollins S.FOUL (P2.T2) (M.Kogut)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3817,7 +4435,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MADE",
     "points": 18,
-    "description": "Sabonis Free Throw 1 of 2 (18 PTS)"
+    "description": "Sabonis Free Throw 1 of 2 (18 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis Free Throw 1 of 2 (18 PTS)"
   },
   {
     "period": 4,
@@ -3825,9 +4445,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Russell Westbrook",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: LaVine FOR Westbrook"
+    "description": "SUB: LaVine FOR Westbrook",
+    "home_description": "",
+    "away_description": "SUB: LaVine FOR Westbrook"
   },
   {
     "period": 4,
@@ -3835,9 +4457,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Nique Clifford",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Schroder FOR Clifford"
+    "description": "SUB: Schroder FOR Clifford",
+    "home_description": "",
+    "away_description": "SUB: Schroder FOR Clifford"
   },
   {
     "period": 4,
@@ -3847,7 +4471,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MADE",
     "points": 19,
-    "description": "Sabonis Free Throw 2 of 2 (19 PTS)"
+    "description": "Sabonis Free Throw 2 of 2 (19 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis Free Throw 2 of 2 (19 PTS)"
   },
   {
     "period": 4,
@@ -3855,9 +4481,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Kyle Kuzma",
-    "event_type": "OTHER",
+    "event_type": "SHOT_MADE",
     "points": 15,
-    "description": "Kuzma 18' Turnaround Fadeaway (15 PTS)"
+    "description": "Kuzma 18' Turnaround Fadeaway (15 PTS)",
+    "home_description": "Kuzma 18' Turnaround Fadeaway (15 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3867,7 +4495,9 @@
     "player": "Taurean Prince",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Prince S.FOUL (P2.T3) (M.Ervin)"
+    "description": "Prince S.FOUL (P2.T3) (M.Ervin)",
+    "home_description": "Prince S.FOUL (P2.T3) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3877,7 +4507,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MADE",
     "points": 20,
-    "description": "Sabonis Free Throw 1 of 2 (20 PTS)"
+    "description": "Sabonis Free Throw 1 of 2 (20 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis Free Throw 1 of 2 (20 PTS)"
   },
   {
     "period": 4,
@@ -3887,7 +4519,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MADE",
     "points": 21,
-    "description": "Sabonis Free Throw 2 of 2 (21 PTS)"
+    "description": "Sabonis Free Throw 2 of 2 (21 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis Free Throw 2 of 2 (21 PTS)"
   },
   {
     "period": 4,
@@ -3897,7 +4531,9 @@
     "player": "Kyle Kuzma",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Kuzma 5' Driving Floating Jump Shot"
+    "description": "MISS Kuzma 5' Driving Floating Jump Shot",
+    "home_description": "MISS Kuzma 5' Driving Floating Jump Shot",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3907,7 +4543,9 @@
     "player": "DeMar DeRozan",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "DeRozan REBOUND (Off:0 Def:4)"
+    "description": "DeRozan REBOUND (Off:0 Def:4)",
+    "home_description": "",
+    "away_description": "DeRozan REBOUND (Off:0 Def:4)"
   },
   {
     "period": 4,
@@ -3917,7 +4555,9 @@
     "player": "DeMar DeRozan",
     "event_type": "STEAL",
     "points": 0,
-    "description": "Rollins STEAL (2 STL)"
+    "description": "Rollins STEAL (2 STL)",
+    "home_description": "Rollins STEAL (2 STL)",
+    "away_description": "DeRozan Bad Pass Turnover (P2.T7)"
   },
   {
     "period": 4,
@@ -3927,7 +4567,9 @@
     "player": "Kyle Kuzma",
     "event_type": "DUNK_MADE",
     "points": 17,
-    "description": "Kuzma 3' Dunk (17 PTS) (Rollins 7 AST)"
+    "description": "Kuzma 3' Dunk (17 PTS) (Rollins 7 AST)",
+    "home_description": "Kuzma 3' Dunk (17 PTS) (Rollins 7 AST)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3937,7 +4579,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 11' Pullup Jump Shot"
+    "description": "MISS DeRozan 11' Pullup Jump Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 11' Pullup Jump Shot"
   },
   {
     "period": 4,
@@ -3947,7 +4591,9 @@
     "player": "Taurean Prince",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Prince REBOUND (Off:0 Def:3)"
+    "description": "Prince REBOUND (Off:0 Def:3)",
+    "home_description": "Prince REBOUND (Off:0 Def:3)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3957,7 +4603,9 @@
     "player": "Ryan Rollins",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Rollins Lost Ball Turnover (P3.T9)"
+    "description": "Rollins Lost Ball Turnover (P3.T9)",
+    "home_description": "Rollins Lost Ball Turnover (P3.T9)",
+    "away_description": "LaVine STEAL (1 STL)"
   },
   {
     "period": 4,
@@ -3965,29 +4613,23 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Taurean Prince",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: G. Antetokounmpo FOR Prince"
+    "description": "SUB: G. Antetokounmpo FOR Prince",
+    "home_description": "SUB: G. Antetokounmpo FOR Prince",
+    "away_description": ""
   },
   {
     "period": 4,
     "time": "7:38",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "BUCKS Timeout: Regular (Full 5 Short 0)"
-  },
-  {
-    "period": 4,
-    "time": "7:38",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "BUCKS Timeout: Regular (Full 5 Short 0)",
+    "home_description": "BUCKS Timeout: Regular (Full 5 Short 0)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -3997,7 +4639,9 @@
     "player": "Domantas Sabonis",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Sabonis Out of Bounds Lost Ball Turnover (P2.T8)"
+    "description": "Sabonis Out of Bounds Lost Ball Turnover (P2.T8)",
+    "home_description": "",
+    "away_description": "Sabonis Out of Bounds Lost Ball Turnover (P2.T8)"
   },
   {
     "period": 4,
@@ -4005,9 +4649,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Keon Ellis",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Westbrook FOR Ellis"
+    "description": "SUB: Westbrook FOR Ellis",
+    "home_description": "",
+    "away_description": "SUB: Westbrook FOR Ellis"
   },
   {
     "period": 4,
@@ -4017,7 +4663,9 @@
     "player": "Amir Coffey",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Coffey 24' 3PT Jump Shot"
+    "description": "MISS Coffey 24' 3PT Jump Shot",
+    "home_description": "MISS Coffey 24' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4027,7 +4675,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:2 Def:7)"
+    "description": "Sabonis REBOUND (Off:2 Def:7)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:2 Def:7)"
   },
   {
     "period": 4,
@@ -4037,7 +4687,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 25' 3PT Jump Shot"
+    "description": "MISS LaVine 25' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 25' 3PT Jump Shot"
   },
   {
     "period": 4,
@@ -4047,7 +4699,9 @@
     "player": "Amir Coffey",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Coffey REBOUND (Off:2 Def:1)"
+    "description": "Coffey REBOUND (Off:2 Def:1)",
+    "home_description": "Coffey REBOUND (Off:2 Def:1)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4057,7 +4711,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Sabonis P.FOUL (P3.T3) (J.Conley)"
+    "description": "Sabonis P.FOUL (P3.T3) (J.Conley)",
+    "home_description": "",
+    "away_description": "Sabonis P.FOUL (P3.T3) (J.Conley)"
   },
   {
     "period": 4,
@@ -4065,9 +4721,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Amir Coffey",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Green FOR Coffey"
+    "description": "SUB: Green FOR Coffey",
+    "home_description": "SUB: Green FOR Coffey",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4077,7 +4735,9 @@
     "player": "Russell Westbrook",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Westbrook P.FOUL (P4.T4) (M.Kogut)"
+    "description": "Westbrook P.FOUL (P4.T4) (M.Kogut)",
+    "home_description": "",
+    "away_description": "Westbrook P.FOUL (P4.T4) (M.Kogut)"
   },
   {
     "period": 4,
@@ -4087,7 +4747,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Green 3PT Jump Shot"
+    "description": "MISS Green 3PT Jump Shot",
+    "home_description": "MISS Green 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4097,7 +4759,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:2 Def:8)"
+    "description": "Sabonis REBOUND (Off:2 Def:8)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:2 Def:8)"
   },
   {
     "period": 4,
@@ -4107,7 +4771,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "SHOT_MADE",
     "points": 22,
-    "description": "Schroder 4' Driving Floating Jump Shot (22 PTS)"
+    "description": "Schroder 4' Driving Floating Jump Shot (22 PTS)",
+    "home_description": "",
+    "away_description": "Schroder 4' Driving Floating Jump Shot (22 PTS)"
   },
   {
     "period": 4,
@@ -4117,7 +4783,9 @@
     "player": "Kyle Kuzma",
     "event_type": "LAYUP_MADE",
     "points": 19,
-    "description": "Kuzma 2' Driving Layup (19 PTS)"
+    "description": "Kuzma 2' Driving Layup (19 PTS)",
+    "home_description": "Kuzma 2' Driving Layup (19 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4127,7 +4795,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FOUL",
     "points": 0,
-    "description": "DeRozan S.FOUL (P2.PN) (M.Kogut)"
+    "description": "DeRozan S.FOUL (P2.PN) (M.Kogut)",
+    "home_description": "",
+    "away_description": "DeRozan S.FOUL (P2.PN) (M.Kogut)"
   },
   {
     "period": 4,
@@ -4137,7 +4807,9 @@
     "player": "Kyle Kuzma",
     "event_type": "FT_MADE",
     "points": 20,
-    "description": "Kuzma Free Throw 1 of 1 (20 PTS)"
+    "description": "Kuzma Free Throw 1 of 1 (20 PTS)",
+    "home_description": "Kuzma Free Throw 1 of 1 (20 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4145,9 +4817,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Bobby Portis",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Turner FOR Portis"
+    "description": "SUB: Turner FOR Portis",
+    "home_description": "SUB: Turner FOR Portis",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4157,7 +4831,9 @@
     "player": "DeMar DeRozan",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 24' 3PT Jump Shot"
+    "description": "MISS DeRozan 24' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 24' 3PT Jump Shot"
   },
   {
     "period": 4,
@@ -4167,7 +4843,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:2 Def:6)"
+    "description": "G. Antetokounmpo REBOUND (Off:2 Def:6)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:2 Def:6)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4177,7 +4855,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Green 27' 3PT Jump Shot"
+    "description": "MISS Green 27' 3PT Jump Shot",
+    "home_description": "MISS Green 27' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4187,7 +4867,9 @@
     "player": "Zach LaVine",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "LaVine REBOUND (Off:0 Def:4)"
+    "description": "LaVine REBOUND (Off:0 Def:4)",
+    "home_description": "",
+    "away_description": "LaVine REBOUND (Off:0 Def:4)"
   },
   {
     "period": 4,
@@ -4197,7 +4879,9 @@
     "player": "AJ Green",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Green P.FOUL (P3.T4) (M.Kogut)"
+    "description": "Green P.FOUL (P3.T4) (M.Kogut)",
+    "home_description": "Green P.FOUL (P3.T4) (M.Kogut)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4207,27 +4891,21 @@
     "player": "Ryan Rollins",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Rollins S.FOUL (P3.PN) (M.Ervin)"
+    "description": "Rollins S.FOUL (P3.PN) (M.Ervin)",
+    "home_description": "Rollins S.FOUL (P3.PN) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 4,
     "time": "5:23",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "BUCKS Timeout: Regular (Full 6 Short 0)"
-  },
-  {
-    "period": 4,
-    "time": "5:23",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "BUCKS Timeout: Regular (Full 6 Short 0)",
+    "home_description": "BUCKS Timeout: Regular (Full 6 Short 0)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4237,7 +4915,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 26,
-    "description": "DeRozan Free Throw 1 of 2 (26 PTS)"
+    "description": "DeRozan Free Throw 1 of 2 (26 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw 1 of 2 (26 PTS)"
   },
   {
     "period": 4,
@@ -4247,7 +4927,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 27,
-    "description": "DeRozan Free Throw 2 of 2 (27 PTS)"
+    "description": "DeRozan Free Throw 2 of 2 (27 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw 2 of 2 (27 PTS)"
   },
   {
     "period": 4,
@@ -4255,9 +4937,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Kyle Kuzma",
-    "event_type": "OTHER",
+    "event_type": "SHOT_MADE",
     "points": 22,
-    "description": "Kuzma 17' Turnaround Fadeaway (22 PTS)"
+    "description": "Kuzma 17' Turnaround Fadeaway (22 PTS)",
+    "home_description": "Kuzma 17' Turnaround Fadeaway (22 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4267,7 +4951,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 24' 3PT Jump Shot"
+    "description": "MISS LaVine 24' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 24' 3PT Jump Shot"
   },
   {
     "period": 4,
@@ -4277,7 +4963,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:3 Def:8)"
+    "description": "Sabonis REBOUND (Off:3 Def:8)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:3 Def:8)"
   },
   {
     "period": 4,
@@ -4287,7 +4975,9 @@
     "player": "Zach LaVine",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS LaVine 24' 3PT Jump Shot"
+    "description": "MISS LaVine 24' 3PT Jump Shot",
+    "home_description": "",
+    "away_description": "MISS LaVine 24' 3PT Jump Shot"
   },
   {
     "period": 4,
@@ -4297,7 +4987,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:4 Def:8)"
+    "description": "Sabonis REBOUND (Off:4 Def:8)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:4 Def:8)"
   },
   {
     "period": 4,
@@ -4307,7 +4999,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Schroder 9' Pullup Jump Shot"
+    "description": "MISS Schroder 9' Pullup Jump Shot",
+    "home_description": "",
+    "away_description": "MISS Schroder 9' Pullup Jump Shot"
   },
   {
     "period": 4,
@@ -4317,7 +5011,9 @@
     "player": "Russell Westbrook",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Westbrook REBOUND (Off:3 Def:2)"
+    "description": "Westbrook REBOUND (Off:3 Def:2)",
+    "home_description": "",
+    "away_description": "Westbrook REBOUND (Off:3 Def:2)"
   },
   {
     "period": 4,
@@ -4327,7 +5023,9 @@
     "player": "Russell Westbrook",
     "event_type": "SHOT_MADE",
     "points": 10,
-    "description": "Westbrook 2' Tip Layup Shot (10 PTS)"
+    "description": "Westbrook 2' Tip Layup Shot (10 PTS)",
+    "home_description": "",
+    "away_description": "Westbrook 2' Tip Layup Shot (10 PTS)"
   },
   {
     "period": 4,
@@ -4337,7 +5035,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Sabonis P.FOUL (P4.PN) (M.Ervin)"
+    "description": "Sabonis P.FOUL (P4.PN) (M.Ervin)",
+    "home_description": "",
+    "away_description": "Sabonis P.FOUL (P4.PN) (M.Ervin)"
   },
   {
     "period": 4,
@@ -4347,17 +5047,21 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 16,
-    "description": "G. Antetokounmpo Free Throw 1 of 2 (16 PTS)"
+    "description": "G. Antetokounmpo Free Throw 1 of 2 (16 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 1 of 2 (16 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
     "time": "3:54",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "Kings Timeout: Regular (Reg.4 Short 0)"
+    "description": "Kings Timeout: Regular (Reg.4 Short 0)",
+    "home_description": "",
+    "away_description": "Kings Timeout: Regular (Reg.4 Short 0)"
   },
   {
     "period": 4,
@@ -4367,7 +5071,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 17,
-    "description": "G. Antetokounmpo Free Throw 2 of 2 (17 PTS)"
+    "description": "G. Antetokounmpo Free Throw 2 of 2 (17 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 2 of 2 (17 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4377,7 +5083,9 @@
     "player": "AJ Green",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Green P.FOUL (P4.PN) (M.Kogut)"
+    "description": "Green P.FOUL (P4.PN) (M.Kogut)",
+    "home_description": "Green P.FOUL (P4.PN) (M.Kogut)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4387,7 +5095,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MADE",
     "points": 22,
-    "description": "Sabonis Free Throw 1 of 2 (22 PTS)"
+    "description": "Sabonis Free Throw 1 of 2 (22 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis Free Throw 1 of 2 (22 PTS)"
   },
   {
     "period": 4,
@@ -4397,7 +5107,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MADE",
     "points": 23,
-    "description": "Sabonis Free Throw 2 of 2 (23 PTS)"
+    "description": "Sabonis Free Throw 2 of 2 (23 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis Free Throw 2 of 2 (23 PTS)"
   },
   {
     "period": 4,
@@ -4407,7 +5119,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "3PT_MADE",
     "points": 20,
-    "description": "G. Antetokounmpo 26' 3PT Jump Shot (20 PTS) (Green 2 AST)"
+    "description": "G. Antetokounmpo 26' 3PT Jump Shot (20 PTS) (Green 2 AST)",
+    "home_description": "G. Antetokounmpo 26' 3PT Jump Shot (20 PTS) (Green 2 AST)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4417,7 +5131,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Sabonis OFF.Foul (P5) (M.Kogut)"
+    "description": "Sabonis OFF.Foul (P5) (M.Kogut)",
+    "home_description": "",
+    "away_description": "Sabonis OFF.Foul (P5) (M.Kogut)"
   },
   {
     "period": 4,
@@ -4425,19 +5141,23 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Domantas Sabonis",
-    "event_type": "FOUL",
+    "event_type": "FOUL+TURNOVER",
     "points": 0,
-    "description": "Sabonis Offensive Foul Turnover (P3.T9)"
+    "description": "Sabonis Offensive Foul Turnover (P3.T9)",
+    "home_description": "",
+    "away_description": "Sabonis Offensive Foul Turnover (P3.T9)"
   },
   {
     "period": 4,
     "time": "3:04",
     "HoA": "AWAY",
-    "team": "nan",
+    "team": "Kings",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "Kings Timeout: Regular (Reg.5 Short 0)"
+    "description": "Kings Timeout: Regular (Reg.5 Short 0)",
+    "home_description": "",
+    "away_description": "Kings Timeout: Regular (Reg.5 Short 0)"
   },
   {
     "period": 4,
@@ -4445,9 +5165,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Kyle Kuzma",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Trent Jr. FOR Kuzma"
+    "description": "SUB: Trent Jr. FOR Kuzma",
+    "home_description": "SUB: Trent Jr. FOR Kuzma",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4457,7 +5179,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "DUNK_MADE",
     "points": 22,
-    "description": "G. Antetokounmpo 1' Driving Dunk (22 PTS)"
+    "description": "G. Antetokounmpo 1' Driving Dunk (22 PTS)",
+    "home_description": "G. Antetokounmpo 1' Driving Dunk (22 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4467,7 +5191,9 @@
     "player": "Myles Turner",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Turner S.FOUL (P4.PN) (M.Ervin)"
+    "description": "Turner S.FOUL (P4.PN) (M.Ervin)",
+    "home_description": "Turner S.FOUL (P4.PN) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4477,7 +5203,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MADE",
     "points": 24,
-    "description": "Sabonis Free Throw 1 of 2 (24 PTS)"
+    "description": "Sabonis Free Throw 1 of 2 (24 PTS)",
+    "home_description": "",
+    "away_description": "Sabonis Free Throw 1 of 2 (24 PTS)"
   },
   {
     "period": 4,
@@ -4487,7 +5215,9 @@
     "player": "Domantas Sabonis",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Sabonis Free Throw 2 of 2"
+    "description": "MISS Sabonis Free Throw 2 of 2",
+    "home_description": "",
+    "away_description": "MISS Sabonis Free Throw 2 of 2"
   },
   {
     "period": 4,
@@ -4497,7 +5227,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:2 Def:7)"
+    "description": "G. Antetokounmpo REBOUND (Off:2 Def:7)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:2 Def:7)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4507,7 +5239,9 @@
     "player": "Russell Westbrook",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Westbrook S.FOUL (P5.PN) (M.Ervin)"
+    "description": "Westbrook S.FOUL (P5.PN) (M.Ervin)",
+    "home_description": "",
+    "away_description": "Westbrook S.FOUL (P5.PN) (M.Ervin)"
   },
   {
     "period": 4,
@@ -4517,7 +5251,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 23,
-    "description": "G. Antetokounmpo Free Throw 1 of 2 (23 PTS)"
+    "description": "G. Antetokounmpo Free Throw 1 of 2 (23 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 1 of 2 (23 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4527,7 +5263,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "FT_MADE",
     "points": 24,
-    "description": "G. Antetokounmpo Free Throw 2 of 2 (24 PTS)"
+    "description": "G. Antetokounmpo Free Throw 2 of 2 (24 PTS)",
+    "home_description": "G. Antetokounmpo Free Throw 2 of 2 (24 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4537,7 +5275,9 @@
     "player": "Myles Turner",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Turner S.FOUL (P5.PN) (M.Ervin)"
+    "description": "Turner S.FOUL (P5.PN) (M.Ervin)",
+    "home_description": "Turner S.FOUL (P5.PN) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4547,7 +5287,9 @@
     "player": "Russell Westbrook",
     "event_type": "FT_MADE",
     "points": 11,
-    "description": "Westbrook Free Throw 1 of 2 (11 PTS)"
+    "description": "Westbrook Free Throw 1 of 2 (11 PTS)",
+    "home_description": "",
+    "away_description": "Westbrook Free Throw 1 of 2 (11 PTS)"
   },
   {
     "period": 4,
@@ -4557,7 +5299,9 @@
     "player": "Russell Westbrook",
     "event_type": "FT_MADE",
     "points": 12,
-    "description": "Westbrook Free Throw 2 of 2 (12 PTS)"
+    "description": "Westbrook Free Throw 2 of 2 (12 PTS)",
+    "home_description": "",
+    "away_description": "Westbrook Free Throw 2 of 2 (12 PTS)"
   },
   {
     "period": 4,
@@ -4567,7 +5311,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "Trent Jr. Lost Ball Turnover (P1.T10)"
+    "description": "Trent Jr. Lost Ball Turnover (P1.T10)",
+    "home_description": "Trent Jr. Lost Ball Turnover (P1.T10)",
+    "away_description": "Schroder STEAL (1 STL)"
   },
   {
     "period": 4,
@@ -4575,9 +5321,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Russell Westbrook",
-    "event_type": "OTHER",
+    "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS Westbrook 9' Fadeaway Jumper"
+    "description": "MISS Westbrook 9' Fadeaway Jumper",
+    "home_description": "",
+    "away_description": "MISS Westbrook 9' Fadeaway Jumper"
   },
   {
     "period": 4,
@@ -4587,7 +5335,9 @@
     "player": "Domantas Sabonis",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Sabonis REBOUND (Off:5 Def:8)"
+    "description": "Sabonis REBOUND (Off:5 Def:8)",
+    "home_description": "",
+    "away_description": "Sabonis REBOUND (Off:5 Def:8)"
   },
   {
     "period": 4,
@@ -4597,7 +5347,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "STEAL",
     "points": 0,
-    "description": "G. Antetokounmpo STEAL (1 STL)"
+    "description": "G. Antetokounmpo STEAL (1 STL)",
+    "home_description": "G. Antetokounmpo STEAL (1 STL)",
+    "away_description": "Schroder Lost Ball Turnover (P3.T10)"
   },
   {
     "period": 4,
@@ -4607,7 +5359,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "DUNK_MADE",
     "points": 26,
-    "description": "G. Antetokounmpo 1' Running Dunk (26 PTS) (Rollins 8 AST)"
+    "description": "G. Antetokounmpo 1' Running Dunk (26 PTS) (Rollins 8 AST)",
+    "home_description": "G. Antetokounmpo 1' Running Dunk (26 PTS) (Rollins 8 AST)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4617,7 +5371,9 @@
     "player": "Gary Trent Jr.",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Trent Jr. S.FOUL (P2.PN) (M.Ervin)"
+    "description": "Trent Jr. S.FOUL (P2.PN) (M.Ervin)",
+    "home_description": "Trent Jr. S.FOUL (P2.PN) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4627,7 +5383,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 28,
-    "description": "DeRozan Free Throw 1 of 2 (28 PTS)"
+    "description": "DeRozan Free Throw 1 of 2 (28 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw 1 of 2 (28 PTS)"
   },
   {
     "period": 4,
@@ -4637,7 +5395,9 @@
     "player": "DeMar DeRozan",
     "event_type": "FT_MADE",
     "points": 29,
-    "description": "DeRozan Free Throw 2 of 2 (29 PTS)"
+    "description": "DeRozan Free Throw 2 of 2 (29 PTS)",
+    "home_description": "",
+    "away_description": "DeRozan Free Throw 2 of 2 (29 PTS)"
   },
   {
     "period": 4,
@@ -4647,7 +5407,9 @@
     "player": "Myles Turner",
     "event_type": "3PT_MADE",
     "points": 9,
-    "description": "Turner 3PT Jump Shot (9 PTS) (G. Antetokounmpo 8 AST)"
+    "description": "Turner 3PT Jump Shot (9 PTS) (G. Antetokounmpo 8 AST)",
+    "home_description": "Turner 3PT Jump Shot (9 PTS) (G. Antetokounmpo 8 AST)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4657,7 +5419,9 @@
     "player": "DeMar DeRozan",
     "event_type": "SHOT_MISSED",
     "points": 0,
-    "description": "MISS DeRozan 17' Pullup Jump Shot"
+    "description": "MISS DeRozan 17' Pullup Jump Shot",
+    "home_description": "",
+    "away_description": "MISS DeRozan 17' Pullup Jump Shot"
   },
   {
     "period": 4,
@@ -4667,7 +5431,9 @@
     "player": "AJ Green",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "Green REBOUND (Off:0 Def:4)"
+    "description": "Green REBOUND (Off:0 Def:4)",
+    "home_description": "Green REBOUND (Off:0 Def:4)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4677,7 +5443,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "TURNOVER",
     "points": 0,
-    "description": "G. Antetokounmpo Bad Pass Turnover (P1.T11)"
+    "description": "G. Antetokounmpo Bad Pass Turnover (P1.T11)",
+    "home_description": "G. Antetokounmpo Bad Pass Turnover (P1.T11)",
+    "away_description": "Schroder STEAL (2 STL)"
   },
   {
     "period": 4,
@@ -4687,7 +5455,9 @@
     "player": "AJ Green",
     "event_type": "FOUL",
     "points": 0,
-    "description": "Green Personal Take Foul (P5.PN) (M.Ervin)"
+    "description": "Green Personal Take Foul (P5.PN) (M.Ervin)",
+    "home_description": "Green Personal Take Foul (P5.PN) (M.Ervin)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4697,7 +5467,9 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "FT_MADE",
     "points": 23,
-    "description": "Schroder Free Throw 1 of 2 (23 PTS)"
+    "description": "Schroder Free Throw 1 of 2 (23 PTS)",
+    "home_description": "",
+    "away_description": "Schroder Free Throw 1 of 2 (23 PTS)"
   },
   {
     "period": 4,
@@ -4707,17 +5479,21 @@
     "player": "Dennis Schr\u00f6der",
     "event_type": "FT_MADE",
     "points": 24,
-    "description": "Schroder Free Throw 2 of 2 (24 PTS)"
+    "description": "Schroder Free Throw 2 of 2 (24 PTS)",
+    "home_description": "",
+    "away_description": "Schroder Free Throw 2 of 2 (24 PTS)"
   },
   {
     "period": 4,
     "time": "0:14",
     "HoA": "HOME",
-    "team": "nan",
+    "team": "Bucks",
     "player": "nan",
-    "event_type": "OTHER",
+    "event_type": "TIMEOUT",
     "points": 0,
-    "description": "BUCKS Timeout: Regular (Full 7 Short 0)"
+    "description": "BUCKS Timeout: Regular (Full 7 Short 0)",
+    "home_description": "BUCKS Timeout: Regular (Full 7 Short 0)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4727,7 +5503,9 @@
     "player": "AJ Green",
     "event_type": "3PT_MISSED",
     "points": 0,
-    "description": "MISS Green 26' 3PT Jump Shot"
+    "description": "MISS Green 26' 3PT Jump Shot",
+    "home_description": "MISS Green 26' 3PT Jump Shot",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4737,7 +5515,9 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:3 Def:7)"
+    "description": "G. Antetokounmpo REBOUND (Off:3 Def:7)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:3 Def:7)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4747,7 +5527,9 @@
     "player": "Zach LaVine",
     "event_type": "FOUL",
     "points": 0,
-    "description": "LaVine P.FOUL (P2.PN) (M.Kogut)"
+    "description": "LaVine P.FOUL (P2.PN) (M.Kogut)",
+    "home_description": "",
+    "away_description": "LaVine P.FOUL (P2.PN) (M.Kogut)"
   },
   {
     "period": 4,
@@ -4757,7 +5539,9 @@
     "player": "AJ Green",
     "event_type": "FT_MADE",
     "points": 17,
-    "description": "Green Free Throw 1 of 2 (17 PTS)"
+    "description": "Green Free Throw 1 of 2 (17 PTS)",
+    "home_description": "Green Free Throw 1 of 2 (17 PTS)",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4767,7 +5551,9 @@
     "player": "AJ Green",
     "event_type": "FT_MISSED",
     "points": 0,
-    "description": "MISS Green Free Throw 2 of 2"
+    "description": "MISS Green Free Throw 2 of 2",
+    "home_description": "MISS Green Free Throw 2 of 2",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4775,9 +5561,11 @@
     "HoA": "HOME",
     "team": "Bucks",
     "player": "Gary Trent Jr.",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Sims FOR Trent Jr."
+    "description": "SUB: Sims FOR Trent Jr.",
+    "home_description": "SUB: Sims FOR Trent Jr.",
+    "away_description": ""
   },
   {
     "period": 4,
@@ -4785,9 +5573,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "DeMar DeRozan",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Eubanks FOR DeRozan"
+    "description": "SUB: Eubanks FOR DeRozan",
+    "home_description": "",
+    "away_description": "SUB: Eubanks FOR DeRozan"
   },
   {
     "period": 4,
@@ -4795,9 +5585,11 @@
     "HoA": "AWAY",
     "team": "Kings",
     "player": "Dennis Schr\u00f6der",
-    "event_type": "OTHER",
+    "event_type": "SUBSTITUTION",
     "points": 0,
-    "description": "SUB: Cardwell FOR Schroder"
+    "description": "SUB: Cardwell FOR Schroder",
+    "home_description": "",
+    "away_description": "SUB: Cardwell FOR Schroder"
   },
   {
     "period": 4,
@@ -4807,16 +5599,8 @@
     "player": "Giannis Antetokounmpo",
     "event_type": "REBOUND",
     "points": 0,
-    "description": "G. Antetokounmpo REBOUND (Off:4 Def:7)"
-  },
-  {
-    "period": 4,
-    "time": "0:00",
-    "HoA": "AWAY",
-    "team": "nan",
-    "player": "nan",
-    "event_type": "OTHER",
-    "points": 0,
-    "description": "nan"
+    "description": "G. Antetokounmpo REBOUND (Off:4 Def:7)",
+    "home_description": "G. Antetokounmpo REBOUND (Off:4 Def:7)",
+    "away_description": ""
   }
 ]

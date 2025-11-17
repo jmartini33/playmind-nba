@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import BackgroundImage from './assets/BackgroundImage.png'
 
 type Game = {
   id: string
@@ -20,8 +21,10 @@ function App() {
   const [gameSummary, setGameSummary] = useState<any | null>(null)
   const [gameSummaryStatus, setGameSummaryStatus] = useState<string | null>(null)
 
+  const hasGames = games.length > 0
+
   const selectedGame: Game | undefined =
-    games.find((g) => g.id === selectedGameId) ?? games[0]
+    hasGames ? games.find((g) => g.id === selectedGameId) ?? games[0] : undefined
 
   useEffect(() => {
     async function loadGames() {
@@ -161,7 +164,15 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={{
+        backgroundImage: `url(${BackgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <header className="app-header">
         <div className="app-header-left">
           <div className="app-title">Playmind NBA</div>
@@ -198,29 +209,35 @@ function App() {
               <div className="games-column games-column-left">
               <h2 className="section-title">Select game</h2>
               <div className="card games-list-card">
-                <div className="games-list">
-                  {games.map((game) => (
-                    <button
-                      key={game.id}
-                      type="button"
-                      className={`games-list-item ${
-                        game.id === selectedGameId ? 'active' : ''
-                      }`}
-                      onClick={() => setSelectedGameId(game.id)}
-                    >
-                      <div className="games-list-item-main">
-                        {game.away} @ {game.home}
-                      </div>
-                    </button>
-                  ))}
-                </div>
+                {hasGames ? (
+                  <div className="games-list">
+                    {games.map((game) => (
+                      <button
+                        key={game.id}
+                        type="button"
+                        className={`games-list-item ${
+                          game.id === selectedGameId ? 'active' : ''
+                        }`}
+                        onClick={() => setSelectedGameId(game.id)}
+                      >
+                        <div className="games-list-item-main">
+                          {game.away} @ {game.home}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="card-placeholder large">
+                    No games have been ingested yet. Add a game above to get started.
+                  </div>
+                )}
               </div>
             </div>
 
             <div className="games-column games-column-middle">
               <h2 className="section-title">Summary</h2>
               <div className="card games-summary-card">
-                {selectedGame ? (
+                {hasGames && selectedGame ? (
                   <>
                     <div className="games-summary-header">
                       <div className="games-summary-score">{selectedGame.score}</div>
@@ -293,7 +310,11 @@ function App() {
                     </div>
                   </>
                 ) : (
-                  <div className="card-placeholder large">Select a game to see details.</div>
+                  <div className="card-placeholder large">
+                    {hasGames
+                      ? 'Select a game to see details.'
+                      : 'No summary available until at least one game has been ingested.'}
+                  </div>
                 )}
               </div>
             </div>
@@ -305,9 +326,9 @@ function App() {
                   <textarea
                     className="games-question-input"
                     placeholder={
-                      selectedGame
+                      hasGames && selectedGame
                         ? 'Example: Why did the Celtics pull away in the 4th quarter?'
-                        : 'Ask anything about a game...'
+                        : 'Ingest a game above to start asking questions...'
                     }
                     value={question}
                     onChange={(event) => setQuestion(event.target.value)}
@@ -319,6 +340,7 @@ function App() {
                         }
                       }
                     }}
+                    disabled={!hasGames || !selectedGame}
                   />
                   <button
                     type="button"

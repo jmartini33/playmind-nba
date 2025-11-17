@@ -79,23 +79,28 @@ def parse_game_data(game_id: str, csv_path: str, home_team="HOME", away_team="AW
         # Primary event (from whichever side has text)
         primary_is_home = bool(home_desc)
         primary_HoA = home_team if primary_is_home else away_team
-        raw_team = str(row.get("PLAYER1_TEAM_NICKNAME") or "").strip()
-        if primary_is_home and not home_team_name:
-            home_team_name = raw_team or home_team_name
-        if not primary_is_home and not away_team_name:
-            away_team_name = raw_team or away_team_name
 
-        if raw_team == "nan":
-            raw_team = home_team_name if primary_is_home else away_team_name
-            print("HERE", raw_team)
-        
-        
+        # With the new ingestion, TEAM_TRICODE holds the team identifier (e.g. "SAC", "BOS")
+        raw_team = str(row.get("TEAM_TRICODE") or "").strip()
+        if raw_team.lower() == "nan":  # guard against pandas NaN stringification
+            raw_team = ""
+
+        # Track first-seen codes for home/away so we can fall back if some rows omit TEAM_TRICODE
+        if primary_is_home and not home_team_name and raw_team:
+            home_team_name = raw_team
+        if not primary_is_home and not away_team_name and raw_team:
+            away_team_name = raw_team
+
+        # Fallback: if this row has no team code, use the first-seen home/away code, or UNK
+        if not raw_team:
+            raw_team = (home_team_name if primary_is_home else away_team_name) or "UNK"
+
         primary_event = {
             "period": int(row.get("PERIOD", 0)),
             "time": str(row.get("PCTIMESTRING") or "").strip(),
             "HoA": primary_HoA,
             "team": raw_team,
-            "player": str(row.get("PLAYER1_NAME") or "").strip(),
+            "player": str(row.get("PLAYER_NAME") or row.get("PLAYER1_NAME") or "").strip(),
             "event_type": parse_event_type(desc),
             "points": extract_points(desc),
             "description": desc.strip(),
