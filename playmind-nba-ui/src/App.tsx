@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './App.css'
-import BackgroundImage2 from './assets/BackgroundImage2.jpg'
 import {
   LineChart,
   Line,
@@ -212,15 +211,7 @@ function App() {
   }
 
   return (
-    <div
-      className="app"
-      style={{
-        backgroundImage: `url(${BackgroundImage2})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
+    <div className="app">
       <header className="app-header">
         <div className="app-header-left">
           <div className="app-title">Playmind NBA</div>
@@ -229,32 +220,32 @@ function App() {
 
       <main className="app-main app-main-games">
         <section className="app-section">
-            <div className="card add-games-card">
-              <div className="add-games-header">Add games by NBA Game ID</div>
-              <div className="add-games-body">
-                <input
-                  className="add-games-input"
-                  type="text"
-                  placeholder="e.g. 0022500142, 0022500143"
-                  value={ingestIds}
-                  onChange={(event) => setIngestIds(event.target.value)}
-                />
-                <button
-                  type="button"
-                  className="add-games-button"
-                  onClick={handleIngestGames}
-                >
-                  Ingest games
-                </button>
-              </div>
-              <div className="add-games-hint">
-                Paste one or more NBA game IDs from nba.com or stats.nba.com. We&apos;ll fetch, parse, and summarize them.
-              </div>
-              {ingestStatus && <div className="add-games-status">{ingestStatus}</div>}
+          <div className="card add-games-card">
+            <div className="add-games-header">Add games by NBA Game ID</div>
+            <div className="add-games-body">
+              <input
+                className="add-games-input"
+                type="text"
+                placeholder="e.g. 0022500142, 0022500143"
+                value={ingestIds}
+                onChange={(event) => setIngestIds(event.target.value)}
+              />
+              <button
+                type="button"
+                className="add-games-button"
+                onClick={handleIngestGames}
+              >
+                Ingest games
+              </button>
             </div>
+            <div className="add-games-hint">
+              Paste one or more NBA game IDs from nba.com or stats.nba.com. We&apos;ll fetch, parse, and summarize them.
+            </div>
+            {ingestStatus && <div className="add-games-status">{ingestStatus}</div>}
+          </div>
 
-            <div className="games-layout">
-              <div className="games-column games-column-left">
+          <div className="games-layout">
+            <div className="games-column games-column-left">
               <h2 className="section-title">Game Select</h2>
               <div className="card games-list-card">
                 {hasGames ? (
@@ -513,7 +504,7 @@ function App() {
                                 stroke="#facc15"
                                 strokeWidth={2}
                                 dot={{ r: 3 }}
-                              />
+            />
                             </LineChart>
                           </ResponsiveContainer>
                         </div>
