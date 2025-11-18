@@ -20,6 +20,7 @@ function App() {
   const [ingestStatus, setIngestStatus] = useState<string | null>(null)
   const [gameSummary, setGameSummary] = useState<any | null>(null)
   const [gameSummaryStatus, setGameSummaryStatus] = useState<string | null>(null)
+  const [reloadGamesKey, setReloadGamesKey] = useState(0)
 
   const hasGames = games.length > 0
 
@@ -45,7 +46,7 @@ function App() {
     }
 
     loadGames()
-  }, [selectedGameId])
+  }, [reloadGamesKey])
 
   useEffect(() => {
     if (!selectedGameId) {
@@ -157,7 +158,9 @@ function App() {
         }),
       )
 
-      setIngestStatus(`Ingested ${ids.length} game${ids.length > 1 ? 's' : ''}. Refresh the list once backend wiring is complete.`)
+      setIngestStatus(`Ingested ${ids.length} game${ids.length > 1 ? 's' : ''}.`)
+      // Trigger reload of games list so newly ingested games appear under "Select game"
+      setReloadGamesKey((key) => key + 1)
     } catch (error) {
       setIngestStatus('There was an error ingesting one or more games. Check the server logs.')
     }

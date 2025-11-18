@@ -5,46 +5,42 @@ from pathlib import Path
 RAW_DIR = Path("data/raw")
 STRUCTURED_DIR = Path("data/structured")
 
-def parse_event_type(description: str) -> str:
-    desc = description.upper()
-    if "3PT" in desc and "MISS" not in desc:
-        return "3PT_MADE"
-    if "3PT" in desc and "MISS" in desc:
-        return "3PT_MISSED"
-    if ("SHOT" in desc or "JUMPER" in desc or "FADEAWAY" in desc) and "MISS" not in desc and "CLOCK" not in desc:
-        return "SHOT_MADE"
-    if ("SHOT" in desc or "JUMPER" in desc or "FADEAWAY" in desc) and "MISS" in desc and "CLOCK" not in desc:
-        return "SHOT_MISSED"
-    if "LAYUP" in desc and "MISS" not in desc:
-        return "LAYUP_MADE"
-    if "LAYUP" in desc and "MISS" in desc:
-        return "LAYUP_MISSED"
-    if "DUNK" in desc and "MISS" not in desc:
-        return "DUNK_MADE"
-    if "DUNK" in desc and "MISS" in desc:
-        return "DUNK_MISSED"
-    if "FREE THROW" in desc and "MISS" not in desc:
-        return "FT_MADE"
-    if "FREE THROW" in desc and "MISS" in desc:
-        return "FT_MISSED"
-    if "REBOUND" in desc:
+def parse_event_type(description: str, action_type: str | None) -> str:
+    desc = (description or "").upper()
+    at = (action_type or "").lower()
+
+    if at == "3pt":
+        return "3PT_MISSED" if "MISS" in desc else "3PT_MADE"
+    if at == "2pt":
+        # Use description to distinguish make vs miss
+        return "SHOT_MISSED" if "MISS" in desc else "SHOT_MADE"
+    if at == "freethrow":
+        return "FT_MISSED" if "MISS" in desc else "FT_MADE"
+    if at == "rebound":
         return "REBOUND"
-    if "FOUL" in desc and "TURNOVER" in desc:
-        return "FOUL+TURNOVER"
-    if "FOUL" in desc:
+    if at == "foul":
         return "FOUL"
-    if "STEAL" in desc:
-        return "STEAL"
-    if "TURNOVER" in desc:
+    if at == "turnover":
         return "TURNOVER"
-    if "BLOCK" in desc:
+    if at == "steal":
+        return "STEAL"
+    if at == "block":
         return "BLOCK"
-    if "SUB" in desc:
-        return "SUBSTITUTION"
-    if "TIMEOUT" in desc:
+    if at == "timeout":
         return "TIMEOUT"
+    if at == "substitution":
+        return "SUBSTITUTION"
+    if at == "jumpball":
+        return "JUMPBALL"
+    if at == "period":
+        # The description will typically say Period Start/End
+        if "START" in desc:
+            return "PERIOD_START"
+        if "END" in desc:
+            return "PERIOD_END"
+        return "PERIOD"
+
     
-    return "OTHER"
 
 
 def extract_points(description: str) -> int:
@@ -62,8 +58,34 @@ def parse_game_data(game_id: str, csv_path: str, home_team="HOME", away_team="AW
     df = pd.read_csv(csv_path)
     parsed = []
     shotAttempts = 0
-    home_team_name = None
-    away_team_name = None
+
+    # Infer home/away team tricodes from score changes
+    def infer_home_away_codes(df: "pd.DataFrame"):
+        home_code = None
+        away_code = None
+        last_home = None
+        last_away = None
+
+        for _, r in df.iterrows():
+            team = r.get("TEAM_TRICODE")
+            sh = r.get("SCORE_HOME")
+            sa = r.get("SCORE_AWAY")
+
+            if team and pd.notna(team) and pd.notna(sh) and pd.notna(sa):
+                if last_home is not None and sh != last_home:
+                    if home_code is None:
+                        home_code = str(team)
+                if last_away is not None and sa != last_away:
+                    if away_code is None:
+                        away_code = str(team)
+                if home_code and away_code:
+                    break
+
+            last_home, last_away = sh, sa
+
+        return home_code, away_code
+
+    home_team_code, away_team_code = infer_home_away_codes(df)
 
     for _, row in df.iterrows():
         # Normalize descriptions and choose the first non-empty
@@ -76,41 +98,47 @@ def parse_game_data(game_id: str, csv_path: str, home_team="HOME", away_team="AW
         if not desc:
             continue
 
-        # Primary event (from whichever side has text)
-        primary_is_home = bool(home_desc)
-        primary_HoA = home_team if primary_is_home else away_team
-
-        # With the new ingestion, TEAM_TRICODE holds the team identifier (e.g. "SAC", "BOS")
+        # TEAM_TRICODE holds the team identifier (e.g. "SAC", "BOS")
         raw_team = str(row.get("TEAM_TRICODE") or "").strip()
         if raw_team.lower() == "nan":  # guard against pandas NaN stringification
             raw_team = ""
 
-        # Track first-seen codes for home/away so we can fall back if some rows omit TEAM_TRICODE
-        if primary_is_home and not home_team_name and raw_team:
-            home_team_name = raw_team
-        if not primary_is_home and not away_team_name and raw_team:
-            away_team_name = raw_team
+        # Map to home/away based on inferred game-level mapping
+        if raw_team and home_team_code and raw_team == home_team_code:
+            primary_HoA = home_team
+        elif raw_team and away_team_code and raw_team == away_team_code:
+            primary_HoA = away_team
+        else:
+            primary_HoA = "NEUTRAL"
 
-        # Fallback: if this row has no team code, use the first-seen home/away code, or UNK
         if not raw_team:
-            raw_team = (home_team_name if primary_is_home else away_team_name) or "UNK"
+            raw_team = "UNK"
+
+        # Prefer structured player name, but fall back to parsing description
+        player_name = str(row.get("PLAYER_NAME") or row.get("PLAYER1_NAME") or "").strip()
+        if not player_name and desc:
+            player_name = extract_player(desc)
+
+        action_type = str(row.get("ACTION_TYPE") or "").strip()
+        evt_type = parse_event_type(desc, action_type)
+        pts = extract_points(desc)
 
         primary_event = {
             "period": int(row.get("PERIOD", 0)),
             "time": str(row.get("PCTIMESTRING") or "").strip(),
             "HoA": primary_HoA,
             "team": raw_team,
-            "player": str(row.get("PLAYER_NAME") or row.get("PLAYER1_NAME") or "").strip(),
-            "event_type": parse_event_type(desc),
-            "points": extract_points(desc),
+            "player": player_name,
+            "event_type": evt_type,
+            "points": pts,
             "description": desc.strip(),
             "home_description": home_desc,
             "away_description": away_desc,
         }
         parsed.append(primary_event)
 
-        evt = parse_event_type(desc)
-        if "SHOT" in evt or "DUNK" in evt or "LAYUP" in evt or "FREE THROW" in evt or "JUMPER" in evt or "FADEAWAY" in evt or "3PT" in evt:
+        evt = evt_type or ""
+        if any(k in evt for k in ("SHOT", "DUNK", "LAYUP", "3PT", "FT")):
             if primary_HoA == away_team:
                 shotAttempts += 1
 

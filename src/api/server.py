@@ -6,11 +6,12 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 from src.rag.qa_engine import build_llm, build_prompt
+from src.service.data_service import ingest_game as ingest_game_service
 
 
-# Initialize LLM and prompt once at import time so they can be reused across requests
-llm = build_llm()
-prompt = build_prompt()
+# Lazily initialize LLM and prompt so the API can start even if OpenAI is misconfigured.
+llm = None
+prompt = None
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 STRUCTURED_DIR = BASE_DIR / "data" / "structured"
@@ -40,24 +41,20 @@ app = FastAPI(title="Playmind NBA API", version="0.1.0")
 
 
 @app.post("/api/games/ingest")
-async def ingest_game(payload: IngestRequest):
+async def ingest_game_endpoint(payload: IngestRequest):
   game_id = payload.gameId.strip()
   if not game_id:
     raise HTTPException(status_code=400, detail="gameId must not be empty")
 
-  script_path = BASE_DIR / "scripts" / "run_pipeline.py"
-  if not script_path.exists():
-    raise HTTPException(status_code=500, detail="Ingestion script not found on server")
-
   try:
-    subprocess.run(["python", str(script_path), game_id], check=True)
-  except subprocess.CalledProcessError as e:
+    summary_path = ingest_game_service(game_id)
+  except Exception as e:
     raise HTTPException(
       status_code=500,
       detail=f"Ingestion failed for game {game_id}: {e}",
     )
 
-  return {"status": "ok", "gameId": game_id}
+  return {"status": "ok", "gameId": game_id, "summaryPath": str(summary_path)}
 
 
 @app.get("/api/games", response_model=List[GameListItem])
@@ -120,6 +117,13 @@ async def get_game_summary(game_id: str):
 
 @app.post("/api/games/{game_id}/ask", response_model=AskResponse)
 async def ask_about_game(game_id: str, payload: AskRequest):
+  global llm, prompt
+
+  # Lazily build the LLM and prompt on first use to avoid blocking startup
+  if llm is None or prompt is None:
+    llm = build_llm()
+    prompt = build_prompt()
+
   if not payload.question.strip():
     raise HTTPException(status_code=400, detail="Question must not be empty")
 

@@ -10,3 +10,6 @@ langchain==1.0.3
 langchain-community==0.4.1
 langchain-huggingface==1.0.1
 langchain-chroma==1.0.0
+fastapi
+uvicorn[standard]
+httpx==0.27.2

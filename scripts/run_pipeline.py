@@ -22,7 +22,7 @@ def main():
 
     # 0️⃣ Fetch raw play-by-play CSV
     print("Step 0: Fetching raw play-by-play data...")
-    subprocess.run(["python", "-m", "src.ingestion.nba_data_loader", game_id], check=True)
+    subprocess.run([sys.executable, "-m", "src.ingestion.nba_data_loader", game_id], check=True)
 
     csv_path = raw_dir / f"{game_id}_game_data.csv"
     if not csv_path.exists():
@@ -34,7 +34,7 @@ def main():
     # 1️⃣ Parse the game data
     print("🔹 Step 1: Parsing play-by-play data...")
     parse_cmd = [
-        "python",
+        sys.executable,
         "-m",
         "src.utils.parse_game_data",
         game_id,
@@ -52,7 +52,7 @@ def main():
     print("🔹 Step 2: Summarizing parsed data...")
     summary_path = structured_dir / f"{game_id}_summary.json"
     summarize_cmd = [
-        "python",
+        sys.executable,
         "-m",
         "src.utils.summarize_parsed_data",
         game_id,
@@ -75,7 +75,7 @@ def main():
     if choice in ["y", "yes"]:
         print("\n Launching QA Engine...\n")
         qa_cmd = [
-            "python",
+            sys.executable,
             "-m",
             "src.rag.qa_engine",
         ]

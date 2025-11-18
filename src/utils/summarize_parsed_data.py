@@ -34,7 +34,7 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
     # Placeholder names if not enough info yet; replaced later if needed
     team_a, team_b = (early_seen + ["UNK", "UNK"])[:2]
 
-    team_stats = defaultdict(lambda: {"points": 0, "fg_Made": 0, "fg_Attempts": 0, "threePt_Attempts": 0, "threePt_Made": 0, "ft_Made": 0, "ft_Attempts": 0, "turnovers": 0, "rebounds": 0, "fouls": 0, "steals": 0, "blocks": 0, "timeouts": 0, "substitutions": 0})
+    team_stats = defaultdict(lambda: {"points": 0, "fg_Made": 0, "fg_Attempts": 0, "threePt_Attempts": 0, "threePt_Made": 0, "ft_Made": 0, "ft_Attempts": 0, "turnovers": 0, "rebounds": 0, "fouls": 0, "steals": 0, "blocks": 0, "timeouts": 0, "substitutions": 0, "runs": 0})
     scoring_timeline = []  # [(team, points, time)]
 
     def opposite(t: str) -> str:
@@ -49,68 +49,66 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
     # --------------------------------------------
     for play in plays:
         team = play.get("team", "UNK")
-        evt = play.get("event_type", "")
-        pts = play.get("points", 0)
-        away_desc = play.get("away_description", "")
-        home_desc = play.get("home_description", "")
+        evt = str(play.get("event_type", "") or "")
+        evt_upper = evt.upper()
+        pts = int(play.get("points", 0) or 0)
+        desc = str(play.get("description", "") or "").upper()
 
-        if "3PT" in evt:
+        # Scoring and shooting stats
+        if evt_upper.startswith("3PT_"):
             team_stats[team]["threePt_Attempts"] += 1
-            team_stats[team]["fg_Attempts"] +=1
-            if "MADE" in evt:
-                team_stats[team]["points"] += 3
+            team_stats[team]["fg_Attempts"] += 1
+            if "MADE" in evt_upper:
+                score = 3
+                team_stats[team]["points"] += score
                 team_stats[team]["threePt_Made"] += 1
                 team_stats[team]["fg_Made"] += 1
-        elif "FT" in evt:
+                scoring_timeline.append((team, score, play.get("time")))
+        elif evt_upper.startswith("FT_"):
             team_stats[team]["ft_Attempts"] += 1
-            if "MADE" in evt:
-                team_stats[team]["points"] += 1
+            if "MADE" in evt_upper:
+                score = 1
+                team_stats[team]["points"] += score
                 team_stats[team]["ft_Made"] += 1
-        elif "MADE" in evt and "3PT" not in evt and "FT" not in evt:
-            team_stats[team]["points"] += 2
-            team_stats[team]["fg_Made"] += 1
-            team_stats[team]["fg_Attempts"] +=1
-        elif "MISS" in evt and "3PT" not in evt and "FT" not in evt:
+                scoring_timeline.append((team, score, play.get("time")))
+        elif evt_upper.startswith("SHOT_"):
             team_stats[team]["fg_Attempts"] += 1
-        elif "TURNOVER" in evt:
+            if "MADE" in evt_upper:
+                score = 2
+                team_stats[team]["points"] += score
+                team_stats[team]["fg_Made"] += 1
+                scoring_timeline.append((team, score, play.get("time")))
+
+        # Non-scoring events
+        if evt_upper == "TURNOVER":
             team_stats[team]["turnovers"] += 1
-            if "STEAL" in away_desc:
-                team_stats[opposite(team)]["steals"] += 1
-        elif "REBOUND" in evt:
+        elif evt_upper == "REBOUND" and "TEAM" not in desc:
             team_stats[team]["rebounds"] += 1
-        elif "FOUL" in evt:
+        elif evt_upper == "FOUL":
             team_stats[team]["fouls"] += 1
-        elif "STEAL" in evt:
-            team_stats[opposite(team)]["steals"] += 1
-            team_stats[team]["turnovers"] += 1
-        elif "BLOCK" in evt:
-            team_stats[opposite(team)]["blocks"] += 1
-            team_stats[team]["fg_Attempts"] += 1
-        elif "TIMEOUT" in evt:
+        elif evt_upper == "STEAL":
+            team_stats[team]["steals"] += 1
+        elif evt_upper == "BLOCK":
+            team_stats[team]["blocks"] += 1
+        elif evt_upper == "TIMEOUT":
             team_stats[team]["timeouts"] += 1
-        elif "SUBSTITUTION" in evt:
+        elif evt_upper == "SUBSTITUTION":
             team_stats[team]["substitutions"] += 1
-        if "MISS" in home_desc and "LOCK" in away_desc:
-            team_stats[opposite(team)]["blocks"] += 1
-            
-
-        
 
     # --------------------------------------------
-    # Compute simple momentum / scoring runs
+    # Compute simple momentum / scoring run counts per team
     # --------------------------------------------
-    runs = []
     current_team, run_pts = None, 0
     for team, pts, _ in scoring_timeline:
         if team == current_team:
             run_pts += pts
         else:
-            if run_pts >= 8:
-                runs.append((current_team, run_pts))
+            if current_team is not None and run_pts >= 8:
+                team_stats[current_team]["runs"] += 1
             current_team = team
             run_pts = pts
-    if run_pts >= 8:
-        runs.append((current_team, run_pts))
+    if current_team is not None and run_pts >= 8:
+        team_stats[current_team]["runs"] += 1
 
     # --------------------------------------------
     # Derive final structured summary
@@ -143,7 +141,7 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
         "rebounds": {team_a: a_stats["rebounds"], team_b: b_stats["rebounds"]},
         "fouls": {team_a: a_stats["fouls"], team_b: b_stats["fouls"]},
         "steals": {team_a: a_stats["steals"], team_b: b_stats["steals"]},
-        "scoring_runs": runs,
+        "scoring_runs": {team_a: a_stats["runs"], team_b: b_stats["runs"]},
         "blocks": {team_a: a_stats["blocks"], team_b: b_stats["blocks"]},
         "timeouts": {team_a: a_stats["timeouts"], team_b: b_stats["timeouts"]},
         "substitutions": {team_a: a_stats["substitutions"], team_b: b_stats["substitutions"]},
@@ -155,7 +153,12 @@ def summarize_parsed_game(parsed_path: str, save_path: str | None = None):
     winner = team_a if a_stats["points"] > b_stats["points"] else team_b
     loser = team_b if winner == team_a else team_a
     margin = abs(a_stats["points"] - b_stats["points"])
-    run_texts = [f"{team} had a {pts}-point run" for team, pts in runs]
+    run_texts = []
+    for t, stats in ((team_a, a_stats), (team_b, b_stats)):
+        count = stats.get("runs", 0)
+        if count > 0:
+            s = "runs" if count > 1 else "run"
+            run_texts.append(f"{t} had {count} scoring {s}")
 
     narrative = (
         f"{winner} defeated {loser} by {margin} points. "

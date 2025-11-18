@@ -32,8 +32,6 @@ def fetch_game(game_id: str):
 
     try:
         resp = requests.get(url, timeout=15)
-        print("Status code:", resp.status_code)
-        print("URL:", resp.url)
         resp.raise_for_status()
 
         data = resp.json()
@@ -84,14 +82,14 @@ def fetch_game(game_id: str):
 
         df = pd.DataFrame(rows)
         if df.empty:
-            print("⚠️ CDN response produced an empty DataFrame.")
+            print("CDN response produced an empty DataFrame.")
             return None
 
         return df
 
     except Exception:
         import traceback
-        print("❌ Exception while fetching data from NBA CDN:")
+        print("Exception while fetching data from NBA CDN:")
         traceback.print_exc()
         raise
 
@@ -108,14 +106,14 @@ def main():
     df = fetch_game(game_id)
 
     if df is None:
-        print("❌ No data saved because the API did not return valid data.")
+        print("No data saved because the API did not return valid data.")
         sys.exit(1)
 
     out_dir = Path("data/raw")
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / f"{game_id}_game_data.csv"
     df.to_csv(out_path, index=False)
-    print(f"✅ Saved play-by-play data to {out_path}")
+    print(f"Saved play-by-play data to {out_path}")
 
 
 if __name__ == "__main__":
