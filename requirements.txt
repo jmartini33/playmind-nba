@@ -13,3 +13,4 @@ langchain-chroma==1.0.0
 fastapi
 uvicorn[standard]
 httpx==0.27.2
+recharts

@@ -1,6 +1,16 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import BackgroundImage2 from './assets/BackgroundImage2.jpg'
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts'
 
 type Game = {
   id: string
@@ -23,6 +33,7 @@ function App() {
   const [gameSummaryStatus, setGameSummaryStatus] = useState<string | null>(null)
   const [reloadGamesKey, setReloadGamesKey] = useState(0)
   const [summaryCache, setSummaryCache] = useState<Record<string, any>>({})
+  const [summaryView, setSummaryView] = useState<'summary' | 'graph'>('summary')
 
   const hasGames = games.length > 0
 
@@ -244,7 +255,7 @@ function App() {
 
             <div className="games-layout">
               <div className="games-column games-column-left">
-              <h2 className="section-title">Select game</h2>
+              <h2 className="section-title">Game Select</h2>
               <div className="card games-list-card">
                 {hasGames ? (
                   <div className="games-list">
@@ -275,7 +286,26 @@ function App() {
             </div>
 
             <div className="games-column games-column-middle">
-              <h2 className="section-title">Summary</h2>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 0 }}>
+                <div className="games-summary-tabs" style={{ marginTop: 0 }}>
+                  <button
+                    type="button"
+                    className={`games-summary-tab ${summaryView === 'summary' ? 'active' : ''}`}
+                    onClick={() => setSummaryView('summary')}
+                    style={{ padding: '6px 16px', fontSize: 13 }}
+                  >
+                    Summary
+                  </button>
+                  <button
+                    type="button"
+                    className={`games-summary-tab ${summaryView === 'graph' ? 'active' : ''}`}
+                    onClick={() => setSummaryView('graph')}
+                    style={{ padding: '6px 16px', fontSize: 13 }}
+                  >
+                    Graph
+                  </button>
+                </div>
+              </div>
               <div className="card games-summary-card">
                 {hasGames && selectedGame && selectedGameIds.length > 0 ? (
                   <>
@@ -297,16 +327,29 @@ function App() {
                       })}
                     </div>
                     <div className="games-summary-header">
-                      <div className="games-summary-score">{selectedGame.score}</div>
-                      <div className="games-summary-teams">
-                        {selectedGame.away} @ {selectedGame.home}
-                      </div>
+                      {(() => {
+                        const [awayScore, homeScore] = selectedGame.score.split(' - ')
+                        const isGraph = summaryView === 'graph'
+                        const awayColor = isGraph ? '#facc15' : undefined
+                        const homeColor = isGraph ? '#3b82f6' : undefined
+                        return (
+                          <div className="games-summary-teams">
+                            <span style={{ color: awayColor }}>
+                              {selectedGame.away} ({awayScore})
+                            </span>
+                            {' @ '}
+                            <span style={{ color: homeColor }}>
+                              {selectedGame.home} ({homeScore})
+                            </span>
+                          </div>
+                        )
+                      })()}
                     </div>
                     <div className="games-summary-stats">
                       {gameSummaryStatus && (
                         <div className="games-summary-stat-line">{gameSummaryStatus}</div>
                       )}
-                      {gameSummary && !gameSummaryStatus && (
+                      {gameSummary && !gameSummaryStatus && summaryView === 'summary' && (
                         <>
                           {gameSummary.teams && gameSummary.teams.length >= 2 && (
                             <div className="games-summary-grid">
@@ -359,6 +402,122 @@ function App() {
                           )}
                         </>
                       )}
+                      {gameSummary && !gameSummaryStatus && summaryView === 'graph' && (
+                        <div style={{ height: 220 }}>
+                          <ResponsiveContainer width="100%" height="100%">
+                            <LineChart
+                              data={(() => {
+                                const teams = gameSummary.teams || []
+                                if (teams.length < 2) return []
+                                const [homeTeam, awayTeam] = teams
+
+                                // Helper to parse "made/attempts" strings like "14/35" into percentage made
+                                const getPct = (obj: any, team: string) => {
+                                  const value = obj?.[team]
+                                  if (!value || typeof value !== 'string') return 0
+                                  const [made, attempts] = value.split('/')
+                                  const m = Number(made)
+                                  const a = Number(attempts)
+                                  if (!Number.isFinite(m) || !Number.isFinite(a) || a === 0) return 0
+                                  // Round to one decimal place
+                                  return Math.round(((m / a) * 100) * 10) / 10
+                                }
+                                return [
+                                  {
+                                    stat: '3PT%',
+                                    [homeTeam]: getPct(gameSummary.three_pointers, homeTeam),
+                                    [awayTeam]: getPct(gameSummary.three_pointers, awayTeam),
+                                  },
+                                  {
+                                    stat: 'FG%',
+                                    [homeTeam]: getPct(gameSummary.field_goals, homeTeam),
+                                    [awayTeam]: getPct(gameSummary.field_goals, awayTeam),
+                                  },
+                                  {
+                                    stat: 'FT%',
+                                    [homeTeam]: getPct(gameSummary.free_throws, homeTeam),
+                                    [awayTeam]: getPct(gameSummary.free_throws, awayTeam),
+                                  },
+                                  {
+                                    stat: 'REB',
+                                    [homeTeam]: gameSummary.rebounds?.[homeTeam] ?? 0,
+                                    [awayTeam]: gameSummary.rebounds?.[awayTeam] ?? 0,
+                                  },
+                                  {
+                                    stat: 'TOV',
+                                    [homeTeam]: gameSummary.turnovers?.[homeTeam] ?? 0,
+                                    [awayTeam]: gameSummary.turnovers?.[awayTeam] ?? 0,
+                                  },
+                                  {
+                                    stat: 'FOUL',
+                                    [homeTeam]: gameSummary.fouls?.[homeTeam] ?? 0,
+                                    [awayTeam]: gameSummary.fouls?.[awayTeam] ?? 0,
+                                  },
+                                  {
+                                    stat: 'STL',
+                                    [homeTeam]: gameSummary.steals?.[homeTeam] ?? 0,
+                                    [awayTeam]: gameSummary.steals?.[awayTeam] ?? 0,
+                                  },
+                                  {
+                                    stat: 'BLK',
+                                    [homeTeam]: gameSummary.blocks?.[homeTeam] ?? 0,
+                                    [awayTeam]: gameSummary.blocks?.[awayTeam] ?? 0,
+                                  },
+                                  {
+                                    stat: 'TO',
+                                    [homeTeam]: gameSummary.timeouts?.[homeTeam] ?? 0,
+                                    [awayTeam]: gameSummary.timeouts?.[awayTeam] ?? 0,
+                                  },
+                                  {
+                                    stat: 'SUB',
+                                    [homeTeam]: gameSummary.substitutions?.[homeTeam] ?? 0,
+                                    [awayTeam]: gameSummary.substitutions?.[awayTeam] ?? 0,
+                                  },
+                                  {
+                                    stat: 'RUNS',
+                                    [homeTeam]: gameSummary.scoring_runs?.[homeTeam] ?? 0,
+                                    [awayTeam]: gameSummary.scoring_runs?.[awayTeam] ?? 0,
+                                  },
+                                ]
+                              })()}
+                            >
+                              <CartesianGrid strokeDasharray="3 3" stroke="#1f2937" />
+                              <XAxis dataKey="stat" stroke="#9ca3af" />
+                              <YAxis stroke="#9ca3af" allowDecimals={false} />
+                              <Tooltip
+                                contentStyle={{
+                                  backgroundColor: '#020617',
+                                  border: '1px solid #374151',
+                                  fontSize: 12,
+                                }}
+                                formatter={(value: any, name: any, props: any) => {
+                                  const stat = props?.payload?.stat as string | undefined
+                                  const num = typeof value === 'number' ? value : Number(value)
+                                  if (stat && ['3PT', 'FG', 'FT'].includes(stat) && Number.isFinite(num)) {
+                                    return [`${num}%`, name]
+                                  }
+                                  return [value, name]
+                                }}
+                              />
+                              <Legend />
+                              <Line
+                                type="monotone"
+                                dataKey={gameSummary.teams?.[0]}
+                                stroke="#3b82f6"
+                                strokeWidth={2}
+                                dot={{ r: 3 }}
+                              />
+                              <Line
+                                type="monotone"
+                                dataKey={gameSummary.teams?.[1]}
+                                stroke="#facc15"
+                                strokeWidth={2}
+                                dot={{ r: 3 }}
+                              />
+                            </LineChart>
+                          </ResponsiveContainer>
+                        </div>
+                      )}
                       {!gameSummary && !gameSummaryStatus && (
                         <div className="games-summary-stat-line">
                           Summary data is not available for this game yet.
@@ -377,7 +536,7 @@ function App() {
             </div>
 
             <div className="games-column games-column-right">
-              <h2 className="section-title">Ask about this game</h2>
+              <h2 className="section-title">Ask AI</h2>
               <div className="card games-qa-card">
                 <div className="games-qa-row">
                   <textarea

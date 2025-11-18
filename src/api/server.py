@@ -175,6 +175,13 @@ async def ask_about_game(game_id: str, payload: AskRequest):
     if narrative:
       lines.append(f"Narrative: {narrative}")
 
+    # Also include the full aggregate summary JSON so the LLM can see all stats/fields
+    try:
+      lines.append(f"RawSummaryJSON: {json.dumps(summary)}")
+    except Exception:
+      # If for some reason the summary isn't serializable, skip this line
+      pass
+
     contexts.append("\n".join(lines))
 
   if not contexts:
