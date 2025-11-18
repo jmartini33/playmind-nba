@@ -31,6 +31,7 @@ class IngestRequest(BaseModel):
 
 class AskRequest(BaseModel):
   question: str
+  gameIds: List[str] | None = None
 
 
 class AskResponse(BaseModel):
@@ -126,50 +127,60 @@ async def ask_about_game(game_id: str, payload: AskRequest):
 
   if not payload.question.strip():
     raise HTTPException(status_code=400, detail="Question must not be empty")
-
-  path = STRUCTURED_DIR / f"{game_id}_summary.json"
-  if not path.exists():
-    raise HTTPException(status_code=404, detail="Summary not found for that game_id")
-
   import json
 
-  with open(path, "r") as f:
-    summary = json.load(f)
+  # Determine which game IDs to include in context
+  game_ids = payload.gameIds or [game_id]
 
-  teams = summary.get("teams", [])
-  fs = summary.get("final_score", {})
+  contexts: List[str] = []
+  for gid in game_ids:
+    path = STRUCTURED_DIR / f"{gid}_summary.json"
+    if not path.exists():
+      continue
 
-  lines = []
-  if len(teams) >= 2:
-    lines.append(f"This game featured {teams[0]} vs {teams[1]}.")
-  if fs and len(teams) >= 2:
-    lines.append(
-      f"Final Score — {teams[0]}: {fs.get(teams[0], 'N/A')}, {teams[1]}: {fs.get(teams[1], 'N/A')}."
-    )
+    with open(path, "r") as f:
+      summary = json.load(f)
 
-  for stat in [
-    "three_pointers",
-    "field_goals",
-    "free_throws",
-    "turnovers",
-    "rebounds",
-    "fouls",
-    "steals",
-    "blocks",
-    "timeouts",
-    "substitutions",
-  ]:
-    s = summary.get(stat, {})
+    teams = summary.get("teams", [])
+    fs = summary.get("final_score", {})
+
+    lines = []
     if len(teams) >= 2:
+      lines.append(f"Game {gid}: {teams[0]} vs {teams[1]}.")
+    if fs and len(teams) >= 2:
       lines.append(
-        f"{stat.replace('_', ' ').title()} — {teams[0]}: {s.get(teams[0], 'N/A')}, {teams[1]}: {s.get(teams[1], 'N/A')}."
+        f"Final Score — {teams[0]}: {fs.get(teams[0], 'N/A')}, {teams[1]}: {fs.get(teams[1], 'N/A')}."
       )
 
-  narrative = summary.get("narrative", "")
-  if narrative:
-    lines.append(f"Game summary: {narrative}")
+    for stat in [
+      "three_pointers",
+      "field_goals",
+      "free_throws",
+      "turnovers",
+      "rebounds",
+      "fouls",
+      "steals",
+      "blocks",
+      "timeouts",
+      "substitutions",
+      "scoring_runs",
+    ]:
+      s = summary.get(stat, {})
+      if len(teams) >= 2 and s:
+        lines.append(
+          f"{stat.replace('_', ' ').title()} — {teams[0]}: {s.get(teams[0], 'N/A')}, {teams[1]}: {s.get(teams[1], 'N/A')}."
+        )
 
-  context = "\n".join(lines)
+    narrative = summary.get("narrative", "")
+    if narrative:
+      lines.append(f"Narrative: {narrative}")
+
+    contexts.append("\n".join(lines))
+
+  if not contexts:
+    raise HTTPException(status_code=404, detail="No summaries found for the requested games")
+
+  context = "\n\n".join(contexts)
 
   input_text = prompt.format(context=context, question=payload.question)
   result = llm.invoke(input_text)

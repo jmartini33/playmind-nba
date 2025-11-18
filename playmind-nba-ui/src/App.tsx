@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import BackgroundImage from './assets/BackgroundImage.png'
+import BackgroundImage2 from './assets/BackgroundImage2.jpg'
 
 type Game = {
   id: string
@@ -12,7 +12,8 @@ type Game = {
 
 function App() {
   const [games, setGames] = useState<Game[]>([])
-  const [selectedGameId, setSelectedGameId] = useState<string | null>(null)
+  const [selectedGameIds, setSelectedGameIds] = useState<string[]>([])
+  const [activeSummaryGameId, setActiveSummaryGameId] = useState<string | null>(null)
   const [question, setQuestion] = useState('')
   const [answer, setAnswer] = useState<string | null>(null)
   const [answerStatus, setAnswerStatus] = useState<string | null>(null)
@@ -21,11 +22,31 @@ function App() {
   const [gameSummary, setGameSummary] = useState<any | null>(null)
   const [gameSummaryStatus, setGameSummaryStatus] = useState<string | null>(null)
   const [reloadGamesKey, setReloadGamesKey] = useState(0)
+  const [summaryCache, setSummaryCache] = useState<Record<string, any>>({})
 
   const hasGames = games.length > 0
 
   const selectedGame: Game | undefined =
-    hasGames ? games.find((g) => g.id === selectedGameId) ?? games[0] : undefined
+    hasGames && activeSummaryGameId
+      ? games.find((g) => g.id === activeSummaryGameId) ?? games[0]
+      : hasGames
+        ? games.find((g) => g.id === selectedGameIds[0]) ?? games[0]
+        : undefined
+
+  function toggleGameSelection(id: string) {
+    setSelectedGameIds((prev) => {
+      const exists = prev.includes(id)
+      if (exists) {
+        const next = prev.filter((g) => g !== id)
+        if (activeSummaryGameId === id) {
+          setActiveSummaryGameId(next[0] ?? null)
+        }
+        return next
+      }
+      setActiveSummaryGameId(id)
+      return [...prev, id]
+    })
+  }
 
   useEffect(() => {
     async function loadGames() {
@@ -37,8 +58,9 @@ function App() {
         }
         const data: Game[] = await response.json()
         setGames(data)
-        if (!selectedGameId && data.length > 0) {
-          setSelectedGameId(data[0].id)
+        if (data.length > 0 && selectedGameIds.length === 0) {
+          setSelectedGameIds([data[0].id])
+          setActiveSummaryGameId(data[0].id)
         }
       } catch {
         // Silent failure for now; could surface a toast later
@@ -49,7 +71,7 @@ function App() {
   }, [reloadGamesKey])
 
   useEffect(() => {
-    if (!selectedGameId) {
+    if (!activeSummaryGameId) {
       setGameSummary(null)
       setGameSummaryStatus(null)
       return
@@ -59,8 +81,19 @@ function App() {
 
     async function loadSummary() {
       try {
+        // If we have this game's summary cached already, use it immediately.
+        const key = activeSummaryGameId as string
+        const cached = summaryCache[key]
+        if (cached) {
+          if (!cancelled) {
+            setGameSummary(cached)
+            setGameSummaryStatus(null)
+          }
+          return
+        }
+
         setGameSummaryStatus('Loading summary...')
-        const response = await fetch(`/api/games/${selectedGameId}/summary`)
+        const response = await fetch(`/api/games/${activeSummaryGameId}/summary`)
         if (!response.ok) {
           setGameSummary(null)
           setGameSummaryStatus('Summary is not available for this game yet.')
@@ -69,6 +102,7 @@ function App() {
         const data = await response.json()
         if (!cancelled) {
           setGameSummary(data)
+          setSummaryCache((prev) => ({ ...prev, [key]: data }))
           setGameSummaryStatus(null)
         }
       } catch {
@@ -84,10 +118,10 @@ function App() {
     return () => {
       cancelled = true
     }
-  }, [selectedGameId])
+  }, [activeSummaryGameId])
 
   async function handleAskQuestion() {
-    if (!selectedGame || !question.trim()) {
+    if (!selectedGame || !question.trim() || selectedGameIds.length === 0) {
       return
     }
 
@@ -100,7 +134,7 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ question }),
+        body: JSON.stringify({ question, gameIds: selectedGameIds }),
       })
 
       if (!response.ok) {
@@ -170,7 +204,7 @@ function App() {
     <div
       className="app"
       style={{
-        backgroundImage: `url(${BackgroundImage})`,
+        backgroundImage: `url(${BackgroundImage2})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -214,20 +248,23 @@ function App() {
               <div className="card games-list-card">
                 {hasGames ? (
                   <div className="games-list">
-                    {games.map((game) => (
-                      <button
-                        key={game.id}
-                        type="button"
-                        className={`games-list-item ${
-                          game.id === selectedGameId ? 'active' : ''
-                        }`}
-                        onClick={() => setSelectedGameId(game.id)}
-                      >
-                        <div className="games-list-item-main">
-                          {game.away} @ {game.home}
-                        </div>
-                      </button>
-                    ))}
+                    {games.map((game) => {
+                      const [awayScore, homeScore] = game.score.split(' - ')
+                      return (
+                        <button
+                          key={game.id}
+                          type="button"
+                          className={`games-list-item ${
+                            selectedGameIds.includes(game.id) ? 'active' : ''
+                          }`}
+                          onClick={() => toggleGameSelection(game.id)}
+                        >
+                          <div className="games-list-item-main">
+                            {game.away} ({awayScore}) @ {game.home} ({homeScore})
+                          </div>
+                        </button>
+                      )
+                    })}
                   </div>
                 ) : (
                   <div className="card-placeholder large">
@@ -240,8 +277,25 @@ function App() {
             <div className="games-column games-column-middle">
               <h2 className="section-title">Summary</h2>
               <div className="card games-summary-card">
-                {hasGames && selectedGame ? (
+                {hasGames && selectedGame && selectedGameIds.length > 0 ? (
                   <>
+                    <div className="games-summary-tabs">
+                      {selectedGameIds.map((id) => {
+                        const game = games.find((g) => g.id === id)
+                        if (!game) return null
+                        const isActive = id === activeSummaryGameId
+                        return (
+                          <button
+                            key={id}
+                            type="button"
+                            className={`games-summary-tab ${isActive ? 'active' : ''}`}
+                            onClick={() => setActiveSummaryGameId(id)}
+                          >
+                            {game.away} @ {game.home}
+                          </button>
+                        )
+                      })}
+                    </div>
                     <div className="games-summary-header">
                       <div className="games-summary-score">{selectedGame.score}</div>
                       <div className="games-summary-teams">
@@ -315,7 +369,7 @@ function App() {
                 ) : (
                   <div className="card-placeholder large">
                     {hasGames
-                      ? 'Select a game to see details.'
+                      ? 'Select one or more games to see details.'
                       : 'No summary available until at least one game has been ingested.'}
                   </div>
                 )}
@@ -329,8 +383,8 @@ function App() {
                   <textarea
                     className="games-question-input"
                     placeholder={
-                      hasGames && selectedGame
-                        ? 'Example: Why did the Celtics pull away in the 4th quarter?'
+                      hasGames && selectedGameIds.length > 0
+                        ? 'Example: Compare these games or ask about a specific one.'
                         : 'Ingest a game above to start asking questions...'
                     }
                     value={question}
@@ -348,7 +402,7 @@ function App() {
                   <button
                     type="button"
                     className="app-nav-button games-ask-button"
-                    disabled={!question.trim() || !selectedGame}
+                    disabled={!question.trim() || !selectedGame || selectedGameIds.length === 0}
                     onClick={handleAskQuestion}
                   >
                     {answerStatus === 'Asking AI...' ? 'Asking...' : 'Ask AI'}
